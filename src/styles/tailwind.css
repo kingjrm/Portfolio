@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional component layer if using Tailwind CLI.
+   When using CDN, this file is not applied. */
+@layer components {
+  /* Add your @apply-based components here when building locally. */
+}

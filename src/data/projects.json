@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "Responsive site built with Tailwind and vanilla JS.",
+    "tags": ["Tailwind", "HTML", "JS"],
+    "url": "https://example.com/portfolio",
+    "image": "./assets/images/portfolio.jpg"
+  },
+  {
+    "title": "UI Components",
+    "description": "Reusable components library for quick prototyping.",
+    "tags": ["Design System", "CSS"],
+    "url": "https://example.com/components",
+    "image": "./assets/images/components.jpg"
+  },
+  {
+    "title": "API Demo",
+    "description": "Fetches and renders data from a public API.",
+    "tags": ["Fetch", "JSON"],
+    "url": "https://example.com/api-demo",
+    "image": "./assets/images/api.jpg"
+  }
+]

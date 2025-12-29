@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About • King Jerome P. Lacerna</title>
+    <meta name="theme-color" content="#4F46E5" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class'
+      }
+    </script>
+  </head>
+  <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300">
+    <nav class="border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur transition-colors duration-300">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
+        <a href="../index.html" class="font-semibold text-gray-900 dark:text-gray-300">K.J</a>
+        <div class="flex items-center gap-8">
+          <ul class="flex items-center gap-8">
+            <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="../index.html">Home</a></li>
+            <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="./about.html">About</a></li>
+          </ul>
+          <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+            <span class="text-lg">☀️</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-12 sm:py-16">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+        <div class="mb-12 animate-fadeInUp">
+          <p class="text-xs tracking-widest uppercase text-gray-500 font-medium mb-2">About me</p>
+          <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-gray-950 dark:text-white mb-3">my journey</h1>
+          <p class="text-gray-600 dark:text-gray-400 font-light">Full details and background about my experience and skills.</p>
+        </div>
+
+        <!-- Profile -->
+        <article class="card glass mb-8">
+          <div class="p-6 grid sm:grid-cols-2 gap-6">
+            <div>
+              <h2 class="font-semibold mb-4">Profile</h2>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Web developer & designer focused on clean, accessible interfaces and performant front‑end experiences.
+              </p>
+            </div>
+            <dl class="text-sm">
+              <div class="grid grid-cols-3 gap-2">
+                <dt class="text-gray-500">Name</dt>
+                <dd class="col-span-2">King Jerome P. Lacerna</dd>
+              </div>
+              <div class="grid grid-cols-3 gap-2 mt-2">
+                <dt class="text-gray-500">Role</dt>
+                <dd class="col-span-2">Web Developer & Designer</dd>
+              </div>
+              <div class="grid grid-cols-3 gap-2 mt-2">
+                <dt class="text-gray-500">Email</dt>
+                <dd class="col-span-2">
+                  <a href="mailto:lacernakingjerome@gmail.com" class="hover:underline">lacernakingjerome@gmail.com</a>
+                </dd>
+              </div>
+              <div class="grid grid-cols-3 gap-2 mt-2">
+                <dt class="text-gray-500">Portfolio</dt>
+                <dd class="col-span-2">
+                  <a href="../index.html" class="hover:underline">Homepage</a>
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </article>
+
+        <section class="grid gap-6 md:grid-cols-2 mb-12">
+          <article class="card glass">
+            <div class="p-6">
+              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Education</h2>
+              <ul class="space-y-6">
+                <li>
+                  <div class="flex items-start justify-between gap-6">
+                    <div>
+                      <h3 class="font-semibold">Batangas State University TNEU - Lipa</h3>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">
+                        Bachelor of Science in Information Technology, Major in Service Management
+                      </p>
+                      <p class="text-xs text-gray-600 dark:text-gray-400">
+                        GWA: 1.4286 • Dean's Lister: First Year – Present
+                      </p>
+                    </div>
+                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
+                      Lipa, Batangas<br />
+                      Expected Graduation: July 2026
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-start justify-between gap-6">
+                    <div>
+                      <h3 class="font-semibold">Pansol Integrated National High School</h3>
+                      <p class="text-sm text-gray-700 dark:text-gray-300">
+                        Science, Technology, Engineering, and Mathematics (STEM)
+                      </p>
+                    </div>
+                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
+                      Lipa, Batangas<br />
+                      September 2020 – June 2022
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card glass">
+            <div class="p-6">
+              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Skills</h2>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Tailwind CSS</span>
+                <span class="badge">Figma</span>
+                <span class="badge">Responsive UI</span>
+                <span class="badge">Design Systems</span>
+                <span class="badge">Accessibility</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card glass">
+            <div class="p-6">
+              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Experience</h2>
+              <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                <li>• Role • Company • Dates</li>
+                <li>• Role • Company • Dates</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card glass">
+            <div class="p-6">
+              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Projects</h2>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="card overflow-hidden">
+                  <img src="../assets/images/libralinkFigma.jpg"
+                       data-fallback="/Portfolio/assets/images/libralinkFigma.jpg, ../assets/images/libralinkFigma.jpeg, ../assets/images/LibraLinkFigma.jpg, ../assets/images/libralinkFigma.png"
+                       alt="LibraLink • Figma"
+                       class="h-40 w-full object-cover rounded-t-lg"
+                       loading="lazy" />
+                  <div class="p-4">
+                    <h3 class="font-semibold">LibraLink • Figma</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Responsive UI exploration and prototyping.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="badge">Figma</span><span class="badge">UI</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="card overflow-hidden group relative">
+                  <img src="../assets/images/responsysFigma.jpg"
+                       data-fallback="/Portfolio/assets/images/responsysFigma.jpg, ../assets/images/responsysFigma.jpeg, ../assets/images/ResponsysFigma.jpg, ../assets/images/responsysFigma.png"
+                       alt="Responsys • Figma"
+                       class="h-40 w-full object-cover rounded-t-lg"
+                       loading="lazy" />
+                  <div class="p-4">
+                    <h3 class="font-semibold">Responsys • Figma</h3>
+                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Dashboard layout and component system.</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                      <span class="badge">Figma</span><span class="badge">Design System</span>
+                    </div>
+                  </div>
+                  <!-- Expandable overlay on hover -->
+                  <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end rounded-lg overflow-hidden">
+                    <div class="w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/80 to-transparent p-4">
+                      <a class="btn w-full text-center justify-center text-sm" href="https://responsysgarcia.com" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <div class="flex flex-wrap gap-3">
+          <a class="btn-outline hover:scale-105 transition duration-300" href="mailto:lacernakingjerome@gmail.com">Email Me</a>
+          <a class="btn-outline hover:scale-105 transition duration-300" href="../index.html">Back to Home</a>
+        </div>
+      </div>
+    </main>
+
+    <footer id="site-footer" class="mt-12"></footer>
+    <script>
+      function initTheme() {
+        const html = document.documentElement;
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = saved ? saved === 'dark' : prefersDark;
+        
+        if (isDark) {
+          html.classList.add('dark');
+        } else {
+          html.classList.remove('dark');
+        }
+        updateThemeButton();
+      }
+
+      function updateThemeButton() {
+        const btn = document.getElementById('theme-toggle');
+        const isDark = document.documentElement.classList.contains('dark');
+        if (btn) btn.textContent = isDark ? '🌙' : '☀️';
+      }
+
+      function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeButton();
+      }
+
+      document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
+      initTheme();
+
+      // Image fallback: try alternate paths/extensions if initial load fails
+      function setupImageFallbacks() {
+        document.querySelectorAll('img[data-fallback]').forEach((img) => {
+          const fallbacks = img.dataset.fallback.split(',').map(s => s.trim()).filter(Boolean);
+          let i = 0;
+          img.addEventListener('error', () => {
+            if (i < fallbacks.length) {
+              img.src = fallbacks[i++];
+            }
+          });
+        });
+      }
+
+      fetch('../src/components/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const el = document.getElementById('site-footer');
+          if (el) el.innerHTML = html;
+          const y = document.getElementById('year');
+          if (y) y.textContent = new Date().getFullYear().toString();
+        })
+        .catch(console.error);
+
+      setupImageFallbacks();
+    </script>
+  </body>
+</html>
