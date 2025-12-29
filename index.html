@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>King Jerome P. Lacerna • Portfolio</title>
     <meta name="theme-color" content="#4F46E5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,14 +16,15 @@
       }
     </script>
   </head>
-  <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300">
-    <nav class="border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur transition-colors duration-300">
+  <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
+    <nav class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur transition-colors duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
         <a href="./index.html" class="font-semibold text-gray-900 dark:text-gray-300">K.J</a>
         <div class="flex items-center gap-8">
           <ul class="flex items-center gap-8">
             <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="./index.html">Home</a></li>
             <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="./pages/about.html">About</a></li>
+            <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="./pages/contact.html">Contact</a></li>
           </ul>
           <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
             <span class="text-lg">☀️</span>
@@ -31,42 +33,82 @@
       </div>
     </nav>
 
-    <main class="min-h-screen flex items-center justify-center py-12 sm:py-16 px-4 bg-white dark:bg-gray-950 transition-colors duration-300">
-      <div class="max-w-4xl text-center">
-        <!-- Heading with multi-line emphasis -->
-        <h1 class="mb-8">
-          <span class="block text-sm tracking-widest uppercase text-gray-500 font-medium mb-4">Welcome to my portfolio</span>
-          <span class="block text-6xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-gray-950 dark:text-white mb-2">king jerome</span>
-          <span class="block text-3xl sm:text-4xl font-light text-gray-600 dark:text-gray-400 mt-3">web developer & creative designer</span>
-        </h1>
+    <main class="relative min-h-[75vh] flex items-center px-4 py-8 sm:py-12 bg-white dark:bg-gray-950 transition-colors duration-300">
+      <div class="mx-auto max-w-7xl grid gap-8 lg:gap-12 md:grid-cols-2 items-center">
+        <!-- Left: Copy -->
+        <div class="space-y-4">
+          <span class="inline-flex items-center gap-2 rounded-full border border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-900/20 px-3 py-1 text-xs font-medium uppercase tracking-widest text-indigo-700 dark:text-indigo-300">
+            Welcome to my portfolio
+          </span>
 
-        <!-- Description -->
-        <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-          I craft clean, accessible, and performant digital experiences for startups and brands worldwide.
-        </p>
+          <h1 class="space-y-2">
+            <span class="block text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">
+              King Jerome P. Lacerna
+            </span>
+            <span class="block text-xl sm:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500">
+              Web developer & creative designer
+            </span>
+          </h1>
 
-        <!-- Navigation Links with Arrows -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12">
-          <a href="./pages/about.html" class="cta-link group text-gray-700 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white transition font-medium tracking-wide hover:scale-105 duration-300">
-            <span class="cta-label">see my projects</span>
-            <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </a>
-          <a href="./pages/about.html" class="cta-link group text-gray-700 dark:text-gray-300 hover:text-gray-950 dark:hover:text-white transition font-medium tracking-wide hover:scale-105 duration-300">
-            <span class="cta-label">more about me</span>
-            <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </a>
+          <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
+            I craft clean, accessible, and performant digital experiences for startups and brands worldwide.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <a href="./pages/about.html" class="cta-link group inline-flex items-center gap-2 rounded-full bg-indigo-600 text-white px-5 py-3 shadow hover:shadow-lg hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 transition">
+              <span class="cta-label">see my projects</span>
+              <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+
+            <a href="./pages/about.html" class="cta-link group inline-flex items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-5 py-3 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <span class="cta-label">more about me</span>
+              <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
         </div>
+
+        <!-- Right: Ambient visual (no external image) -->
+        <div class="relative">
+          <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-gray-200 dark:ring-gray-800 bg-gradient-to-br from-indigo-500/20 via-fuchsia-500/10 to-emerald-500/20">
+            <!-- Glow -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="h-32 w-32 sm:h-40 sm:w-40 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 blur-2xl opacity-40"></div>
+            </div>
+            <!-- Skill badges -->
+            <div class="absolute inset-x-6 bottom-6 flex flex-wrap gap-2">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge">Tailwind</span>
+              <span class="badge">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div aria-hidden="true" class="absolute inset-0 -z-10 pointer-events-none">
+        <div class="absolute left-1/2 -top-10 h-60 w-60 sm:h-80 sm:w-80 -translate-x-1/2 rounded-full bg-gradient-to-tr from-indigo-400/20 to-pink-400/20 blur-3xl"></div>
       </div>
     </main>
 
+    <!-- Scroll hint positioned after main -->
+    <div class="relative -mt-16 pointer-events-none">
+      <a href="#projects" aria-label="Scroll to projects" class="pointer-events-auto absolute left-1/2 -translate-x-1/2 inline-flex items-center gap-2 px-3 py-2 rounded-full bg-white/70 dark:bg-gray-900/50 backdrop-blur-sm border border-gray-200 dark:border-gray-800 text-xs text-gray-700 dark:text-gray-300 hover:bg-white dark:hover:bg-gray-800 transition">
+        <span>Scroll</span>
+        <svg class="w-4 h-4 animate-bounce" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 6l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+
     <!-- Projects -->
-    <section class="py-12 sm:py-16 bg-white dark:bg-gray-950 transition-colors">
+    <section id="projects" class="py-12 sm:py-16 bg-white dark:bg-gray-950 transition-colors">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">Projects</h2>
+        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
         <div class="mt-6 grid gap-6 sm:grid-cols-2 auto-rows-fr">
           <article class="card overflow-hidden">
             <img src="./assets/images/libralinkFigma.jpg"
@@ -108,6 +150,14 @@
     </section>
 
     <footer id="site-footer" class="mt-12"></footer>
+    
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
     <script>
       function initTheme() {
         const html = document.documentElement;
@@ -191,9 +241,28 @@
         });
       }
 
+      // Scroll to top button functionality
+      function initScrollToTop() {
+        const btn = document.getElementById('scroll-to-top');
+        if (!btn) return;
+        
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            btn.classList.add('show');
+          } else {
+            btn.classList.remove('show');
+          }
+        });
+        
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
       // Initialize after theme and CTA setup
       initCtaLinks();
       setupImageFallbacks();
+      initScrollToTop();
     </script>
   </body>
 </html>

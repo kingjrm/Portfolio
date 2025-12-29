@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en" class="h-full scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About • King Jerome P. Lacerna</title>
     <meta name="theme-color" content="#4F46E5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -18,14 +16,15 @@
       }
     </script>
   </head>
-  <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300">
-    <nav class="border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur transition-colors duration-300">
+  <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
+    <nav class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur transition-colors duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
         <a href="../index.html" class="font-semibold text-gray-900 dark:text-gray-300">K.J</a>
         <div class="flex items-center gap-8">
           <ul class="flex items-center gap-8">
             <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="../index.html">Home</a></li>
             <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="./about.html">About</a></li>
+            <li><a class="hover:text-gray-700 dark:hover:text-gray-300 text-gray-600 dark:text-gray-400 text-sm transition" href="./contact.html">Contact</a></li>
           </ul>
           <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
             <span class="text-lg">☀️</span>
@@ -34,165 +33,336 @@
       </div>
     </nav>
 
-    <main class="py-12 sm:py-16">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div class="mb-12 animate-fadeInUp">
-          <p class="text-xs tracking-widest uppercase text-gray-500 font-medium mb-2">About me</p>
-          <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-gray-950 dark:text-white mb-3">my journey</h1>
-          <p class="text-gray-600 dark:text-gray-400 font-light">Full details and background about my experience and skills.</p>
-        </div>
-
-        <!-- Profile -->
-        <article class="card glass mb-8">
-          <div class="p-6 grid sm:grid-cols-2 gap-6">
-            <div>
-              <h2 class="font-semibold mb-4">Profile</h2>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
-                Web developer & designer focused on clean, accessible interfaces and performant front‑end experiences.
-              </p>
-            </div>
-            <dl class="text-sm">
-              <div class="grid grid-cols-3 gap-2">
-                <dt class="text-gray-500">Name</dt>
-                <dd class="col-span-2">King Jerome P. Lacerna</dd>
-              </div>
-              <div class="grid grid-cols-3 gap-2 mt-2">
-                <dt class="text-gray-500">Role</dt>
-                <dd class="col-span-2">Web Developer & Designer</dd>
-              </div>
-              <div class="grid grid-cols-3 gap-2 mt-2">
-                <dt class="text-gray-500">Email</dt>
-                <dd class="col-span-2">
-                  <a href="mailto:lacernakingjerome@gmail.com" class="hover:underline">lacernakingjerome@gmail.com</a>
-                </dd>
-              </div>
-              <div class="grid grid-cols-3 gap-2 mt-2">
-                <dt class="text-gray-500">Portfolio</dt>
-                <dd class="col-span-2">
-                  <a href="../index.html" class="hover:underline">Homepage</a>
-                </dd>
-              </div>
-            </dl>
+    <main>
+      <!-- Hero Profile Section -->
+      <section class="relative py-16 sm:py-24 px-4 bg-gradient-to-br from-indigo-50 via-white to-pink-50 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/30">
+        <div class="mx-auto max-w-7xl">
+          <div class="mb-8">
+            <p class="text-xs tracking-widest uppercase text-indigo-600 dark:text-indigo-400 font-medium mb-2">About me</p>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 dark:text-white mb-4" style="font-family: 'Pixelify Sans', sans-serif;">King Jerome P. Lacerna</h1>
+            <p class="text-lg sm:text-xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500 font-semibold mb-6">
+              Web Developer & Creative Designer
+            </p>
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-3xl">
+              I craft clean, accessible, and performant digital experiences for startups and brands worldwide. Currently pursuing a Bachelor of Science in Information Technology at Batangas State University.
+            </p>
           </div>
-        </article>
-
-        <section class="grid gap-6 md:grid-cols-2 mb-12">
-          <article class="card glass">
-            <div class="p-6">
-              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Education</h2>
-              <ul class="space-y-6">
-                <li>
-                  <div class="flex items-start justify-between gap-6">
-                    <div>
-                      <h3 class="font-semibold">Batangas State University TNEU - Lipa</h3>
-                      <p class="text-sm text-gray-700 dark:text-gray-300">
-                        Bachelor of Science in Information Technology, Major in Service Management
-                      </p>
-                      <p class="text-xs text-gray-600 dark:text-gray-400">
-                        GWA: 1.4286 • Dean's Lister: First Year – Present
-                      </p>
-                    </div>
-                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
-                      Lipa, Batangas<br />
-                      Expected Graduation: July 2026
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="flex items-start justify-between gap-6">
-                    <div>
-                      <h3 class="font-semibold">Pansol Integrated National High School</h3>
-                      <p class="text-sm text-gray-700 dark:text-gray-300">
-                        Science, Technology, Engineering, and Mathematics (STEM)
-                      </p>
-                    </div>
-                    <div class="text-right text-xs text-gray-500 dark:text-gray-400">
-                      Lipa, Batangas<br />
-                      September 2020 – June 2022
-                    </div>
-                  </div>
-                </li>
-              </ul>
+          
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+            <div class="card glass p-6">
+              <dt class="text-sm text-gray-500 dark:text-gray-400 mb-1">Email</dt>
+              <dd class="font-semibold"><a href="mailto:lacernakingjerome@gmail.com" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">lacernakingjerome@gmail.com</a></dd>
             </div>
-          </article>
-
-          <article class="card glass">
-            <div class="p-6">
-              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Skills</h2>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge">HTML</span>
-                <span class="badge">CSS</span>
-                <span class="badge">JavaScript</span>
-                <span class="badge">Tailwind CSS</span>
-                <span class="badge">Figma</span>
-                <span class="badge">Responsive UI</span>
-                <span class="badge">Design Systems</span>
-                <span class="badge">Accessibility</span>
-              </div>
+            <div class="card glass p-6">
+              <dt class="text-sm text-gray-500 dark:text-gray-400 mb-1">Location</dt>
+              <dd class="font-semibold">Padre Garcia, Batangas</dd>
             </div>
-          </article>
-
-          <article class="card glass">
-            <div class="p-6">
-              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Experience</h2>
-              <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
-                <li>• Role • Company • Dates</li>
-                <li>• Role • Company • Dates</li>
-              </ul>
+            <div class="card glass p-6">
+              <dt class="text-sm text-gray-500 dark:text-gray-400 mb-1">GWA</dt>
+              <dd class="font-semibold">1.4286</dd>
             </div>
-          </article>
-
-          <article class="card glass">
-            <div class="p-6">
-              <h2 class="font-semibold text-gray-900 dark:text-white mb-4">Projects</h2>
-              <div class="grid gap-4 sm:grid-cols-2">
-                <div class="card overflow-hidden">
-                  <img src="../assets/images/libralinkFigma.jpg"
-                       data-fallback="/Portfolio/assets/images/libralinkFigma.jpg, ../assets/images/libralinkFigma.jpeg, ../assets/images/LibraLinkFigma.jpg, ../assets/images/libralinkFigma.png"
-                       alt="LibraLink • Figma"
-                       class="h-40 w-full object-cover rounded-t-lg"
-                       loading="lazy" />
-                  <div class="p-4">
-                    <h3 class="font-semibold">LibraLink • Figma</h3>
-                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Responsive UI exploration and prototyping.</p>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                      <span class="badge">Figma</span><span class="badge">UI</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card overflow-hidden group relative">
-                  <img src="../assets/images/responsysFigma.jpg"
-                       data-fallback="/Portfolio/assets/images/responsysFigma.jpg, ../assets/images/responsysFigma.jpeg, ../assets/images/ResponsysFigma.jpg, ../assets/images/responsysFigma.png"
-                       alt="Responsys • Figma"
-                       class="h-40 w-full object-cover rounded-t-lg"
-                       loading="lazy" />
-                  <div class="p-4">
-                    <h3 class="font-semibold">Responsys • Figma</h3>
-                    <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Dashboard layout and component system.</p>
-                    <div class="mt-3 flex flex-wrap gap-2">
-                      <span class="badge">Figma</span><span class="badge">Design System</span>
-                    </div>
-                  </div>
-                  <!-- Expandable overlay on hover -->
-                  <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end rounded-lg overflow-hidden">
-                    <div class="w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/80 to-transparent p-4">
-                      <a class="btn w-full text-center justify-center text-sm" href="https://responsysgarcia.com" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="card glass p-6">
+              <dt class="text-sm text-gray-500 dark:text-gray-400 mb-1">Status</dt>
+              <dd class="font-semibold">Dean's Lister</dd>
             </div>
-          </article>
-        </section>
-
-        <div class="flex flex-wrap gap-3">
-          <a class="btn-outline hover:scale-105 transition duration-300" href="mailto:lacernakingjerome@gmail.com">Email Me</a>
-          <a class="btn-outline hover:scale-105 transition duration-300" href="../index.html">Back to Home</a>
+          </div>
         </div>
-      </div>
-    </main>
+      </section>
 
-    <footer id="site-footer" class="mt-12"></footer>
+      <!-- Education Section -->
+      <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Education</h2>
+          <div class="grid lg:grid-cols-2 gap-6">
+            <article class="card p-8 hover:shadow-xl transition-shadow duration-300">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Batangas State University TNEU - Lipa</h3>
+                <span class="badge whitespace-nowrap">2022 – 2026</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-300 mb-2">
+                Bachelor of Science in Information Technology<br />
+                <span class="text-sm">Major in Service Management</span>
+              </p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                GWA: 1.4286 • Dean's Lister: First Year – Present
+              </p>
+              <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Expected Graduation: July 2026</p>
+            </article>
+
+            <article class="card p-8 hover:shadow-xl transition-shadow duration-300">
+              <div class="flex items-start justify-between gap-4 mb-4">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pansol Integrated National High School</h3>
+                <span class="badge whitespace-nowrap">2020 – 2022</span>
+              </div>
+              <p class="text-gray-700 dark:text-gray-300 mb-2">
+                Science, Technology, Engineering, and Mathematics (STEM)
+              </p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Graduated with High Honors
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/20">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Skills & Expertise</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="card glass p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Frontend</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
+                  </svg>
+                  HTML
+                </span>
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
+                  </svg>
+                  CSS
+                </span>
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
+                  </svg>
+                  JavaScript
+                </span>
+              </div>
+            </div>
+            <div class="card glass p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Frameworks</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+                  </svg>
+                  Tailwind CSS
+                </span>
+              </div>
+            </div>
+            <div class="card glass p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                </svg>
+                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Design</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/>
+                  </svg>
+                  Figma
+                </span>
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  Responsive UI
+                </span>
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                  </svg>
+                  Design Systems
+                </span>
+              </div>
+            </div>
+            <div class="card glass p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Best Practices</h3>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge inline-flex items-center gap-1.5">
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                  </svg>
+                  Accessibility
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Events & Workshops</h2>
+          <div class="space-y-6">
+            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Junior Philippine Computer Society BatStateU TNEU–Lipa Chapter</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Member of the Junior Philippine Computer Society, actively participating in academic and technology-related activities that promote professional growth and collaboration among IT students.</p>
+                </div>
+                <span class="badge whitespace-nowrap">Aug 2022 – Jun 2026</span>
+              </div>
+            </article>
+
+            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Techsynergy: Navigating the Digital Landscape</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Certified participant of Techsynergy, gaining knowledge on emerging digital technologies, innovation, and modern IT practices.</p>
+                </div>
+                <span class="badge whitespace-nowrap">Lipa City</span>
+              </div>
+            </article>
+
+            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Techno SDG Exposition – Junior</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Completed the Techno SDG Exposition – Junior, focusing on sustainable development goals and the role of technology in promoting social and environmental responsibility.</p>
+                </div>
+                <span class="badge whitespace-nowrap">Oct 2025</span>
+              </div>
+            </article>
+
+            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
+              <div class="flex items-start justify-between gap-4 mb-3">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">2nd Place – Creative Clicks CICS UI/UX Design Challenge</h3>
+                  <p class="text-sm text-gray-600 dark:text-gray-400">Awarded Second Place in the Creative Clicks UI/UX Design Challenge for demonstrating creativity, usability, and effective interface design.</p>
+                </div>
+                <span class="badge whitespace-nowrap">Lipa City</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certificates Section -->
+      <section class="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/20">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Certificates & Achievements</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            <!-- Certificate 1 -->
+            <article class="card p-6 hover:shadow-xl transition-shadow duration-300">
+              <div class="mb-4 aspect-video bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/20 rounded-lg flex items-center justify-center overflow-hidden">
+                <svg class="w-12 h-12 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">2025 World Innovation Day</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Certificate of Participation for active participation in the 2025 World Innovation Day with the theme "Advancing Innovation for Sustainable Cities" held on April 21, 2025 via Google Meet.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge text-xs">Apr 2025</span>
+                <span class="badge text-xs">Innovation</span>
+              </div>
+            </article>
+
+            <!-- Certificate 2 -->
+            <article class="card p-6 hover:shadow-xl transition-shadow duration-300">
+              <div class="mb-4 aspect-video bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/20 rounded-lg flex items-center justify-center overflow-hidden">
+                <svg class="w-12 h-12 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">BITCON 2025</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Certificate of Participation for active participation in the Batangas Information Technology Conference (BITCON) 2025 with the theme "Building a Connected Tomorrow: IoT Innovations and Beyond" held on April 26, 2025 at Lipa Academy for Sports, Culture and Arts Convention Center.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge text-xs">Apr 2025</span>
+                <span class="badge text-xs">Technology</span>
+              </div>
+            </article>
+
+            <!-- Certificate 3 -->
+            <article class="card p-6 hover:shadow-xl transition-shadow duration-300">
+              <div class="mb-4 aspect-video bg-gradient-to-br from-amber-100 to-yellow-100 dark:from-amber-900/30 dark:to-yellow-900/20 rounded-lg flex items-center justify-center overflow-hidden">
+                <svg class="w-12 h-12 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">TechSilog: Building High-Performance Teams</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Certificate of Participation for actively participating in the TechSilog: Uaapang Agham, Kaulam sa Umagahan Online Seminar on "Building High-Performance Teams for Startup Technopreneurs" held on September 3, 2025 via Facebook Live.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="badge text-xs">Sep 2025</span>
+                <span class="badge text-xs">Entrepreneurship</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
+        <div class="mx-auto max-w-7xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Featured Projects</h2>
+          <div class="grid md:grid-cols-2 gap-8">
+            <article class="card overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <img src="../assets/images/libralinkFigma.jpg"
+                   data-fallback="/Portfolio/assets/images/libralinkFigma.jpg, ../assets/images/libralinkFigma.jpeg, ../assets/images/LibraLinkFigma.jpg, ../assets/images/libralinkFigma.png"
+                   alt="LibraLink • Figma"
+                   class="h-72 w-full object-cover"
+                   loading="lazy" />
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">LibraLink • Figma</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Responsive UI exploration and prototyping based on resume highlights.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge">Figma</span><span class="badge">UI</span><span class="badge">Responsive</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="card overflow-hidden group relative hover:shadow-2xl transition-shadow duration-300">
+              <img src="../assets/images/responsysFigma.jpg"
+                   data-fallback="/Portfolio/assets/images/responsysFigma.jpg, ../assets/images/responsysFigma.jpeg, ../assets/images/ResponsysFigma.jpg, ../assets/images/responsysFigma.png"
+                   alt="Responsys • Figma"
+                   class="h-72 w-full object-cover"
+                   loading="lazy" />
+              <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">Responsys • Figma</h3>
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Dashboard layout and component system aligned with resume experience.</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="badge">Figma</span><span class="badge">Design System</span><span class="badge">Components</span>
+                </div>
+              </div>
+              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end overflow-hidden">
+                <div class="w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/80 to-transparent p-6">
+                  <a class="btn w-full text-center justify-center" href="https://responsysgarcia.com" target="_blank" rel="noopener noreferrer">Live Demo →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    
+
+    <footer id="site-footer" class="mt-0"></footer>
+    
+    <!-- Scroll to top button -->
+    <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M12 19V5M5 12l7-7 7 7" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
     <script>
       function initTheme() {
         const html = document.documentElement;
@@ -248,6 +418,26 @@
         .catch(console.error);
 
       setupImageFallbacks();
+
+      // Scroll to top button functionality
+      function initScrollToTop() {
+        const btn = document.getElementById('scroll-to-top');
+        if (!btn) return;
+        
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            btn.classList.add('show');
+          } else {
+            btn.classList.remove('show');
+          }
+        });
+        
+        btn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      
+      initScrollToTop();
     </script>
   </body>
 </html>
