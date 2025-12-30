@@ -3,6 +3,12 @@
 :root {
   --brand-600: #4F46E5;
   --brand-500: #6366F1;
+  --wave-fill: #ffffff; /* light theme target background */
+  --wave-stroke: #d1d5db; /* light: darker gray-300 for better visibility */
+}
+.dark {
+  --wave-fill: #0b0b12; /* dark theme target background */
+  --wave-stroke: rgba(255,255,255,.12); /* dark: slightly more visible */
 }
 
 html { 
@@ -335,4 +341,26 @@ footer {
 .dark .scroll-to-top:hover {
   background: #818CF8;
   box-shadow: 0 8px 20px rgba(99, 102, 241, 0.5);
+}
+
+/* Decorative wave separator */
+.wave-separator {
+  line-height: 0;
+}
+.wave-separator svg {
+  display: block;
+  width: 100%;
+  height: 80px;
+  filter: drop-shadow(0 -1px 3px rgba(0,0,0,0.08));
+}
+.dark .wave-separator svg {
+  filter: drop-shadow(0 -1px 3px rgba(255,255,255,0.05));
+}
+/* All paths get a visible stroke for definition */
+.wave-separator svg path {
+  stroke: var(--wave-stroke);
+  stroke-width: 1.5;
+}
+@media (min-width: 640px) {
+  .wave-separator svg { height: 110px; }
 }
