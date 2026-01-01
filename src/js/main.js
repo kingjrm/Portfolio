@@ -100,6 +100,21 @@ function setupImageFallbacksGlobal() {
   });
 }
 
+function initScrollAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('[data-scroll-animate]').forEach(el => {
+    observer.observe(el);
+  });
+}
+
 (async function bootstrap() {
   // Determine the correct path prefix based on current location
   const isInPages = location.pathname.includes('/pages/');
@@ -114,4 +129,5 @@ function setupImageFallbacksGlobal() {
   renderProjects();
   initCtaLinksGlobal();
   setupImageFallbacksGlobal();
+  initScrollAnimations();
 })();
