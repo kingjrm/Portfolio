@@ -1,23 +1,24 @@
 [
   {
+    "title": "LibraLink • Figma",
+    "description": "Library management system for Batangas State University - Lipa Campus featuring student access tracking and streamlined book borrowing.",
+    "tags": ["Figma", "UI", "Responsive"],
+    "url": "https://www.figma.com/design/IVB1rvkB3edy6krUrvnA86/High-Fidelity-Wireframe-Libralink?node-id=0-1&t=aevcvyOsbTyAfpcC-1",
+    "image": "../assets/images/libralinkFigma.jpg"
+  },
+  {
+    "title": "Responsys • Figma",
+    "description": "An incident management system designed for the MDRRMO of Padre Garcia, enabling citizens to report emergencies and allowing responders to coordinate rapid response efforts in real-time.",
+    "tags": ["Figma", "Design System", "Components"],
+    "url": "https://www.figma.com/design/lVszmaSnQdLW7cx2S8srut/MDRRMO-Capstone?node-id=0-1&t=7M0aTp3xEcfvXqql-1",
+    "liveUrl": "https://responsysgarcia.com",
+    "image": "../assets/images/responsysFigma.jpg"
+  },
+  {
     "title": "Portfolio Website",
     "description": "Responsive site built with Tailwind and vanilla JS.",
     "tags": ["Tailwind", "HTML", "JS"],
     "url": "https://example.com/portfolio",
     "image": "./assets/images/portfolio.jpg"
-  },
-  {
-    "title": "UI Components",
-    "description": "Reusable components library for quick prototyping.",
-    "tags": ["Design System", "CSS"],
-    "url": "https://example.com/components",
-    "image": "./assets/images/components.jpg"
-  },
-  {
-    "title": "API Demo",
-    "description": "Fetches and renders data from a public API.",
-    "tags": ["Fetch", "JSON"],
-    "url": "https://example.com/api-demo",
-    "image": "./assets/images/api.jpg"
   }
 ]

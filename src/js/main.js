@@ -101,8 +101,12 @@ function setupImageFallbacksGlobal() {
 }
 
 (async function bootstrap() {
-  await loadComponent("site-header", "./src/components/header.html");
-  await loadComponent("site-footer", "./src/components/footer.html");
+  // Determine the correct path prefix based on current location
+  const isInPages = location.pathname.includes('/pages/');
+  const prefix = isInPages ? '../' : './';
+  
+  await loadComponent("site-header", prefix + "src/components/header.html");
+  await loadComponent("site-footer", prefix + "src/components/footer.html");
   setActiveNav();
   initTheme();
   const yearEl = document.getElementById("year");
