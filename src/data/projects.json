@@ -1,5 +1,12 @@
 [
   {
+    "title": "OJT Organizer",
+    "description": "A comprehensive OJT (On-the-Job Training) tracking application for monitoring student progress, managing training activities, and facilitating communication between trainees, supervisors, and coordinators.",
+    "tags": ["Figma", "Design", "In Development"],
+    "url": "https://www.figma.com/design/SdRPGA0j5V7RWUEyJmgBN7/OJT-Organizer?node-id=0-1&p=f&t=91BZjVbhnBBjkvOl-0",
+    "image": "../assets/images/ojtFigma.jpg"
+  },
+  {
     "title": "LibraLink • Figma",
     "description": "Library management system for Batangas State University - Lipa Campus featuring student access tracking and streamlined book borrowing.",
     "tags": ["Figma", "UI", "Responsive"],
