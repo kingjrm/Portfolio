@@ -27,5 +27,12 @@
     "tags": ["Tailwind", "HTML", "JS"],
     "url": "https://example.com/portfolio",
     "image": "./assets/images/portfolio.jpg"
+  },
+  {
+    "title": "School Skill",
+    "description": "A Learning Management System (LMS) designed to function like Google Classroom, providing tools for educators and students to collaborate, share resources, and manage coursework effectively.",
+    "tags": ["Figma", "Design", "LMS", "In Development"],
+    "url": "https://www.figma.com/design/OpoVtpDbcDGxogNj0RdGrA/School-Skill?t=pnXwaxJUQdqZBJAg-1",
+    "image": "../assets/images/SchoolSkill.png"
   }
 ]

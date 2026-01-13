@@ -34,7 +34,7 @@ function initTheme() {
 }
 
 async function renderProjects() {
-  const grid = document.getElementById("projects-grid");
+  const grid = document.getElementById("projects-container");
   if (!grid) return;
   try {
     const data = await (await fetch("../src/data/projects.json")).json().catch(async () => {
