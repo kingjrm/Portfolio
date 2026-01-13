@@ -35,4 +35,28 @@
     "url": "https://www.figma.com/design/OpoVtpDbcDGxogNj0RdGrA/School-Skill?t=pnXwaxJUQdqZBJAg-1",
     "image": "../assets/images/SchoolSkill.png"
   }
+  ,
+  {
+    "title": "My Diary System",
+    "description": "A beautifully designed diary system that empowers users to manage their thoughts and reflections day by day. Features an intuitive interface focused on daily journaling and personal growth.",
+    "tags": ["Figma", "UI/UX", "Diary", "Design"],
+    "url": "https://www.figma.com/design/Ha7Bh9ah7lV0g9n05FzjRW/My-Diary?t=pnXwaxJUQdqZBJAg-1",
+    "image": "../assets/images/diaryFigma.jpg"
+  }
+  ,
+  {
+    "title": "InventoryBox (Admin)",
+    "description": "A robust inventory management system designed for administrators to efficiently track, organize, and manage all assets and inventory. Built with a focus on usability and streamlined workflows for admin users.",
+    "tags": ["Figma", "Inventory", "Admin", "Design"],
+    "url": "https://www.figma.com/design/oFwmxHmlpeE0EDAyYVaEZ6/InventoryBox?t=pnXwaxJUQdqZBJAg-1",
+    "image": "../assets/images/inventoryboxFigma.jpg"
+  }
+  ,
+  {
+    "title": "Weather Application",
+    "description": "A modern weather app with a clean, user-friendly interface, providing real-time weather updates and forecasts. Designed for clarity and ease of use.",
+    "tags": ["Figma", "Weather", "UI", "Design"],
+    "url": "https://www.figma.com/design/JmpNFi8whNb84iDYHvU1Nq/Weather-App?t=pnXwaxJUQdqZBJAg-1",
+    "image": "../assets/images/weatherFigma.jpg"
+  }
 ]
