@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      html { overflow-x: hidden; }
+      html { overflow-x: hidden; height: 100%; }
+      body { min-height: 100vh; display: flex; flex-direction: column; margin: 0; padding: 0; }
+      main { flex: 1; }
       .intro-overlay{position:fixed;inset:0;z-index:70;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 50%, #000000 0%, #111111 50%, #000000 100%);color:#e5e7eb;transition:opacity .6s ease,visibility .6s ease;}
       .intro-particles{position:absolute;inset:0;pointer-events:none;}
       .intro-particle{width:4px;height:4px;border-radius:50%;background:#ffffff;opacity:0.6;animation:intro-particle-float 8s linear infinite;}
@@ -42,6 +44,8 @@
       @keyframes intro-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);} }
       @keyframes intro-spark{0%{opacity:.35;transform:translateY(-4px);}100%{opacity:.65;transform:translateY(6px);}}
       @keyframes intro-title-sweep{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+      .cursor-follower{position:fixed;width:20px;height:20px;background:rgba(255,255,255,0.1);border-radius:50%;pointer-events:none;z-index:9999;transition:transform 0.1s ease;}
+      .cursor-dot{position:fixed;width:8px;height:8px;background:#ffffff;border-radius:50%;pointer-events:none;z-index:10000;}
       /* Hero ambient */
       .hero-ambient{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}
       .hero-blob{position:absolute;border-radius:40%;filter:blur(38px);opacity:.32;animation:hero-drift 22s ease-in-out infinite;}
