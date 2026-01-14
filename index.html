@@ -44,8 +44,8 @@
       @keyframes intro-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);} }
       @keyframes intro-spark{0%{opacity:.35;transform:translateY(-4px);}100%{opacity:.65;transform:translateY(6px);}}
       @keyframes intro-title-sweep{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-      .cursor-follower{position:fixed;width:20px;height:20px;background:rgba(255,255,255,0.1);border-radius:50%;pointer-events:none;z-index:9999;transition:transform 0.1s ease;}
-      .cursor-dot{position:fixed;width:8px;height:8px;background:#ffffff;border-radius:50%;pointer-events:none;z-index:10000;}
+      .cursor-follower{position:fixed;width:30px;height:30px;border:2px solid rgba(255,255,255,0.3);border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);pointer-events:none;z-index:9999;transition:transform 0.15s ease;backdrop-filter:blur(2px);}
+      .cursor-dot{position:fixed;width:6px;height:6px;background:#ffffff;border-radius:50%;pointer-events:none;z-index:10000;box-shadow:0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(255,255,255,0.4);}
       /* Hero ambient */
       .hero-ambient{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}
       .hero-blob{position:absolute;border-radius:40%;filter:blur(38px);opacity:.32;animation:hero-drift 22s ease-in-out infinite;}
@@ -99,7 +99,7 @@
       <p class="intro-subtitle">Full-Stack Developer</p>
       <div class="intro-progress"><span></span></div>
     </div>
-    <nav class="sticky top-0 z-50 bg-black backdrop-blur border-b border-white/20 transition-all duration-300 shadow-xl">
+    <nav class="sticky top-0 z-50 bg-black backdrop-blur border-b border-white/20 transition-all duration-300 shadow-xl" style="-webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
         <a href="./index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
           K.J
