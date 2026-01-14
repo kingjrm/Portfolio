@@ -284,6 +284,33 @@
           if (y) y.textContent = new Date().getFullYear().toString();
         })
         .catch(console.error);
+
+      // Cursor follower with color inversion
+      const cursorFollower = document.createElement('div');
+      cursorFollower.className = 'cursor-follower';
+      document.body.appendChild(cursorFollower);
+
+      const cursorDot = document.createElement('div');
+      cursorDot.className = 'cursor-dot';
+      document.body.appendChild(cursorDot);
+
+      let mouseX = 0, mouseY = 0;
+      let followerX = 0, followerY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorDot.style.left = `${mouseX}px`;
+        cursorDot.style.top = `${mouseY}px`;
+      });
+
+      function updateFollower() {
+        followerX += (mouseX - followerX) * 0.1; // Delay factor
+        followerY += (mouseY - followerY) * 0.1;
+        cursorFollower.style.transform = `translate(${followerX - 20}px, ${followerY - 20}px)`;
+        requestAnimationFrame(updateFollower);
+      }
+      updateFollower();
     </script>
   </body>
 </html>
