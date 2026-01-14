@@ -4,49 +4,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>King Jerome P. Lacerna • Portfolio</title>
+    <link rel="icon" type="image/png" href="/Portfolio/assets/images/logoPortfolio.png" />
     <meta name="theme-color" content="#4F46E5" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <style>
-      .intro-overlay{position:fixed;inset:0;z-index:70;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 18% 20%,rgba(99,102,241,.25),transparent 32%),radial-gradient(circle at 78% 38%,rgba(168,85,247,.22),transparent 32%),radial-gradient(circle at 50% 65%,rgba(14,165,233,.18),transparent 34%),linear-gradient(135deg,#050814 0%,#0a1022 48%,#060914 100%);color:#e5e7eb;transition:opacity .6s ease,visibility .6s ease;overflow:hidden;padding:clamp(1.2rem,3vw,2rem);}
-      .intro-overlay::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,0) 40%,rgba(255,255,255,.05) 70%,rgba(255,255,255,0) 100%);opacity:.22;mix-blend-mode:screen;animation:intro-sheen 6s linear infinite;}
-      .intro-overlay::after{content:"";position:absolute;inset:-40%;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 50%);animation:intro-float 14s ease-in-out infinite;opacity:.32;}
-      .intro-grid,.intro-sparkles{position:absolute;inset:0;pointer-events:none;}
-      .intro-grid{background:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:120px 120px;opacity:.18;mask-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,.7),transparent 70%);}
-      .intro-sparkles{background:radial-gradient(circle at 20% 30%,rgba(255,255,255,.35) 0,rgba(255,255,255,0) 18%),radial-gradient(circle at 70% 20%,rgba(255,255,255,.28) 0,rgba(255,255,255,0) 16%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.3) 0,rgba(255,255,255,0) 20%);mix-blend-mode:screen;animation:intro-spark 8s ease-in-out infinite alternate;opacity:.55;}
-      .intro-shell{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(1.8rem,4vw,3rem);width:min(1120px,92%);padding:clamp(1.9rem,3.4vw,3rem) clamp(1.7rem,4.2vw,3.3rem);border:1px solid rgba(255,255,255,.07);border-radius:1.6rem;backdrop-filter:blur(8px);background:linear-gradient(135deg,rgba(14,18,34,.78),rgba(6,9,18,.7));box-shadow:0 22px 70px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.02);animation:intro-pop .65s ease forwards;transform:translateY(10px) scale(.985);opacity:0;}
-      .intro-meta{max-width:640px;}
-      .intro-badge{letter-spacing:.25em;text-transform:uppercase;font-size:.68rem;color:#c7d2fe;display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:.45rem .95rem;border-radius:9999px;box-shadow:0 8px 30px rgba(0,0,0,.2);}
-      .intro-dot{width:7px;height:7px;border-radius:9999px;background:linear-gradient(120deg,#8b5cf6,#22d3ee);box-shadow:0 0 12px rgba(139,92,246,.7);}
-      .intro-title{font-family:'Pixelify Sans', cursive;font-size:clamp(2.45rem,3.9vw,3.2rem);font-weight:800;letter-spacing:.01em;margin-bottom:.2rem;background:linear-gradient(120deg,#f8fafc 0%,#c7d2fe 35%,#a5b4fc 55%,#f8fafc 80%);background-size:200% 200%;-webkit-background-clip:text;color:transparent;text-shadow:0 10px 40px rgba(0,0,0,.55);animation:intro-title-sweep 6s ease-in-out infinite;}
-      .intro-tagline{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:#a5b4fc;margin-bottom:.8rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:.4rem .9rem;border-radius:9999px;box-shadow:0 12px 32px rgba(0,0,0,.28);}
-      .intro-tagline::before{content:"//";color:#8b5cf6;font-weight:700;}
-      .intro-sub{color:#cbd5e1;font-size:1.02rem;line-height:1.6;max-width:48ch;}
-      .intro-row{margin-top:1.1rem;display:flex;gap:.55rem;flex-wrap:wrap;}
-      .intro-chip{font-size:.82rem;padding:.5rem .85rem;border-radius:.9rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);color:#e5e7eb;animation:intro-rise .9s ease forwards;opacity:0;transform:translateY(6px);box-shadow:0 10px 32px rgba(0,0,0,.18);}
-      .intro-chip:nth-child(1){animation-delay:.2s;}
-      .intro-chip:nth-child(2){animation-delay:.32s;}
-      .intro-chip:nth-child(3){animation-delay:.44s;}
-      .intro-progress{margin-top:1.35rem;width:82%;height:8px;border-radius:9999px;background:rgba(255,255,255,.08);overflow:hidden;position:relative;box-shadow:0 12px 32px rgba(0,0,0,.28) inset;}
-      .intro-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#4f46e5,#8b5cf6,#0ea5e9);animation:intro-bar 1.7s ease forwards .25s;box-shadow:0 10px 24px rgba(99,102,241,.45);}
-      .intro-hint{font-size:.86rem;margin-top:.7rem;opacity:.82;color:#cbd5e1;display:flex;align-items:center;gap:.45rem;}
-      .intro-enter{margin-top:1.15rem;display:inline-flex;align-items:center;gap:.55rem;padding:.7rem 1.25rem;border-radius:1rem;background:linear-gradient(120deg,rgba(99,102,241,.26),rgba(14,165,233,.24));border:1px solid rgba(255,255,255,.18);color:#e5e7eb;font-weight:800;font-size:.94rem;letter-spacing:.01em;transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;box-shadow:0 14px 32px rgba(0,0,0,.28);}
-      .intro-enter:hover{transform:translateY(-1px) scale(1.005);box-shadow:0 16px 36px rgba(0,0,0,.3);filter:brightness(1.04);}
-      .intro-graphic{position:relative;isolation:isolate;min-height:280px;max-height:360px;display:flex;align-items:center;justify-content:center;transform:translate3d(var(--gx,0),var(--gy,0),0);transition:transform .18s ease-out;}
-      .intro-orb{position:absolute;inset:12%;background:radial-gradient(circle at 30% 30%,rgba(124,58,237,.52),rgba(59,130,246,.34),rgba(8,7,17,.5));filter:blur(10px);border-radius:32%;transform:rotate(-6deg);animation:intro-float 12s ease-in-out infinite;opacity:.82;}
-      .intro-ring{position:absolute;inset:18%;border:1px solid rgba(255,255,255,.1);border-radius:42%;transform:rotate(calc(8deg + var(--gr,0deg)));animation:intro-spin 18s linear infinite;}
-      .intro-ring-two{inset:6%;border-radius:50%;opacity:.52;animation-direction:reverse;transform:rotate(calc(8deg - var(--gr,0deg)));}
-      .intro-beam{position:absolute;width:58%;height:150%;background:linear-gradient(120deg,rgba(255,255,255,.18),rgba(255,255,255,0));transform:rotate(-16deg) translateX(var(--bx,0));mix-blend-mode:screen;animation:intro-sheen 7s linear infinite;opacity:.44;}
-      .intro-label{position:relative;z-index:1;padding:.5rem 1rem;border-radius:.95rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(8px);color:#e5e7eb;font-size:.9rem;font-weight:700;display:inline-flex;align-items:center;gap:.5rem;box-shadow:0 14px 30px rgba(0,0,0,.26);text-transform:uppercase;letter-spacing:.08em;}
-      .intro-label::before{content:"";width:8px;height:8px;border-radius:9999px;background:linear-gradient(120deg,#22d3ee,#8b5cf6);box-shadow:0 0 14px rgba(139,92,246,.8);}      
+      .intro-overlay{position:fixed;inset:0;z-index:70;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 50%, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);color:#e5e7eb;transition:opacity .6s ease,visibility .6s ease;}
+      .intro-particles{position:absolute;inset:0;pointer-events:none;}
+      .intro-particle{width:4px;height:4px;border-radius:50%;background:#a5b4fc;opacity:0.6;animation:intro-particle-float 8s linear infinite;}
+      .intro-particle:nth-child(1){top:20%;left:10%;animation-delay:0s;}
+      .intro-particle:nth-child(2){top:60%;left:80%;animation-delay:2s;}
+      .intro-particle:nth-child(3){top:40%;left:50%;animation-delay:4s;}
+      .intro-particle:nth-child(4){top:80%;left:20%;animation-delay:6s;}
+      .intro-logo{animation: intro-logo-fade-in 1.2s ease forwards, intro-logo-pulse 2s ease-in-out infinite 1.5s; opacity: 0; filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));}
+      .intro-text{margin-top:1rem; font-family:'Pixelify Sans', cursive; font-size:1.5rem; color:#a5b4fc; animation: intro-text-fade-in 1.5s ease forwards 0.5s; opacity:0;}
+      .intro-progress{margin-top:2rem;width:200px;height:4px;border-radius:2px;background:rgba(255,255,255,0.2);overflow:hidden;position:relative;}
+      .intro-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#4f46e5,#8b5cf6,#0ea5e9);animation:intro-bar-fill 2.2s ease forwards;}
       .intro-hide{opacity:0;visibility:hidden;}
-      @keyframes intro-bar{to{width:100%;}}
-      @keyframes intro-pop{to{opacity:1;transform:translateY(0) scale(1);}}
-      @keyframes intro-rise{to{opacity:1;transform:translateY(0);}}
-      @keyframes intro-sheen{from{transform:translateX(-20%);}to{transform:translateX(20%);}}
-      @keyframes intro-float{0%{transform:translate(0,0) scale(1);}50%{transform:translate(8%,6%) scale(1.05);}100%{transform:translate(0,0) scale(1);} }
+      @keyframes intro-logo-fade-in{from{opacity:0; transform:scale(0.5) rotate(-10deg);}to{opacity:1; transform:scale(1) rotate(0deg);}}
+      @keyframes intro-logo-pulse{0%,100%{filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));}50%{filter: drop-shadow(0 0 30px rgba(255,255,255,0.6));}}
+      @keyframes intro-text-fade-in{from{opacity:0; transform:translateY(20px);}to{opacity:1; transform:translateY(0);}}
+      @keyframes intro-bar-fill{to{width:100%;}}
+      @keyframes intro-particle-float{0%{transform:translateY(0) translateX(0); opacity:0;}10%{opacity:0.6;}90%{opacity:0.6;}100%{transform:translateY(-100vh) translateX(50px); opacity:0;}}
       @keyframes intro-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);} }
       @keyframes intro-spark{0%{opacity:.35;transform:translateY(-4px);}100%{opacity:.65;transform:translateY(6px);}}
       @keyframes intro-title-sweep{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
@@ -85,36 +66,15 @@
   </head>
   <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
     <div id="intro-overlay" class="intro-overlay">
-      <div class="intro-grid" aria-hidden="true"></div>
-      <div class="intro-sparkles" aria-hidden="true"></div>
-      <div class="intro-shell">
-        <div class="intro-meta">
-          <div class="intro-badge"><span class="intro-dot"></span><span>Portfolio</span></div>
-          <div class="intro-tagline">Front-end engineer • UI systems • Motion</div>
-          <div class="intro-title">King Jerome P. Lacerna</div>
-          <p class="intro-sub">Crafting playful, precise web experiences with a pixel heart.</p>
-          <div class="intro-row">
-            <span class="intro-chip">Pixelify vibe</span>
-            <span class="intro-chip">Clean builds</span>
-            <span class="intro-chip">Human-first</span>
-          </div>
-          <div class="intro-progress" aria-hidden="true"><span></span></div>
-          <p class="intro-hint">Click, tap, or press Enter to dive in</p>
-          <button id="intro-enter" class="intro-enter" type="button" aria-label="Enter the portfolio">
-            <span>Enter now</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="intro-graphic" aria-hidden="true">
-          <div class="intro-orb"></div>
-          <div class="intro-ring"></div>
-          <div class="intro-ring intro-ring-two"></div>
-          <div class="intro-beam"></div>
-          <div class="intro-label">Loading smooth pixels</div>
-        </div>
+      <div class="intro-particles">
+        <div class="intro-particle"></div>
+        <div class="intro-particle"></div>
+        <div class="intro-particle"></div>
+        <div class="intro-particle"></div>
       </div>
+      <img src="./assets/images/logoPortfolio.png" alt="Portfolio Logo" class="w-32 h-32 intro-logo" />
+      <p class="intro-text">King Jerome P. Lacerna</p>
+      <div class="intro-progress"><span></span></div>
     </div>
     <nav class="sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur transition-colors duration-300">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-14 items-center justify-between">
