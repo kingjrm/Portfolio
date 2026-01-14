@@ -4,21 +4,21 @@
     "description": "A comprehensive OJT (On-the-Job Training) tracking application for monitoring student progress, managing training activities, and facilitating communication between trainees, supervisors, and coordinators.",
     "tags": ["Figma", "Design", "In Development"],
     "url": "https://www.figma.com/design/SdRPGA0j5V7RWUEyJmgBN7/OJT-Organizer?node-id=0-1&p=f&t=91BZjVbhnBBjkvOl-0",
-    "image": "/Portfolio/assets/images/ojtFigma.jpg"
+    "image": "../assets/images/ojtFigma.jpg"
   },
   {
     "title": "Jawibi App",
     "description": "Jawibi is an ordering system with admin and customer interfaces, primarily designed for admins to track sales and manage orders efficiently.",
     "tags": ["Mobile", "App", "Design"],
     "url": "#",
-    "image": "/Portfolio/assets/images/jawibi.jpg"
+    "image": "../assets/images/jawibi.jpg"
   },
   {
     "title": "LibraLink • Figma",
     "description": "Library management system for Batangas State University - Lipa Campus featuring student access tracking and streamlined book borrowing.",
     "tags": ["Figma", "UI", "Responsive"],
     "url": "https://www.figma.com/design/IVB1rvkB3edy6krUrvnA86/High-Fidelity-Wireframe-Libralink?node-id=0-1&t=aevcvyOsbTyAfpcC-1",
-    "image": "/Portfolio/assets/images/libralinkFigma.jpg"
+    "image": "../assets/images/libralinkFigma.jpg"
   },
   {
     "title": "Responsys • Figma",
@@ -26,21 +26,21 @@
     "tags": ["Figma", "Design System", "Components"],
     "url": "https://www.figma.com/design/lVszmaSnQdLW7cx2S8srut/MDRRMO-Capstone?node-id=0-1&t=7M0aTp3xEcfvXqql-1",
     "liveUrl": "https://responsysgarcia.com",
-    "image": "/Portfolio/assets/images/responsysFigma.jpg"
+    "image": "../assets/images/responsysFigma.jpg"
   },
   {
     "title": "Portfolio Website",
     "description": "Responsive site built with Tailwind and vanilla JS.",
     "tags": ["Tailwind", "HTML", "JS"],
     "url": "https://example.com/portfolio",
-    "image": "/Portfolio/assets/images/portfolio.jpg"
+    "image": "../assets/images/portfolio.jpg"
   },
   {
     "title": "School Skill",
     "description": "A Learning Management System (LMS) designed to function like Google Classroom, providing tools for educators and students to collaborate, share resources, and manage coursework effectively.",
     "tags": ["Figma", "Design", "LMS", "In Development"],
     "url": "https://www.figma.com/design/OpoVtpDbcDGxogNj0RdGrA/School-Skill?t=pnXwaxJUQdqZBJAg-1",
-    "image": "/Portfolio/assets/images/SchoolSkill.png"
+    "image": "../assets/images/SchoolSkill.png"
   }
   ,
   {
@@ -48,7 +48,7 @@
     "description": "A beautifully designed diary system that empowers users to manage their thoughts and reflections day by day. Features an intuitive interface focused on daily journaling and personal growth.",
     "tags": ["Figma", "UI/UX", "Diary", "Design"],
     "url": "https://www.figma.com/design/Ha7Bh9ah7lV0g9n05FzjRW/My-Diary?t=pnXwaxJUQdqZBJAg-1",
-    "image": "/Portfolio/assets/images/diaryApp.jpg"
+    "image": "../assets/images/diaryApp.jpg"
   }
   ,
   {
@@ -56,7 +56,7 @@
     "description": "A robust inventory management system designed for administrators to efficiently track, organize, and manage all assets and inventory. Built with a focus on usability and streamlined workflows for admin users.",
     "tags": ["Figma", "Inventory", "Admin", "Design"],
     "url": "https://www.figma.com/design/oFwmxHmlpeE0EDAyYVaEZ6/InventoryBox?t=pnXwaxJUQdqZBJAg-1",
-    "image": "/Portfolio/assets/images/inventoryboxFigma.jpg"
+    "image": "../assets/images/inventoryboxFigma.jpg"
   }
   ,
   {
@@ -64,6 +64,6 @@
     "description": "A modern weather app with a clean, user-friendly interface, providing real-time weather updates and forecasts. Designed for clarity and ease of use.",
     "tags": ["Figma", "Weather", "UI", "Design"],
     "url": "https://www.figma.com/design/JmpNFi8whNb84iDYHvU1Nq/Weather-App?t=pnXwaxJUQdqZBJAg-1",
-    "image": "/Portfolio/assets/images/weatherFigma.jpg"
+    "image": "../assets/images/weatherFigma.jpg"
   }
 ]
