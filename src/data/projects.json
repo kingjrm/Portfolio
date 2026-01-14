@@ -7,6 +7,13 @@
     "image": "../assets/images/ojtFigma.jpg"
   },
   {
+    "title": "Jawibi App",
+    "description": "A mobile application for [brief description of what Jawibi App does - you can update this].",
+    "tags": ["Mobile", "App", "Design"],
+    "url": "#",
+    "image": "../assets/images/jawibi.jpg"
+  },
+  {
     "title": "LibraLink • Figma",
     "description": "Library management system for Batangas State University - Lipa Campus featuring student access tracking and streamlined book borrowing.",
     "tags": ["Figma", "UI", "Responsive"],
@@ -37,11 +44,11 @@
   }
   ,
   {
-    "title": "My Diary System",
+    "title": "My Thoughts",
     "description": "A beautifully designed diary system that empowers users to manage their thoughts and reflections day by day. Features an intuitive interface focused on daily journaling and personal growth.",
     "tags": ["Figma", "UI/UX", "Diary", "Design"],
     "url": "https://www.figma.com/design/Ha7Bh9ah7lV0g9n05FzjRW/My-Diary?t=pnXwaxJUQdqZBJAg-1",
-    "image": "../assets/images/diaryFigma.jpg"
+    "image": "../assets/images/diaryApp.jpg"
   }
   ,
   {
