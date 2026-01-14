@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/Portfolio/assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <style>
       html { overflow-x: hidden; height: 100%; }
       body { min-height: 100vh; display: flex; flex-direction: column; margin: 0; padding: 0; }
@@ -787,6 +787,17 @@
       initScrollToTop();
       // initial wave sync
       syncWaveColorsToAbove();
+
+      // Load footer
+        fetch('../src/components/footer.html')
+        .then(r => r.text())
+        .then(html => {
+          const el = document.getElementById('site-footer');
+          if (el) el.innerHTML = html;
+          const y = document.getElementById('year');
+          if (y) y.textContent = new Date().getFullYear().toString();
+        })
+        .catch(console.error);
 
       // Cursor follower with color inversion
       const cursorFollower = document.createElement('div');
