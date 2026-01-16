@@ -6,11 +6,11 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(79, 70, 229, 0.3);
-  border: 1px solid rgba(79, 70, 229, 0.5);
+  background: white;
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.1s ease-out;
+  mix-blend-mode: difference;
 }
 .cursor-dot {
   position: fixed;
@@ -21,7 +21,6 @@
   border-radius: 50%;
   background: #4f46e5;
   border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
   pointer-events: none;
   z-index: 10000;
   transform: translate(-10px, -10px);
