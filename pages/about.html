@@ -90,113 +90,180 @@
 
 
       <!-- About Summary Section -->
-      <section class="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/20">
-        <div class="mx-auto max-w-5xl">
-          <div class="mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center" style="font-family: 'Pixelify Sans', sans-serif;">My Journey</h2>
-            <p class="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">From curiosity to craft: how I became a web developer and designer</p>
+      <section class="py-16 sm:py-24 px-4 bg-gradient-to-br from-gray-50 via-white to-indigo-50/30 dark:from-gray-900 dark:via-gray-950 dark:to-indigo-950/20 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-30">
+          <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+          <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-pink-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
+        <div class="mx-auto max-w-6xl relative z-10">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 mb-6">
+              <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+              <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400">My Journey</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-950 dark:text-white mb-4" style="font-family: 'Pixelify Sans', sans-serif;">
+              From Curiosity to Craft
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              How I became a web developer and designer through passion, persistence, and pixel-perfect execution
+            </p>
           </div>
 
           <!-- Journey Timeline -->
-          <div class="grid md:grid-cols-3 gap-6 mb-8">
-            <!-- Card 1 -->
-            <div class="card p-8 relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-indigo-900/30 dark:to-purple-900/30 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-              <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-12 h-12 rounded-full bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="grid md:grid-cols-3 gap-8 mb-16">
+            <!-- The Spark -->
+            <div class="group relative">
+              <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                <!-- Decorative top accent -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
+
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                   </div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">The Spark</h3>
+                  <h3 class="text-xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Spark</h3>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    My journey began with a simple question: <span class="font-semibold text-indigo-600 dark:text-indigo-400">how does the web really work?</span> That curiosity sparked a relentless exploration of code, design, and digital experiences.
+                  </p>
                 </div>
-                <p class="text-gray-700 dark:text-gray-300">My journey in technology started with a simple curiosity: <span class="font-semibold">how things work on the web</span>. That question led me down a rabbit hole of learning, building, and experimenting.</p>
+
+                <!-- Floating particles effect -->
+                <div class="absolute top-4 right-4 w-2 h-2 bg-indigo-400/30 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-6 left-6 w-1 h-1 bg-purple-400/40 rounded-full animate-pulse delay-300"></div>
               </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="card p-8 relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-sky-100 to-blue-100 dark:from-sky-900/30 dark:to-blue-900/30 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-              <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-12 h-12 rounded-full bg-sky-100 dark:bg-sky-900/40 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+            <!-- The Build -->
+            <div class="group relative">
+              <div class="absolute -inset-1 bg-gradient-to-r from-sky-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                <!-- Decorative top accent -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500 to-blue-500"></div>
+
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                     </svg>
                   </div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">The Build</h3>
+                  <h3 class="text-xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Build</h3>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    As a 4th-year IT student at <span class="font-semibold text-sky-600 dark:text-sky-400">Batangas State University</span>, I've mastered frontend development, responsive design, and user-centered thinking through hands-on projects and continuous learning.
+                  </p>
                 </div>
-                <p class="text-gray-700 dark:text-gray-300">As a 4th-year IT student at <span class="font-semibold">Batangas State University</span>, I've honed my skills in frontend development, responsive design, and user-centered thinking. Technical expertise meets creative problem-solving.</p>
+
+                <!-- Floating particles effect -->
+                <div class="absolute top-6 right-6 w-1.5 h-1.5 bg-sky-400/30 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-4 left-4 w-1 h-1 bg-blue-400/40 rounded-full animate-pulse delay-500"></div>
               </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="card p-8 relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-              <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-pink-100 to-rose-100 dark:from-pink-900/30 dark:to-rose-900/30 rounded-full -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-500"></div>
-              <div class="relative z-10">
-                <div class="flex items-center gap-3 mb-4">
-                  <div class="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-900/40 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-pink-600 dark:text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10l-7 6m0 0l7 6m-7-6h12"></path>
+            <!-- The Impact -->
+            <div class="group relative">
+              <div class="absolute -inset-1 bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div class="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+                <!-- Decorative top accent -->
+                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-rose-500"></div>
+
+                <div class="text-center">
+                  <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
                     </svg>
                   </div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">The Impact</h3>
+                  <h3 class="text-xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Impact</h3>
+                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                    Beyond code, I <span class="font-semibold text-pink-600 dark:text-pink-400">contribute to communities</span>, explore emerging technologies, and collaborate on projects that create meaningful digital experiences and solve real-world problems.
+                  </p>
                 </div>
-                <p class="text-gray-700 dark:text-gray-300">When I'm not coding, I'm exploring new tech, <span class="font-semibold">contributing to communities</span>, and pushing boundaries. Always eager to collaborate on projects that make a real difference.</p>
+
+                <!-- Floating particles effect -->
+                <div class="absolute top-5 right-5 w-1 h-1 bg-pink-400/30 rounded-full animate-pulse"></div>
+                <div class="absolute bottom-5 left-5 w-2 h-2 bg-rose-400/40 rounded-full animate-pulse delay-700"></div>
               </div>
             </div>
           </div>
 
-          <!-- Key Message -->
-          <div class="rounded-2xl p-8 sm:p-10 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm">
-            <div class="flex items-start justify-between gap-4 mb-8">
-              <div>
-                <p class="text-xs uppercase tracking-[0.12em] text-gray-500 dark:text-gray-400 mb-2">Core focus</p>
-                <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Here's What I Do Best</h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mt-2 max-w-2xl">Practical strengths I bring to every project—kept simple and purposeful.</p>
-              </div>
-              <div class="hidden sm:flex w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 items-center justify-center text-indigo-500">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                </svg>
-              </div>
-            </div>
-
-            <div class="grid sm:grid-cols-3 gap-4 sm:gap-6">
-              <div class="flex items-start gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/70 dark:bg-gray-900/40">
-                <div class="mt-1 text-indigo-500">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+          <!-- Core Focus Section -->
+          <div class="relative">
+            <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-2xl"></div>
+            <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-white/30 dark:border-gray-700/30 rounded-3xl p-8 sm:p-12">
+              <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 dark:bg-indigo-900/40 border border-indigo-200 dark:border-indigo-800 mb-6">
+                  <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
+                  <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Core Focus</span>
                 </div>
-                <div>
-                  <p class="font-semibold text-gray-900 dark:text-white">Pixel-Perfect Design</p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Calm, consistent interfaces that feel effortless.</p>
-                </div>
+                <h3 class="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-950 dark:text-white mb-4" style="font-family: 'Pixelify Sans', sans-serif;">
+                  Here's What I Do Best
+                </h3>
+                <p class="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+                  Practical strengths I bring to every project—kept simple, purposeful, and impactful.
+                </p>
               </div>
 
-              <div class="flex items-start gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/70 dark:bg-gray-900/40">
-                <div class="mt-1 text-indigo-500">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
+              <div class="grid sm:grid-cols-3 gap-6">
+                <!-- Pixel-Perfect Design -->
+                <div class="group relative">
+                  <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                        </svg>
+                      </div>
+                      <h4 class="font-bold text-gray-950 dark:text-white">Pixel-Perfect Design</h4>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Crafting calm, consistent interfaces that feel effortless and intuitive to users.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p class="font-semibold text-gray-900 dark:text-white">Technical Excellence</p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Lean, maintainable code built to scale.</p>
-                </div>
-              </div>
 
-              <div class="flex items-start gap-3 p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50/70 dark:bg-gray-900/40">
-                <div class="mt-1 text-indigo-500">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
+                <!-- Technical Excellence -->
+                <div class="group relative">
+                  <div class="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-blue-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                      </div>
+                      <h4 class="font-bold text-gray-950 dark:text-white">Technical Excellence</h4>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Writing lean, maintainable code that's built to scale and perform reliably.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p class="font-semibold text-gray-900 dark:text-white">User-Centered Thinking</p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Focus on clarity, intent, and real-world use.</p>
+
+                <!-- User-Centered Thinking -->
+                <div class="group relative">
+                  <div class="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                      </div>
+                      <h4 class="font-bold text-gray-950 dark:text-white">User-Centered Thinking</h4>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Focusing on clarity, intent, and real-world usability in every design decision.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -428,49 +495,137 @@
       </div>
 
       <!-- Experience Section -->
-      <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
-        <div class="mx-auto max-w-7xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Events & Workshops</h2>
-          <div class="space-y-6">
-            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Junior Philippine Computer Society BatStateU TNEU–Lipa Chapter</h3>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Member of the Junior Philippine Computer Society, actively participating in academic and technology-related activities that promote professional growth and collaboration among IT students.</p>
-                </div>
-                <span class="badge whitespace-nowrap">Aug 2022 – Jun 2026</span>
-              </div>
-            </article>
+      <section class="py-12 sm:py-16 px-4 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/20">
 
-            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Techsynergy: Navigating the Digital Landscape</h3>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Certified participant of Techsynergy, gaining knowledge on emerging digital technologies, innovation, and modern IT practices.</p>
-                </div>
-                <span class="badge whitespace-nowrap">Lipa City</span>
-              </div>
-            </article>
+        <div class="mx-auto max-w-6xl">
+          <!-- Section Header -->
+          <div class="text-center mb-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 mb-4">
+              <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+              </svg>
+              <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Experience</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white mb-2" style="font-family: 'Pixelify Sans', sans-serif;">
+              Events & Workshops
+            </h2>
+            <p class="text-sm text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+              Building knowledge through technology events, workshops, and design challenges
+            </p>
+          </div>
 
-            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">Techno SDG Exposition – Junior</h3>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Completed the Techno SDG Exposition – Junior, focusing on sustainable development goals and the role of technology in promoting social and environmental responsibility.</p>
+          <!-- Events Grid -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- JPCS Membership -->
+            <div class="group relative">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3 mb-3">
+                  <div class="w-6 h-6 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <svg class="w-3 h-3 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-sm font-bold text-gray-950 dark:text-white mb-1" style="font-family: 'Pixelify Sans', sans-serif;">JPCS Member</h3>
+                    <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mb-1">BatStateU TNEU–Lipa Chapter</p>
+                    <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span>Aug 2022 – Jun 2026</span>
+                    </div>
+                  </div>
                 </div>
-                <span class="badge whitespace-nowrap">Oct 2025</span>
+                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                  Active member participating in academic and technology activities promoting professional growth and collaboration.
+                </p>
               </div>
-            </article>
+            </div>
 
-            <article class="card p-8 hover:shadow-xl transition-shadow duration-300 border-l-4 border-indigo-600">
-              <div class="flex items-start justify-between gap-4 mb-3">
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">2nd Place – Creative Clicks CICS UI/UX Design Challenge</h3>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">Awarded Second Place in the Creative Clicks UI/UX Design Challenge for demonstrating creativity, usability, and effective interface design.</p>
+            <!-- Techsynergy -->
+            <div class="group relative">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3 mb-3">
+                  <div class="w-6 h-6 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <svg class="w-3 h-3 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-sm font-bold text-gray-950 dark:text-white mb-1" style="font-family: 'Pixelify Sans', sans-serif;">Techsynergy</h3>
+                    <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-1">Digital Landscape</p>
+                    <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                      <span>Lipa City</span>
+                    </div>
+                  </div>
                 </div>
-                <span class="badge whitespace-nowrap">Lipa City</span>
+                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                  Certified participant gaining knowledge on emerging digital technologies and modern IT practices.
+                </p>
               </div>
-            </article>
+            </div>
+
+            <!-- Techno SDG -->
+            <div class="group relative">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3 mb-3">
+                  <div class="w-6 h-6 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <svg class="w-3 h-3 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-sm font-bold text-gray-950 dark:text-white mb-1" style="font-family: 'Pixelify Sans', sans-serif;">Techno SDG</h3>
+                    <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium mb-1">Sustainable Goals</p>
+                    <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                      </svg>
+                      <span>Oct 2025</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                  Completed SDG Exposition focusing on technology's role in sustainable development and social responsibility.
+                </p>
+              </div>
+            </div>
+
+            <!-- UI/UX Design Challenge -->
+            <div class="group relative">
+              <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-start gap-3 mb-3">
+                  <div class="w-6 h-6 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <svg class="w-3 h-3 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                    </svg>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="text-sm font-bold text-gray-950 dark:text-white mb-1" style="font-family: 'Pixelify Sans', sans-serif;">2nd Place</h3>
+                    <p class="text-xs text-amber-600 dark:text-amber-400 font-medium mb-1">UI/UX Challenge</p>
+                    <div class="flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400">
+                      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                      </svg>
+                      <span>Lipa City</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
+                  Awarded 2nd place in Creative Clicks UI/UX Design Challenge for exceptional creativity and interface design.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

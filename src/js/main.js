@@ -22,7 +22,8 @@ function initTheme() {
   const root = document.documentElement;
   const saved = localStorage.getItem("theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  const isDark = saved ? saved === "dark" : prefersDark;
+  // Default to light mode instead of system preference
+  const isDark = saved === "dark";
   root.classList.toggle("dark", isDark);
   const btn = document.getElementById("theme-toggle");
   if (btn) {
