@@ -62,8 +62,8 @@
   {
     "title": "Weather Application",
     "description": "A modern weather app with a clean, user-friendly interface, providing real-time weather updates and forecasts. Designed for clarity and ease of use.",
-    "tags": ["Figma", "Weather", "UI", "Design"],
+    "tags": ["TypeScript/JavaScript (React Native/Expo)", "Kotlin (Android native)", "Gradle (Android build system)", "JSON (configuration)"],
     "url": "https://www.figma.com/design/JmpNFi8whNb84iDYHvU1Nq/Weather-App?t=pnXwaxJUQdqZBJAg-1",
-    "image": "../assets/images/weatherFigma.jpg"
+    "image": "../assets/images/weatherApp.jpg"
   }
 ]
