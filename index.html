@@ -44,8 +44,6 @@
       @keyframes intro-spin{from{transform:rotate(0deg);}to{transform:rotate(360deg);} }
       @keyframes intro-spark{0%{opacity:.35;transform:translateY(-4px);}100%{opacity:.65;transform:translateY(6px);}}
       @keyframes intro-title-sweep{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-      .cursor-follower{position:fixed;width:40px;height:40px;border-radius:50%;background:black;pointer-events:none;z-index:9999;transition:transform 0.1s ease-out;mix-blend-mode:difference;}
-      .cursor-dot{position:fixed;width:20px;height:20px;border-radius:50%;background:#4f46e5;border:2px solid #fff;pointer-events:none;z-index:10000;transform:translate(-10px,-10px);transition:transform 0.1s ease;}
       /* Hero ambient */
       .hero-ambient{position:absolute;inset:0;pointer-events:none;z-index:-1;overflow:hidden;}
       .hero-blob{position:absolute;border-radius:40%;filter:blur(38px);opacity:.32;animation:hero-drift 22s ease-in-out infinite;}
@@ -470,16 +468,19 @@
   initCtaLinks();
   setupImageFallbacks();
   initScrollToTop();
-  syncWaveColorsToAbove();
 
-  // Cursor follower with color inversion
+  // Cursor follower with delayed animation and color inversion
   const cursorFollower = document.createElement('div');
-  cursorFollower.className = 'cursor-follower';
+  cursorFollower.style.position = 'fixed';
+  cursorFollower.style.width = '50px';
+  cursorFollower.style.height = '50px';
+  cursorFollower.style.borderRadius = '50%';
+  cursorFollower.style.backgroundColor = 'white';
+  cursorFollower.style.mixBlendMode = 'difference';
+  cursorFollower.style.pointerEvents = 'none';
+  cursorFollower.style.zIndex = '9999';
+  cursorFollower.style.transform = 'translate(-50%, -50%)';
   document.body.appendChild(cursorFollower);
-
-  const cursorDot = document.createElement('div');
-  cursorDot.className = 'cursor-dot';
-  document.body.appendChild(cursorDot);
 
   let mouseX = 0, mouseY = 0;
   let followerX = 0, followerY = 0;
@@ -487,17 +488,19 @@
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursorDot.style.left = `${mouseX}px`;
-    cursorDot.style.top = `${mouseY}px`;
   });
 
   function updateFollower() {
-    followerX += (mouseX - followerX) * 0.1; // Delay factor
-    followerY += (mouseY - followerY) * 0.1;
-    cursorFollower.style.transform = `translate(${followerX - 20}px, ${followerY - 20}px)`;
+    followerX += (mouseX - followerX) * 0.08; // delay factor for smooth following
+    followerY += (mouseY - followerY) * 0.08;
+    cursorFollower.style.left = followerX + 'px';
+    cursorFollower.style.top = followerY + 'px';
     requestAnimationFrame(updateFollower);
   }
+
   updateFollower();
+
+  syncWaveColorsToAbove();
 </script>
   </body>
 </html>

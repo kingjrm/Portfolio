@@ -294,14 +294,18 @@
       
       initScrollToTop();
 
-      // Cursor follower with color inversion
+      // Cursor follower with delayed animation and color inversion
       const cursorFollower = document.createElement('div');
-      cursorFollower.className = 'cursor-follower';
+      cursorFollower.style.position = 'fixed';
+      cursorFollower.style.width = '50px';
+      cursorFollower.style.height = '50px';
+      cursorFollower.style.borderRadius = '50%';
+      cursorFollower.style.backgroundColor = 'white';
+      cursorFollower.style.mixBlendMode = 'difference';
+      cursorFollower.style.pointerEvents = 'none';
+      cursorFollower.style.zIndex = '9999';
+      cursorFollower.style.transform = 'translate(-50%, -50%)';
       document.body.appendChild(cursorFollower);
-
-      const cursorDot = document.createElement('div');
-      cursorDot.className = 'cursor-dot';
-      document.body.appendChild(cursorDot);
 
       let mouseX = 0, mouseY = 0;
       let followerX = 0, followerY = 0;
@@ -309,16 +313,16 @@
       document.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
-        cursorDot.style.left = `${mouseX}px`;
-        cursorDot.style.top = `${mouseY}px`;
       });
 
       function updateFollower() {
-        followerX += (mouseX - followerX) * 0.1; // Delay factor
-        followerY += (mouseY - followerY) * 0.1;
-        cursorFollower.style.transform = `translate(${followerX - 20}px, ${followerY - 20}px)`;
+        followerX += (mouseX - followerX) * 0.08; // delay factor for smooth following
+        followerY += (mouseY - followerY) * 0.08;
+        cursorFollower.style.left = followerX + 'px';
+        cursorFollower.style.top = followerY + 'px';
         requestAnimationFrame(updateFollower);
       }
+
       updateFollower();
     </script>
   </body>
