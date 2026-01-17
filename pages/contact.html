@@ -20,7 +20,7 @@
     </style>
   </head>
   <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
-    <nav class="sticky top-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/20 transition-all duration-300 shadow-xl" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
+    <nav class="relative sticky top-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/20 transition-all duration-300 shadow-xl" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
         <a href="../index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
           K.J
@@ -76,15 +76,19 @@
             </svg>
           </button>
         </div>
-      </div>
-      
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="md:hidden hidden bg-black/40 backdrop-blur-md border-t border-white/20">
-        <div class="px-4 py-6 space-y-4">
-          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
-          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./about.html">About</a>
-          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./projects.html">Projects</a>
-          <a class="block text-white bg-white/20 px-4 py-3 rounded-lg text-base font-medium transition duration-300 hover:bg-white/30" href="./contact.html">Contact</a>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden fixed top-20 right-0 z-40 w-80 h-auto bg-black/60 backdrop-blur-md border border-white/20 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out hidden">
+          <div class="flex flex-col h-full">
+            
+            <!-- Menu items -->
+            <div class="flex-1 px-6 py-8 space-y-6 text-right" style="font-family: 'Pixelify Sans', sans-serif;">
+              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
+              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./about.html">About</a>
+              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./projects.html">Projects</a>
+              <a class="block text-white bg-white/20 px-4 py-3 rounded-lg text-xl font-medium transition duration-300 hover:bg-white/30" href="./contact.html">Contact</a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -413,20 +417,53 @@
         const sunIconMobile = document.getElementById('sun-icon-mobile');
         const moonIconMobile = document.getElementById('moon-icon-mobile');
         
+        // Function to open menu
+        const openMenu = () => {
+          mobileMenu.classList.remove('hidden');
+          mobileMenu.classList.remove('translate-x-full');
+        };
+        
+        // Function to close menu
+        const closeMenu = () => {
+          mobileMenu.classList.add('translate-x-full');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+          }, 300); // Match transition duration
+        };
+        
+        // Open menu on hamburger click
         if (mobileMenuButton && mobileMenu) {
           mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const isExpanded = !mobileMenu.classList.contains('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', isExpanded);
-            
-            // Update hamburger icon
-            const hamburgerIcon = mobileMenuButton.querySelector('svg');
-            if (hamburgerIcon) {
-              if (isExpanded) {
+            if (mobileMenu.classList.contains('hidden')) {
+              openMenu();
+              // Update hamburger icon to X
+              const hamburgerIcon = mobileMenuButton.querySelector('svg');
+              if (hamburgerIcon) {
                 hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-              } else {
+              }
+            } else {
+              closeMenu();
+              // Update hamburger icon back to hamburger
+              const hamburgerIcon = mobileMenuButton.querySelector('svg');
+              if (hamburgerIcon) {
                 hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
               }
+            }
+          });
+        }
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            closeMenu();
+          }
+        });
+        
+        // Close menu on menu item click
+        if (mobileMenu) {
+          mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+              closeMenu();
             }
           });
         }
