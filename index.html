@@ -74,6 +74,15 @@
       @media (max-width:640px){
         .intro-shell{padding:1.35rem 1rem;}
         .intro-title{font-size:2.05rem;}
+        .hero-blob{display:none;} /* Hide heavy animations on mobile */
+        .hero-spark{display:none;} /* Hide sparkles on mobile */
+        .hero-lines{display:none;} /* Simplify background on mobile */
+        .intro-overlay .intro-particles{display:none;} /* Reduce animations on mobile */
+      }
+      @media (max-width:480px){
+        .intro-logo{width:24; height:24;} /* Smaller logo on very small screens */
+        .intro-text{font-size:1.25rem;}
+        .intro-subtitle{font-size:0.9rem;}
       }
     </style>
   </head>
@@ -102,7 +111,9 @@
         <a href="./index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
           K.J
         </a>
-        <div class="flex items-center gap-8">
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
           <ul class="flex items-center gap-8" style="font-family: 'Pixelify Sans', sans-serif;">
             <li><a class="text-white bg-white/20 px-3 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-white/30" href="./index.html">Home</a></li>
             <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./pages/about.html">About</a></li>
@@ -126,10 +137,45 @@
             </svg>
           </button>
         </div>
+        
+        <!-- Mobile Navigation Button -->
+        <div class="md:hidden flex items-center gap-4">
+          <button id="theme-toggle-mobile" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
+            <svg id="sun-icon-mobile" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="moon-icon-mobile" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button id="mobile-menu-button" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle mobile menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-black/40 backdrop-blur-md border-t border-white/20">
+        <div class="px-4 py-6 space-y-4">
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./index.html">Home</a>
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./pages/about.html">About</a>
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./pages/projects.html">Projects</a>
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./pages/contact.html">Contact</a>
+        </div>
       </div>
     </nav>
 
-    <main class="relative min-h-[75vh] flex items-center px-4 py-8 sm:py-12 bg-white dark:bg-gray-950 transition-colors duration-300">
+    <main class="relative min-h-[85vh] sm:min-h-[75vh] flex items-center px-4 py-8 sm:py-12 bg-white dark:bg-gray-950 transition-colors duration-300">
       <div class="hero-ambient" aria-hidden="true">
         <div class="hero-lines"></div>
         <div class="hero-blob a"></div>
@@ -141,72 +187,74 @@
         <div class="hero-spark s4"></div>
         <div class="hero-spark s5"></div>
       </div>
-      <div class="mx-auto max-w-7xl grid gap-8 lg:gap-12 md:grid-cols-2 items-center">
-        <!-- Left: Copy -->
-        <div class="space-y-4">
-          <span class="inline-flex items-center gap-2 rounded-full border border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-900/20 px-3 py-1 text-xs font-medium uppercase tracking-widest text-indigo-700 dark:text-indigo-300">
-            Welcome to my portfolio
-          </span>
-
-          <h1 class="space-y-2">
-            <span class="block text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">
-              King Jerome P. Lacerna
+      <div class="mx-auto max-w-7xl w-full">
+        <div class="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
+          <!-- Left: Copy -->
+          <div class="space-y-6 text-center lg:text-left">
+            <span class="inline-flex items-center gap-2 rounded-full border border-indigo-200 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-900/20 px-3 py-1 text-xs font-medium uppercase tracking-widest text-indigo-700 dark:text-indigo-300">
+              Welcome to my portfolio
             </span>
-            <span class="block text-xl sm:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500">
-              Web developer & creative designer
-            </span>
-          </h1>
 
-          <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed">
-            I craft clean, accessible, and performant digital experiences for startups and brands worldwide.
-          </p>
+            <h1 class="space-y-2">
+              <span class="block text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black tracking-tight text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">
+                King Jerome P. Lacerna
+              </span>
+              <span class="block text-lg sm:text-xl lg:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-violet-500 to-pink-500">
+                Web developer & creative designer
+              </span>
+            </h1>
 
-          <div class="hero-highlights">
-            <div class="hero-highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l3 7h7l-5.5 4.1L17 21l-5-3.2L7 21l1.5-6.9L3 10h7z"></path></svg>
-              <div><strong>Polished UI</strong><span class="block">Clean, cohesive visuals</span></div>
+            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              I craft clean, accessible, and performant digital experiences for startups and brands worldwide.
+            </p>
+
+            <div class="hero-highlights grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div class="hero-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l3 7h7l-5.5 4.1L17 21l-5-3.2L7 21l1.5-6.9L3 10h7z"></path></svg>
+                <div><strong>Polished UI</strong><span class="block">Clean, cohesive visuals</span></div>
+              </div>
+              <div class="hero-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20m6-6H6"></path></svg>
+                <div><strong>Fast builds</strong><span class="block">Performance-first setups</span></div>
+              </div>
+              <div class="hero-highlight">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4.7-3.4-8-7.2-8-11.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 13.8 16.7 17.6 12 21z"></path></svg>
+                <div><strong>Human-first</strong><span class="block">UX that feels kind</span></div>
+              </div>
             </div>
-            <div class="hero-highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20m6-6H6"></path></svg>
-              <div><strong>Fast builds</strong><span class="block">Performance-first setups</span></div>
-            </div>
-            <div class="hero-highlight">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4.7-3.4-8-7.2-8-11.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 13.8 16.7 17.6 12 21z"></path></svg>
-              <div><strong>Human-first</strong><span class="block">UX that feels kind</span></div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 pt-4">
+              <a href="./pages/projects.html" class="cta-link group inline-flex items-center gap-2 rounded-full bg-indigo-600 text-white px-6 py-3 shadow hover:shadow-lg hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 transition w-full sm:w-auto justify-center">
+                <span class="cta-label">see my projects</span>
+                <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+
+              <a href="./pages/about.html" class="cta-link group inline-flex items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-6 py-3 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition w-full sm:w-auto justify-center">
+                <span class="cta-label">more about me</span>
+                <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
             </div>
           </div>
 
-          <div class="mt-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-            <a href="./pages/about.html" class="cta-link group inline-flex items-center gap-2 rounded-full bg-indigo-600 text-white px-5 py-3 shadow hover:shadow-lg hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-400 transition">
-              <span class="cta-label">see my projects</span>
-              <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
-
-            <a href="./pages/about.html" class="cta-link group inline-flex items-center gap-2 rounded-full border border-gray-300 dark:border-gray-700 px-5 py-3 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
-              <span class="cta-label">more about me</span>
-              <svg class="cta-arrow w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Ambient visual (no external image) -->
-        <div class="relative">
-          <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-gray-200 dark:ring-gray-800 bg-gradient-to-br from-indigo-500/20 via-fuchsia-500/10 to-emerald-500/20">
-            <!-- Glow -->
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="h-32 w-32 sm:h-40 sm:w-40 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 blur-2xl opacity-40"></div>
-            </div>
-            <!-- Skill badges -->
-            <div class="absolute inset-x-6 bottom-6 flex flex-wrap gap-2">
-              <span class="badge">HTML</span>
-              <span class="badge">CSS</span>
-              <span class="badge">JavaScript</span>
-              <span class="badge">Tailwind</span>
-              <span class="badge">Figma</span>
+          <!-- Right: Ambient visual (no external image) -->
+          <div class="relative order-first lg:order-last">
+            <div class="relative w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-gray-200 dark:ring-gray-800 bg-gradient-to-br from-indigo-500/20 via-fuchsia-500/10 to-emerald-500/20">
+              <!-- Glow -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="h-32 w-32 sm:h-40 sm:w-40 rounded-full bg-gradient-to-tr from-indigo-500 to-pink-500 blur-2xl opacity-40"></div>
+              </div>
+              <!-- Skill badges -->
+              <div class="absolute inset-x-4 sm:inset-x-6 bottom-4 sm:bottom-6 flex flex-wrap gap-2">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Tailwind</span>
+                <span class="badge">Figma</span>
+              </div>
             </div>
           </div>
         </div>
@@ -238,19 +286,27 @@
 
     <!-- Projects -->
     <section id="projects" class="py-12 sm:py-16 bg-white dark:bg-gray-950 transition-colors">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <h2 class="text-xl sm:text-2xl font-semibold tracking-tight">Projects</h2>
-        <div class="mt-6 grid gap-6 sm:grid-cols-2 auto-rows-fr">
-          <article class="card overflow-hidden">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 sm:mb-12">
+          <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-950 dark:text-white">Projects</h2>
+          <p class="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            A showcase of my recent work and creative projects
+          </p>
+        </div>
+
+        <div class="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-2 auto-rows-fr">
+          <article class="card overflow-hidden group relative">
             <img src="assets/images/libralinkFigma.jpg"
                  data-fallback="assets/images/libralinkFigma.jpg, assets/images/libralinkFigma.jpeg, assets/images/LibraLinkFigma.jpg, assets/images/libralinkFigma.png"
                  alt="LibraLink • Figma"
-                 class="h-64 w-full object-cover rounded-t-lg"
+                 class="h-48 sm:h-64 w-full object-cover rounded-t-lg"
                  loading="lazy" />
-            <div class="p-4">
-              <h3 class="font-semibold">LibraLink • Figma</h3>
-              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Responsive UI exploration and prototyping based on resume highlights.</p>
-              <div class="mt-3 flex flex-wrap gap-2">
+            <div class="p-4 sm:p-6">
+              <h3 class="font-semibold text-lg text-gray-950 dark:text-white">LibraLink • Figma</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Responsive UI exploration and prototyping based on resume highlights.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
                 <span class="badge">Figma</span><span class="badge">UI</span><span class="badge">Responsive</span>
               </div>
             </div>
@@ -260,25 +316,33 @@
             <img src="assets/images/responsysFigma.jpg"
                  data-fallback="assets/images/responsysFigma.jpg, assets/images/responsysFigma.jpeg, assets/images/ResponsysFigma.jpg, assets/images/responsysFigma.png"
                  alt="Responsys • Figma"
-                 class="h-64 w-full object-cover rounded-t-lg"
+                 class="h-48 sm:h-64 w-full object-cover rounded-t-lg"
                  loading="lazy" />
-            <div class="p-4">
-              <h3 class="font-semibold">Responsys • Figma</h3>
-              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Dashboard layout and component system aligned with resume experience.</p>
-              <div class="mt-3 flex flex-wrap gap-2">
+            <div class="p-4 sm:p-6">
+              <h3 class="font-semibold text-lg text-gray-950 dark:text-white">Responsys • Figma</h3>
+              <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                Dashboard layout and component system aligned with resume experience.
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
                 <span class="badge">Figma</span><span class="badge">Design System</span><span class="badge">Components</span>
               </div>
             </div>
             <!-- Expandable overlay on hover -->
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end rounded-lg overflow-hidden">
-              <div class="w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/80 to-transparent p-6">
+              <div class="w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
                 <a class="btn w-full text-center justify-center" href="https://responsysgarcia.com" target="_blank" rel="noopener noreferrer">Live Demo →</a>
               </div>
             </div>
           </article>
         </div>
-        <div class="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
-          See more projects in the <a href="./pages/projects.html" class="text-indigo-600 dark:text-indigo-400 underline">Projects tab</a>.
+
+        <div class="mt-8 sm:mt-12 text-center">
+          <a href="./pages/projects.html" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition duration-300 shadow hover:shadow-lg">
+            <span>View All Projects</span>
+            <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 8h12M13 8L9 4M13 8L9 12" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </section>
@@ -350,12 +414,25 @@
     const isDark = document.documentElement.classList.contains('dark');
     const sunIcon = document.getElementById('sun-icon');
     const moonIcon = document.getElementById('moon-icon');
+    
+    // Update desktop icons
     if (isDark) {
       sunIcon?.classList.add('hidden');
       moonIcon?.classList.remove('hidden');
     } else {
       sunIcon?.classList.remove('hidden');
       moonIcon?.classList.add('hidden');
+    }
+    
+    // Update mobile icons
+    const sunIconMobile = document.getElementById('sun-icon-mobile');
+    const moonIconMobile = document.getElementById('moon-icon-mobile');
+    if (isDark) {
+      sunIconMobile?.classList.add('hidden');
+      moonIconMobile?.classList.remove('hidden');
+    } else {
+      sunIconMobile?.classList.remove('hidden');
+      moonIconMobile?.classList.add('hidden');
     }
   }
 
@@ -381,6 +458,54 @@
       if (y) y.textContent = new Date().getFullYear().toString();
     })
     .catch(console.error);
+
+  // Mobile menu functionality
+  function initMobileMenu() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const sunIconMobile = document.getElementById('sun-icon-mobile');
+    const moonIconMobile = document.getElementById('moon-icon-mobile');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const isExpanded = !mobileMenu.classList.contains('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+        
+        // Update hamburger icon
+        const hamburgerIcon = mobileMenuButton.querySelector('svg');
+        if (hamburgerIcon) {
+          if (isExpanded) {
+            hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+          } else {
+            hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+          }
+        }
+      });
+    }
+    
+    // Mobile theme toggle
+    if (themeToggleMobile && sunIconMobile && moonIconMobile) {
+      themeToggleMobile.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+        sunIconMobile.classList.toggle('hidden');
+        moonIconMobile.classList.toggle('hidden');
+        
+        // Sync with desktop theme toggle if it exists
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = document.getElementById('sun-icon');
+        const moonIcon = document.getElementById('moon-icon');
+        if (themeToggle && sunIcon && moonIcon) {
+          sunIcon.classList.toggle('hidden');
+          moonIcon.classList.toggle('hidden');
+        }
+        
+        localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        updateThemeButton();
+      });
+    }
+  }
 
   // Interactive CTA links: glow follows cursor + subtle magnetic hover
   function initCtaLinks() {
@@ -465,6 +590,7 @@
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', syncWaveColorsToAbove);
 
   // Initialize after theme and CTA setup
+  initMobileMenu();
   initCtaLinks();
   setupImageFallbacks();
   initScrollToTop();

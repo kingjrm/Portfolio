@@ -21,19 +21,42 @@
   </head>
   <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
     <nav class="sticky top-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/20 transition-all duration-300 shadow-xl" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
-        <a href="../index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
-          K.J
-        </a>
-        <div class="flex items-center gap-8">
-          <ul class="flex items-center gap-8" style="font-family: 'Pixelify Sans', sans-serif;">
-            <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="../index.html">Home</a></li>
-            <li><a class="text-white bg-white/20 px-3 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-white/30" href="./about.html">About</a></li>
-            <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./projects.html">Projects</a></li>
-            <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./contact.html">Contact</a></li>
-          </ul>
-          <button id="theme-toggle" class="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
-            <svg id="sun-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-20 items-center justify-between">
+          <a href="../index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
+            K.J
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-8">
+            <ul class="flex items-center gap-8" style="font-family: 'Pixelify Sans', sans-serif;">
+              <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="../index.html">Home</a></li>
+              <li><a class="text-white bg-white/20 px-3 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-white/30" href="./about.html">About</a></li>
+              <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./projects.html">Projects</a></li>
+              <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./contact.html">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
+              <svg id="sun-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg id="moon-icon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </div>
+
+        <!-- Mobile Navigation Button -->
+        <div class="md:hidden flex items-center gap-4">
+          <button id="theme-toggle-mobile" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
+            <svg id="sun-icon-mobile" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
               <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -44,10 +67,25 @@
               <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
               <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
             </svg>
-            <svg id="moon-icon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <svg id="moon-icon-mobile" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
+          <button id="mobile-menu-button" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle mobile menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-black/40 backdrop-blur-md border-t border-white/20">
+        <div class="px-4 py-6 space-y-4">
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
+          <a class="block text-white bg-white/20 px-4 py-3 rounded-lg text-base font-medium transition duration-300 hover:bg-white/30" href="./about.html">About</a>
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./projects.html">Projects</a>
+          <a class="block text-white/90 hover:text-white text-base font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./contact.html">Contact</a>
         </div>
       </div>
     </nav>
@@ -940,12 +978,25 @@
         const isDark = document.documentElement.classList.contains('dark');
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
+        
+        // Update desktop icons
         if (isDark) {
           sunIcon?.classList.add('hidden');
           moonIcon?.classList.remove('hidden');
         } else {
           sunIcon?.classList.remove('hidden');
           moonIcon?.classList.add('hidden');
+        }
+        
+        // Update mobile icons
+        const sunIconMobile = document.getElementById('sun-icon-mobile');
+        const moonIconMobile = document.getElementById('moon-icon-mobile');
+        if (isDark) {
+          sunIconMobile?.classList.add('hidden');
+          moonIconMobile?.classList.remove('hidden');
+        } else {
+          sunIconMobile?.classList.remove('hidden');
+          moonIconMobile?.classList.add('hidden');
         }
       }
 
@@ -956,6 +1007,54 @@
         updateThemeButton();
         // ensure waves match the new theme's section colors
         syncWaveColorsToAbove();
+      }
+
+      // Mobile menu functionality
+      function initMobileMenu() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const sunIconMobile = document.getElementById('sun-icon-mobile');
+        const moonIconMobile = document.getElementById('moon-icon-mobile');
+        
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isExpanded = !mobileMenu.classList.contains('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+            
+            // Update hamburger icon
+            const hamburgerIcon = mobileMenuButton.querySelector('svg');
+            if (hamburgerIcon) {
+              if (isExpanded) {
+                hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+              } else {
+                hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+              }
+            }
+          });
+        }
+        
+        // Mobile theme toggle
+        if (themeToggleMobile && sunIconMobile && moonIconMobile) {
+          themeToggleMobile.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            sunIconMobile.classList.toggle('hidden');
+            moonIconMobile.classList.toggle('hidden');
+            
+            // Sync with desktop theme toggle if it exists
+            const themeToggle = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
+            if (themeToggle && sunIcon && moonIcon) {
+              sunIcon.classList.toggle('hidden');
+              moonIcon.classList.toggle('hidden');
+            }
+            
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+            updateThemeButton();
+          });
+        }
       }
 
       document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
@@ -1033,6 +1132,7 @@
         });
       }
       
+      initMobileMenu();
       initScrollToTop();
 
       // Cursor follower with delayed animation and color inversion
