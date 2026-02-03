@@ -272,11 +272,11 @@
                       href="${project.url}" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 text-sm"
+                      class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 group/btn"
                     >
                       <span>${project.liveUrl ? 'View Design' : 'View Project'}</span>
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
                     </a>
                     ${project.liveUrl ? `
@@ -284,11 +284,11 @@
                         href="${project.liveUrl}" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-indigo-600 dark:text-indigo-400 font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 border-2 border-indigo-200 dark:border-indigo-700 hover:border-indigo-300 dark:hover:border-indigo-600 text-sm"
+                        class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 text-sm shadow-md hover:shadow-lg group/btn"
                       >
                         <span>Live Site</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
                       </a>
                     ` : ''}
@@ -296,7 +296,7 @@
                 ` : project.title === 'Jawibi App' ? `
                   <div class="flex gap-3">
                     <button 
-                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gray-400 text-white font-semibold px-5 py-2.5 rounded-lg text-sm cursor-not-allowed opacity-60"
+                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 font-semibold px-5 py-3 rounded-xl text-sm cursor-not-allowed opacity-60"
                       disabled
                     >
                       <span>Coming Soon</span>
