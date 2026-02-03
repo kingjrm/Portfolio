@@ -138,20 +138,16 @@
 
       <!-- Projects Grid Section -->
       <section class="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
-        <div class="mx-auto max-w-7xl relative">
-          <!-- Animated background shapes -->
-          <div class="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-indigo-400/30 via-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-pulse-slow -z-10"></div>
-          <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-pink-400/20 via-indigo-400/20 to-purple-400/30 rounded-full blur-3xl animate-pulse-slow -z-10"></div>
-
+        <div class="mx-auto max-w-7xl">
           <!-- Section header -->
-          <div class="mb-16 text-center relative z-10">
-            <p class="text-sm tracking-widest uppercase text-indigo-600 dark:text-indigo-400 font-semibold mb-3 animate-fade-in">Featured Work</p>
-            <h2 class="text-4xl sm:text-5xl font-black text-gray-950 dark:text-white drop-shadow-lg animate-gradient-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent" style="font-family: 'Pixelify Sans', sans-serif;">Showcasing Excellence</h2>
-            <div class="mx-auto mt-4 w-24 h-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-full animate-slide-in"></div>
+          <div class="mb-12 text-center">
+            <p class="text-sm tracking-widest uppercase text-indigo-600 dark:text-indigo-400 font-semibold mb-3">Featured Work</p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-950 dark:text-white mb-4" style="font-family: 'Pixelify Sans', sans-serif;">Showcasing Excellence</h2>
+            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">A collection of my best work in web development and design</p>
           </div>
 
           <!-- Projects Grid -->
-          <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
+          <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Projects will be rendered here -->
           </div>
         </div>
@@ -220,7 +216,7 @@
       initTheme();
 
 
-      // Render projects with innovative, interactive UI
+      // Render projects with clean, modern card design
       async function renderProjects() {
         const container = document.getElementById('projects-container');
         if (!container) return;
@@ -228,57 +224,59 @@
           const response = await fetch('../src/data/projects.json');
           const projects = await response.json();
           container.innerHTML = projects.map((project, index) => `
-            <article class="group relative overflow-visible rounded-3xl bg-gradient-to-br from-white/90 via-indigo-50/80 to-purple-50/80 dark:from-gray-900/90 dark:via-gray-800/80 dark:to-indigo-900/80 border-2 border-transparent hover:border-indigo-400 dark:hover:border-indigo-500 shadow-xl hover:shadow-2xl transition-all duration-500 h-full flex flex-col cursor-pointer will-change-transform" style="perspective: 1200px; animation: slideInUp 0.7s cubic-bezier(.23,1.01,.32,1) ${index * 0.12}s backwards;">
-              <!-- 3D Tilt Overlay -->
-              <div class="absolute inset-0 pointer-events-none z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" style="background: radial-gradient(circle at 60% 40%, rgba(99,102,241,0.12) 0%, transparent 80%);"></div>
-              <!-- Image Container with floating effect -->
-              <div class="relative h-64 overflow-visible flex items-center justify-center">
-                <div class="absolute -top-6 left-1/2 -translate-x-1/2 w-40 h-40 bg-gradient-to-tr from-indigo-400/30 via-purple-400/20 to-pink-400/20 rounded-full blur-2xl scale-0 group-hover:scale-100 transition-transform duration-700 -z-10"></div>
+            <article class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s backwards;">
+              <!-- Project Image -->
+              <div class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800">
                 <img 
                   src="${project.image}" 
                   alt="${project.title}" 
-                  class="h-56 w-56 object-cover rounded-2xl shadow-lg border-4 border-white dark:border-gray-900 group-hover:scale-110 group-hover:rotate-2 group-hover:shadow-indigo-300/40 dark:group-hover:shadow-indigo-900/40 transition-transform duration-700 ease-out mx-auto bg-white/40 dark:bg-gray-900/40"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   loading="lazy"
-                  onerror="this.style.display='none'" 
-                  style="will-change: transform;"
+                  onerror="this.style.display='none'"
                 />
-                <!-- Animated badge -->
-                <div class="absolute top-4 right-4 animate-bounce z-10">
-                  <span class="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-pink-500 text-white text-xs font-bold shadow-md">
-                    ${project.liveUrl ? 'Live' : 'Design'}
-                  </span>
+                <!-- Overlay on hover -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <span class="inline-block px-3 py-1 rounded-full ${project.liveUrl ? 'bg-green-500' : 'bg-indigo-500'} text-white text-xs font-bold">
+                      ${project.liveUrl ? '● Live' : '● Design'}
+                    </span>
+                  </div>
                 </div>
               </div>
-              <!-- Content -->
-              <div class="p-7 flex-1 flex flex-col relative">
-                <div class="flex-1">
-                  <h3 class="text-2xl font-black text-gray-950 dark:text-white mb-3 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300 tracking-tight" style="font-family: 'Pixelify Sans', sans-serif; letter-spacing: 0.01em;">
-                    <span class="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient-text">${project.title}</span>
-                  </h3>
-                  <p class="text-gray-600 dark:text-gray-300 text-base leading-relaxed mb-5 animate-fade-in delay-100">
-                    ${project.description}
-                  </p>
-                </div>
+              
+              <!-- Project Content -->
+              <div class="p-6 flex-1 flex flex-col">
+                <!-- Title -->
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" style="font-family: 'Pixelify Sans', sans-serif;">
+                  ${project.title}
+                </h3>
+                
+                <!-- Description -->
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-1">
+                  ${project.description}
+                </p>
+                
                 <!-- Tags -->
-                <div class="flex flex-wrap gap-2 mb-6">
+                <div class="flex flex-wrap gap-2 mb-5">
                   ${project.tags.map(tag => `
-                    <span class="inline-block px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-indigo-100 to-pink-100 dark:from-indigo-900/60 dark:to-pink-900/60 text-indigo-700 dark:text-indigo-200 border border-indigo-200/50 dark:border-indigo-700/30 hover:border-indigo-400 dark:hover:border-indigo-600 transition-colors shadow-sm animate-fade-in delay-200">
+                    <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">
                       ${tag}
                     </span>
                   `).join('')}
                 </div>
-                <!-- CTA Buttons -->
+                
+                <!-- Action Buttons -->
                 ${project.url !== '#' ? `
-                  <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700 animate-fade-in delay-300">
+                  <div class="flex gap-3">
                     <a 
                       href="${project.url}" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-pink-500 hover:from-indigo-700 hover:to-pink-600 text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 group/btn text-sm uppercase tracking-wider shadow-lg hover:shadow-xl group-hover/btn:shadow-indigo-500/50 dark:shadow-indigo-900/30"
+                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 text-sm"
                     >
-                      <span>${project.liveUrl ? 'View Design' : 'Explore'}</span>
-                      <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                      <span>${project.liveUrl ? 'View Design' : 'View Project'}</span>
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                       </svg>
                     </a>
                     ${project.liveUrl ? `
@@ -286,51 +284,28 @@
                         href="${project.liveUrl}" 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 hover:bg-gray-50 dark:hover:bg-gray-600 border-2 border-indigo-200 dark:border-indigo-600/50 font-bold px-6 py-3 rounded-xl transition-all duration-300 group/btn text-sm uppercase tracking-wider hover:border-indigo-600 dark:hover:border-indigo-400"
+                        class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-indigo-600 dark:text-indigo-400 font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 border-2 border-indigo-200 dark:border-indigo-700 hover:border-indigo-300 dark:hover:border-indigo-600 text-sm"
                       >
-                        <span>View Live</span>
-                        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        <span>Live Site</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                         </svg>
                       </a>
                     ` : ''}
                   </div>
                 ` : project.title === 'Jawibi App' ? `
-                  <div class="flex gap-3 pt-4 border-t border-gray-100 dark:border-gray-700 animate-fade-in delay-300">
+                  <div class="flex gap-3">
                     <button 
-                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-pink-500 text-white font-bold px-6 py-3 rounded-xl text-sm uppercase tracking-wider shadow-lg opacity-60 cursor-not-allowed"
+                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gray-400 text-white font-semibold px-5 py-2.5 rounded-lg text-sm cursor-not-allowed opacity-60"
                       disabled
                     >
-                      <span>Explore</span>
-                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
-                      </svg>
+                      <span>Coming Soon</span>
                     </button>
                   </div>
                 ` : ''}
               </div>
-              <!-- Glass reflection overlay -->
-              <div class="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-60 transition-opacity duration-700" style="background: linear-gradient(120deg, rgba(255,255,255,0.18) 20%, rgba(99,102,241,0.08) 80%);"></div>
             </article>
           `).join('');
-
-          // Add 3D tilt effect on hover (using JS for innovation)
-          const cards = container.querySelectorAll('article');
-          cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-              const rect = card.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              const centerX = rect.width / 2;
-              const centerY = rect.height / 2;
-              const rotateX = ((y - centerY) / centerY) * 8;
-              const rotateY = ((x - centerX) / centerX) * -8;
-              card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
-            });
-            card.addEventListener('mouseleave', () => {
-              card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
-            });
-          });
         } catch (error) {
           console.error('Failed to load projects:', error);
           container.innerHTML = '<p class="col-span-full text-center text-gray-600 dark:text-gray-400">Unable to load projects. Please try again later.</p>';
@@ -484,44 +459,18 @@
           if (y) y.textContent = new Date().getFullYear().toString();
         })
         .catch(console.error);
-      // Custom animations for innovative UI
+      // Custom animations
       const style = document.createElement('style');
       style.innerHTML = `
-        @keyframes slideInUp {
-          0% { opacity: 0; transform: translateY(60px) scale(0.98); }
-          100% { opacity: 1; transform: translateY(0) scale(1); }
-        }
-        @keyframes gradientText {
-          0%,100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        .animate-gradient-text {
-          background-size: 200% 200%;
-          animation: gradientText 3s ease-in-out infinite;
-        }
-        .animate-pulse-slow {
-          animation: pulse 5s cubic-bezier(.4,0,.6,1) infinite;
-        }
-        @keyframes pulse {
-          0%,100% { opacity: 0.7; }
-          50% { opacity: 1; }
-        }
-        .animate-fade-in {
-          opacity: 0;
-          animation: fadeIn 1.2s ease forwards;
-        }
-        .animate-fade-in.delay-100 { animation-delay: 0.1s; }
-        .animate-fade-in.delay-200 { animation-delay: 0.2s; }
-        .animate-fade-in.delay-300 { animation-delay: 0.3s; }
-        @keyframes fadeIn {
-          to { opacity: 1; }
-        }
-        .animate-slide-in {
-          animation: slideIn 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s backwards;
-        }
-        @keyframes slideIn {
-          0% { transform: scaleX(0); opacity: 0; }
-          100% { transform: scaleX(1); opacity: 1; }
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       `;
       document.head.appendChild(style);
