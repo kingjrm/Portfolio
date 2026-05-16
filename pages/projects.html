@@ -151,7 +151,30 @@
 
           <!-- Projects Grid -->
           <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Projects will be rendered here -->
+            <!-- Static Bookside card to ensure visibility while JSON loads -->
+            <article id="bookside-card" class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg h-full flex flex-col">
+              <div class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800">
+                <img src="../assets/images/Bookside.jpg" alt="Bookside" class="w-full h-full object-cover" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                  <div class="absolute bottom-4 left-4 right-4">
+                    <span class="inline-block px-3 py-1 rounded-full bg-green-500 text-white text-xs font-bold">● Live</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">Bookside</h3>
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-1">Bookside Street is a transaction-aware marketplace where every book deal is transparent, every seller is accountable, and every buyer is protected.</p>
+                <div class="flex flex-wrap gap-2 mb-5">
+                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">Marketplace</span>
+                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">Web</span>
+                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">Demo</span>
+                </div>
+                <div class="flex gap-3">
+                  <a href="https://bookside.st" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 text-sm shadow-lg hover:shadow-xl">View Project</a>
+                  <a href="https://bookside.st" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 border-2 border-gray-300 dark:border-gray-600 text-sm shadow-md hover:shadow-lg">Live Site</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -226,7 +249,10 @@
         try {
           const response = await fetch('../src/data/projects.json');
           const projects = await response.json();
-          container.innerHTML = projects.map((project, index) => `
+          // Append JSON-driven project cards but skip Bookside (static card present)
+          container.insertAdjacentHTML('beforeend', projects
+            .filter(p => p.title !== 'Bookside')
+            .map((project, index) => `
             <article class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s backwards;">
               <!-- Project Image -->
               <div class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800">
@@ -308,7 +334,7 @@
                 ` : ''}
               </div>
             </article>
-          `).join('');
+          `).join(''));
         } catch (error) {
           console.error('Failed to load projects:', error);
           container.innerHTML = '<p class="col-span-full text-center text-gray-600 dark:text-gray-400">Unable to load projects. Please try again later.</p>';

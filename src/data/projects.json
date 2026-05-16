@@ -66,4 +66,13 @@
     "url": "https://www.figma.com/design/JmpNFi8whNb84iDYHvU1Nq/Weather-App?t=pnXwaxJUQdqZBJAg-1",
     "image": "../assets/images/weatherApp.jpg"
   }
+  ,
+  {
+    "title": "Bookside",
+    "description": "Bookside Street is a transaction-aware marketplace where every book deal is transparent, every seller is accountable, and every buyer is protected.",
+    "tags": ["Marketplace", "Web", "Demo"],
+    "url": "https://bookside.st",
+    "liveUrl": "https://bookside.st",
+    "image": "../assets/images/Bookside.jpg"
+  }
 ]
