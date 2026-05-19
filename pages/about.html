@@ -152,87 +152,75 @@
               </div>
             </div>
 
-            <!-- Right Column - Info Cards -->
+            <!-- Right Column - Profile & Achievements -->
             <div class="space-y-4">
-              <!-- Clean Profile Photo (no duplicate text/buttons) -->
-              <div class="flex justify-center">
-                <div class="relative">
-                  <div class="w-44 h-44 sm:w-48 sm:h-48 mx-auto rounded-full overflow-hidden border-4 border-indigo-600 shadow-lg">
+              <div class="relative bg-white/90 dark:bg-gray-800/90 rounded-2xl p-4 sm:p-6 shadow-lg overflow-hidden">
+                <!-- Floating accents -->
+                <div class="absolute -top-6 -right-6 w-36 h-36 bg-indigo-500/12 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="flex items-start gap-6">
+                  <!-- Rectangular photo (not circular) -->
+                  <div class="w-32 sm:w-36 lg:w-40 h-44 rounded-lg overflow-hidden border border-white/30 shadow-md flex-shrink-0">
                     <img src="../assets/images/SHS.jpg" alt="King Jerome Lacerna" class="w-full h-full object-cover" />
                   </div>
-                  <div class="absolute -top-3 -left-3 w-6 h-6 rounded-full bg-white dark:bg-gray-900 border border-white/30 shadow-md"></div>
+
+                  <!-- Info + Achievements -->
+                  <div class="flex-1">
+                    <h3 class="text-lg font-bold text-gray-950 dark:text-white">King Jerome P. Lacerna</h3>
+                    <p class="text-sm text-indigo-600 dark:text-indigo-400">Web Developer & Creative Designer</p>
+
+                    <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                      <p><span class="font-semibold">Email</span> <span class="text-gray-600 dark:text-gray-400">lacernakingjeromep@gmail.com</span></p>
+                      <p><span class="font-semibold">Location</span> <span class="text-gray-600 dark:text-gray-400">Padre Garcia, Batangas</span></p>
+                      <p><span class="font-semibold">4th Year</span> <span class="text-gray-600 dark:text-gray-400">TBA</span></p>
+                      <p><span class="font-semibold">Status</span> <span class="text-gray-600 dark:text-gray-400">Dean's Lister</span></p>
+                    </div>
+
+                    <div class="mt-4">
+                      <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Achievements</h4>
+                      <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                        <li>Dean's Lister</li>
+                        <li>2nd Place — UI/UX Challenge</li>
+                        <li>Techsynergy Certified</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <!-- Contact Info Cards -->
-              <div class="grid gap-3 sm:gap-4">
-                <!-- Email -->
-                <div class="group relative">
-                  <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-3 sm:p-4 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-3 sm:gap-4">
-                      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">Email</p>
-                        <a href="mailto:lacernakingjeromep@gmail.com" class="font-bold text-gray-950 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-200 text-sm sm:text-base truncate block">
-                          lacernakingjeromep@gmail.com
-                        </a>
-                      </div>
-                    </div>
+              <!-- Compact details list to reduce repetition -->
+              <div class="mt-6 text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-indigo-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <div>
+                    <p class="text-xs text-gray-500">Location</p>
+                    <p class="font-semibold text-gray-900 dark:text-white">Padre Garcia, Batangas</p>
                   </div>
                 </div>
 
-                <!-- Location -->
-                <div class="group relative">
-                  <div class="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-blue-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-3 sm:p-4 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-3 sm:gap-4">
-                      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center shadow-lg">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">Location</p>
-                        <p class="font-bold text-gray-950 dark:text-white text-sm sm:text-base">Padre Garcia, Batangas</p>
-                      </div>
-                    </div>
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-amber-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 5C5.57 5 4 6.57 4 8.5v7C4 18.43 5.57 20 7.5 20h9c1.93 0 3.5-1.57 3.5-3.5v-7C20 6.57 18.43 5 16.5 5h-9z"></path>
+                  </svg>
+                  <div>
+                    <p class="text-xs text-gray-500">4th Year</p>
+                    <p class="font-semibold text-gray-900 dark:text-white">TBA</p>
                   </div>
                 </div>
 
-                <!-- Academic Info -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                  <!-- 4th Year -->
-                  <div class="group relative">
-                    <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                    <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 text-center">
-                      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center shadow-lg mx-auto mb-3">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                        </svg>
-                      </div>
-                      <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">4th Year</p>
-                      <p class="font-bold text-amber-600 dark:text-amber-400 text-sm sm:text-base">TBA</p>
-                    </div>
-                  </div>
-
-                  <!-- Status -->
-                  <div class="group relative">
-                    <div class="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                    <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 text-center">
-                      <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-green-600 flex items-center justify-center shadow-lg mx-auto mb-3">
-                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
-                      </div>
-                      <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-1">Status</p>
-                      <p class="font-bold text-emerald-600 dark:text-emerald-400 text-sm sm:text-base">Dean's Lister</p>
-                    </div>
+                <div class="flex items-start gap-3">
+                  <svg class="w-5 h-5 text-emerald-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <div>
+                    <p class="text-xs text-gray-500">Status</p>
+                    <p class="font-semibold text-emerald-600 dark:text-emerald-400">Dean's Lister</p>
                   </div>
                 </div>
               </div>
