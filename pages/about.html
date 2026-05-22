@@ -151,45 +151,24 @@
               </div>
             </div>
 
-            <!-- Floating portrait composition -->
-            <div class="relative w-full flex justify-center lg:justify-end">
-              <div class="relative isolate aspect-[4/5]" style="width:min(100%,16rem); height:auto; max-width:16rem; transform:scale(0.96); transform-origin:center;">
-                <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-indigo-600/15 via-transparent to-purple-600/15 blur-2xl"></div>
+            
+            <!-- Right Column: Neon portrait + overlays -->
+            <div class="flex justify-center items-center">
+              <div class="relative w-full max-w-[1100px]">
+                <!-- (Removed background neon glow and corner borders per request) -->
 
-                <div class="absolute left-1 top-8 sm:left-0 sm:top-12 z-20 flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/65 px-2.5 py-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-indigo-200 shadow-lg backdrop-blur-md">
-                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)]"></span>
-                  Creative mode
-                </div>
+                <!-- Portrait with frame overlay (allow overflow so frame can extend) -->
+                <div class="relative rounded-2xl overflow-visible flex justify-center items-center" style="padding: 12px; z-index: 5;">
 
-                <div class="absolute right-0 top-4 sm:-right-2 sm:top-8 z-20 flex items-center gap-2 rounded-2xl border border-white/10 bg-slate-900/70 px-2.5 py-2 shadow-xl backdrop-blur-md">
-                  <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300">
-                    <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16l-2 12H6L4 6z"></path>
-                    </svg>
-                  </div>
-                  <div class="pr-1">
-                    <p class="text-[9px] uppercase tracking-[0.2em] text-slate-400">Focus</p>
-                    <p class="text-[11px] font-semibold text-white">Web + UI</p>
-                  </div>
-                </div>
 
-                <div class="absolute left-2 bottom-6 sm:-left-2 sm:bottom-8 z-20 rounded-2xl border border-white/10 bg-slate-900/75 px-3 py-2 shadow-xl backdrop-blur-md">
-                  <p class="text-[9px] uppercase tracking-[0.2em] text-slate-400">Status</p>
-                  <p class="text-[11px] font-semibold text-emerald-300">Dean's Lister</p>
-                </div>
+                  <!-- Portrait: expanded slightly more as requested -->
+                  <img src="../assets/images/SHS.jpg" alt="Profile" class="h-auto object-cover rounded-lg shadow-xl" style="width:360px; max-width:360px; display:block; z-index:2;">
 
-                <div class="absolute right-2 bottom-8 sm:-right-3 sm:bottom-10 z-20 h-12 w-12 rounded-full border border-white/15 bg-indigo-500/15 shadow-[0_0_30px_rgba(99,102,241,0.3)] backdrop-blur-sm"></div>
-                <div class="absolute left-1/2 top-1/2 z-20 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-white/15 shadow-[0_0_28px_rgba(255,255,255,0.16)] backdrop-blur-sm"></div>
+                  <!-- (Removed inner inset glow per request) -->
 
-                <div class="absolute inset-0 rounded-[2.25rem] border border-white/8 bg-slate-900/10 shadow-2xl"></div>
-                <div class="relative h-full overflow-hidden rounded-[2.25rem] border border-white/10 shadow-2xl">
-                  <img src="../assets/images/SHS.jpg" alt="King Jerome Lacerna" class="h-full w-full object-cover object-center" />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                  <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-transparent to-transparent"></div>
-                </div>
-              </div>
-            </div>
+                  <!-- Frame overlay (on top of portrait) - expanded further as requested -->
+                  <img src="../assets/images/frame.png" alt="Frame" class="absolute pointer-events-none" style="z-index:4; width:400%; height:auto; left:50%; top:58%; transform:translate(-50%,-50%) scale(1.78); filter: drop-shadow(0 24px 84px rgba(14,165,233,0.22));">
+
           </div>
         </div>
       </section>
