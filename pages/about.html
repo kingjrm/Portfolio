@@ -100,9 +100,8 @@
       <section class="relative py-8 sm:py-10 px-4 bg-white dark:bg-gray-950 overflow-hidden">
         <!-- Background decorative elements -->
         <div class="absolute inset-0 opacity-15 pointer-events-none">
-          <div class="absolute top-16 left-8 w-64 h-64 bg-gradient-to-r from-indigo-400/6 to-purple-400/6 rounded-full blur-2xl"></div>
-          <div class="absolute bottom-16 right-8 w-56 h-56 bg-gradient-to-r from-pink-400/6 to-indigo-400/6 rounded-full blur-2xl"></div>
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-r from-violet-400/4 to-indigo-400/4 rounded-full blur-xl"></div>
+          <div class="absolute top-16 left-8 w-64 h-64 bg-indigo-600/5 rounded-full blur-2xl"></div>
+          <div class="absolute bottom-16 right-8 w-56 h-56 bg-indigo-600/5 rounded-full blur-2xl"></div>
         </div>
 
         <div class="mx-auto max-w-7xl relative z-10">
@@ -127,7 +126,7 @@
 
               <!-- Title -->
               <div class="space-y-4">
-                <p class="text-base sm:text-lg lg:text-xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 font-bold">
+                <p class="text-base sm:text-lg lg:text-xl text-indigo-600 dark:text-indigo-400 font-bold">
                   Web Developer & Creative Designer
                 </p>
                 <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed max-w-xl">
@@ -137,14 +136,14 @@
 
               <!-- CTA Buttons -->
               <div class="pt-3 flex flex-wrap gap-3">
-                <a href="#contact" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 group">
+                <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-slate-950/70 px-6 py-3 font-bold text-white shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-300/40 hover:bg-slate-900 group backdrop-blur-md dark:bg-slate-900/80">
                   <span>Get In Touch</span>
-                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                   </svg>
                 </a>
-                <a href="../Resume-King%20Jerome%20P.%20Lacerna.pdf" download class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-purple-500/25 group">
-                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <a href="../Resume-King%20Jerome%20P.%20Lacerna.pdf" download class="inline-flex items-center gap-2 rounded-full border border-slate-300/20 bg-white/5 px-6 py-3 font-bold text-slate-100 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-200/35 hover:bg-white/10 group backdrop-blur-md dark:border-slate-700/40 dark:bg-white/5 dark:text-white">
+                  <svg class="w-5 h-5 text-slate-200 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                   </svg>
                   <span>Download Resume</span>
@@ -152,76 +151,42 @@
               </div>
             </div>
 
-            <!-- Right Column - Profile & Achievements -->
-            <div class="space-y-4">
-              <div class="relative bg-white/90 dark:bg-gray-800/90 rounded-2xl p-4 sm:p-6 shadow-lg overflow-hidden">
-                <!-- Floating accents -->
-                <div class="absolute -top-6 -right-6 w-36 h-36 bg-indigo-500/12 rounded-full blur-3xl pointer-events-none"></div>
-                <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-pink-500/10 rounded-full blur-2xl pointer-events-none"></div>
+            <!-- Floating portrait composition -->
+            <div class="relative w-full flex justify-center lg:justify-end">
+              <div class="relative isolate aspect-[4/5]" style="width:min(100%,16rem); height:auto; max-width:16rem; transform:scale(0.96); transform-origin:center;">
+                <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-indigo-600/15 via-transparent to-purple-600/15 blur-2xl"></div>
 
-                <div class="flex items-start gap-6">
-                  <!-- Rectangular photo (not circular) -->
-                  <div class="w-32 sm:w-36 lg:w-40 h-44 rounded-lg overflow-hidden border border-white/30 shadow-md flex-shrink-0">
-                    <img src="../assets/images/SHS.jpg" alt="King Jerome Lacerna" class="w-full h-full object-cover" />
-                  </div>
-
-                  <!-- Info + Achievements -->
-                  <div class="flex-1">
-                    <h3 class="text-lg font-bold text-gray-950 dark:text-white">King Jerome P. Lacerna</h3>
-                    <p class="text-sm text-indigo-600 dark:text-indigo-400">Web Developer & Creative Designer</p>
-
-                    <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-1">
-                      <p><span class="font-semibold">Email</span> <span class="text-gray-600 dark:text-gray-400">lacernakingjeromep@gmail.com</span></p>
-                      <p><span class="font-semibold">Location</span> <span class="text-gray-600 dark:text-gray-400">Padre Garcia, Batangas</span></p>
-                      <p><span class="font-semibold">4th Year</span> <span class="text-gray-600 dark:text-gray-400">TBA</span></p>
-                      <p><span class="font-semibold">Status</span> <span class="text-gray-600 dark:text-gray-400">Dean's Lister</span></p>
-                    </div>
-
-                    <div class="mt-4">
-                      <h4 class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-2">Achievements</h4>
-                      <ul class="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                        <li>Dean's Lister</li>
-                        <li>2nd Place — UI/UX Challenge</li>
-                        <li>Techsynergy Certified</li>
-                      </ul>
-                    </div>
-                  </div>
+                <div class="absolute left-1 top-8 sm:left-0 sm:top-12 z-20 flex items-center gap-2 rounded-full border border-white/10 bg-slate-950/65 px-2.5 py-1.5 text-[9px] font-semibold uppercase tracking-[0.2em] text-indigo-200 shadow-lg backdrop-blur-md">
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,0.8)]"></span>
+                  Creative mode
                 </div>
-              </div>
 
-              <!-- Compact details list to reduce repetition -->
-              <div class="mt-6 text-sm text-gray-700 dark:text-gray-300 space-y-3">
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-indigo-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                  <div>
-                    <p class="text-xs text-gray-500">Location</p>
-                    <p class="font-semibold text-gray-900 dark:text-white">Padre Garcia, Batangas</p>
+                <div class="absolute right-0 top-4 sm:-right-2 sm:top-8 z-20 flex items-center gap-2 rounded-2xl border border-white/10 bg-slate-900/70 px-2.5 py-2 shadow-xl backdrop-blur-md">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-amber-400/15 text-amber-300">
+                    <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16l-2 12H6L4 6z"></path>
+                    </svg>
+                  </div>
+                  <div class="pr-1">
+                    <p class="text-[9px] uppercase tracking-[0.2em] text-slate-400">Focus</p>
+                    <p class="text-[11px] font-semibold text-white">Web + UI</p>
                   </div>
                 </div>
 
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-amber-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.5 5C5.57 5 4 6.57 4 8.5v7C4 18.43 5.57 20 7.5 20h9c1.93 0 3.5-1.57 3.5-3.5v-7C20 6.57 18.43 5 16.5 5h-9z"></path>
-                  </svg>
-                  <div>
-                    <p class="text-xs text-gray-500">4th Year</p>
-                    <p class="font-semibold text-gray-900 dark:text-white">TBA</p>
-                  </div>
+                <div class="absolute left-2 bottom-6 sm:-left-2 sm:bottom-8 z-20 rounded-2xl border border-white/10 bg-slate-900/75 px-3 py-2 shadow-xl backdrop-blur-md">
+                  <p class="text-[9px] uppercase tracking-[0.2em] text-slate-400">Status</p>
+                  <p class="text-[11px] font-semibold text-emerald-300">Dean's Lister</p>
                 </div>
 
-                <div class="flex items-start gap-3">
-                  <svg class="w-5 h-5 text-emerald-500 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <div>
-                    <p class="text-xs text-gray-500">Status</p>
-                    <p class="font-semibold text-emerald-600 dark:text-emerald-400">Dean's Lister</p>
-                  </div>
+                <div class="absolute right-2 bottom-8 sm:-right-3 sm:bottom-10 z-20 h-12 w-12 rounded-full border border-white/15 bg-indigo-500/15 shadow-[0_0_30px_rgba(99,102,241,0.3)] backdrop-blur-sm"></div>
+                <div class="absolute left-1/2 top-1/2 z-20 h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/20 bg-white/15 shadow-[0_0_28px_rgba(255,255,255,0.16)] backdrop-blur-sm"></div>
+
+                <div class="absolute inset-0 rounded-[2.25rem] border border-white/8 bg-slate-900/10 shadow-2xl"></div>
+                <div class="relative h-full overflow-hidden rounded-[2.25rem] border border-white/10 shadow-2xl">
+                  <img src="../assets/images/SHS.jpg" alt="King Jerome Lacerna" class="h-full w-full object-cover object-center" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                  <div class="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-transparent to-transparent"></div>
                 </div>
               </div>
             </div>
@@ -229,19 +194,12 @@
         </div>
       </section>
 
-
       <!-- About Summary Section -->
-      <section class="py-16 sm:py-24 px-4 bg-gradient-to-br from-gray-50 via-white to-indigo-50/30 dark:from-gray-900 dark:via-gray-950 dark:to-indigo-950/20 relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 opacity-30">
-          <div class="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
-          <div class="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-pink-400/20 to-indigo-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-
+      <section class="py-16 sm:py-24 px-4 bg-slate-50/50 dark:bg-slate-900/10 relative overflow-hidden">
         <div class="mx-auto max-w-6xl relative z-10">
           <!-- Section Header -->
           <div class="text-center mb-16">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 mb-6">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-slate-200/50 dark:border-slate-700/20 mb-6">
               <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
               </svg>
@@ -256,155 +214,118 @@
           </div>
 
           <!-- Journey Timeline -->
-          <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="grid md:grid-cols-3 gap-8 mb-16 relative">
+            <!-- Central connecting line on desktop -->
+            <div class="hidden md:block absolute top-1/2 left-4 right-4 h-0.5 bg-slate-200 dark:bg-slate-800 -translate-y-1/2 z-0"></div>
+            
             <!-- The Spark -->
-            <div class="group relative">
-              <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div class="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-4 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
-                <!-- Decorative top accent -->
-                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 to-purple-500"></div>
-
-                <div class="text-center">
-                  <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Spark</h3>
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    My journey began with a simple question: <span class="font-semibold text-indigo-600 dark:text-indigo-400">how does the web really work?</span> That curiosity sparked a relentless exploration of code, design, and digital experiences.
-                  </p>
+            <div class="relative z-10 group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 border-t-4 border-t-indigo-500 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
                 </div>
-
-                <!-- Floating particles effect -->
-                <div class="absolute top-4 right-4 w-2 h-2 bg-indigo-400/30 rounded-full animate-pulse"></div>
-                <div class="absolute bottom-6 left-6 w-1 h-1 bg-purple-400/40 rounded-full animate-pulse delay-300"></div>
+                <h3 class="text-lg font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Spark</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  My journey began with a simple question: <span class="font-semibold text-indigo-600 dark:text-indigo-400">how does the web really work?</span> That curiosity sparked a relentless exploration of code, design, and digital experiences.
+                </p>
               </div>
             </div>
 
             <!-- The Build -->
-            <div class="group relative">
-              <div class="absolute -inset-1 bg-gradient-to-r from-sky-500/20 to-blue-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
-                <!-- Decorative top accent -->
-                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-sky-500 to-blue-500"></div>
-
-                <div class="text-center">
-                  <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Build</h3>
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    As a 4th-year IT student at <span class="font-semibold text-sky-600 dark:text-sky-400">Batangas State University</span>, I've mastered frontend development, responsive design, and user-centered thinking through hands-on projects and continuous learning.
-                  </p>
+            <div class="relative z-10 group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 border-t-4 border-t-sky-500 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                  </svg>
                 </div>
-
-                <!-- Floating particles effect -->
-                <div class="absolute top-6 right-6 w-1.5 h-1.5 bg-sky-400/30 rounded-full animate-pulse"></div>
-                <div class="absolute bottom-4 left-4 w-1 h-1 bg-blue-400/40 rounded-full animate-pulse delay-500"></div>
+                <h3 class="text-lg font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Build</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  As a 4th-year IT student at <span class="font-semibold text-sky-600 dark:text-sky-400">Batangas State University</span>, I've mastered frontend development, responsive design, and user-centered thinking through hands-on projects and continuous learning.
+                </p>
               </div>
             </div>
 
             <!-- The Impact -->
-            <div class="group relative">
-              <div class="absolute -inset-1 bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div class="relative bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border border-white/30 dark:border-gray-700/30 rounded-2xl p-6 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
-                <!-- Decorative top accent -->
-                <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-rose-500"></div>
-
-                <div class="text-center">
-                  <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gray-100 dark:bg-gray-800 mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-                    </svg>
-                  </div>
-                  <h3 class="text-xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Impact</h3>
-                  <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Beyond code, I <span class="font-semibold text-pink-600 dark:text-pink-400">contribute to communities</span>, explore emerging technologies, and collaborate on projects that create meaningful digital experiences and solve real-world problems.
-                  </p>
+            <div class="relative z-10 group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 border-t-4 border-t-pink-500 rounded-2xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div class="text-center">
+                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-600 dark:text-slate-400 mb-4 group-hover:scale-105 transition-transform duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                  </svg>
                 </div>
-
-                <!-- Floating particles effect -->
-                <div class="absolute top-5 right-5 w-1 h-1 bg-pink-400/30 rounded-full animate-pulse"></div>
-                <div class="absolute bottom-5 left-5 w-2 h-2 bg-rose-400/40 rounded-full animate-pulse delay-700"></div>
+                <h3 class="text-lg font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Impact</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  Beyond code, I <span class="font-semibold text-pink-600 dark:text-pink-400">contribute to communities</span>, explore emerging technologies, and collaborate on projects that create meaningful digital experiences and solve real-world problems.
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Core Focus Section -->
-          <div class="relative">
-            <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 rounded-3xl blur-2xl"></div>
-            <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border border-white/30 dark:border-gray-700/30 rounded-3xl p-8 sm:p-12">
-              <div class="text-center mb-12">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 dark:bg-indigo-900/40 border border-indigo-200 dark:border-indigo-800 mb-6">
+          <div class="relative max-w-5xl mx-auto">
+            <div class="relative bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-8 sm:p-10 shadow-lg">
+              <div class="text-center mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-100 dark:border-indigo-800/50 mb-4">
                   <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
-                  <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Core Focus</span>
+                  <span class="text-xs font-semibold text-indigo-600 dark:text-indigo-400">Core Focus</span>
                 </div>
-                <h3 class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-gray-950 dark:text-white mb-4" style="font-family: 'Pixelify Sans', sans-serif;">
+                <h3 class="text-xl sm:text-2xl lg:text-3xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">
                   Here's What I Do Best
                 </h3>
-                <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
+                <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">
                   Practical strengths I bring to every project—kept simple, purposeful, and impactful.
                 </p>
               </div>
 
               <div class="grid sm:grid-cols-3 gap-6">
                 <!-- Pixel-Perfect Design -->
-                <div class="group relative">
-                  <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-3 mb-4">
-                      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
-                        </svg>
-                      </div>
-                      <h4 class="font-bold text-gray-950 dark:text-white">Pixel-Perfect Design</h4>
+                <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="w-9 h-9 rounded-lg bg-indigo-100 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
+                      </svg>
                     </div>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                      Crafting calm, consistent interfaces that feel effortless and intuitive to users.
-                    </p>
+                    <h4 class="font-bold text-gray-950 dark:text-white text-sm">Pixel-Perfect Design</h4>
                   </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Crafting calm, consistent interfaces that feel effortless and intuitive to users.
+                  </p>
                 </div>
 
                 <!-- Technical Excellence -->
-                <div class="group relative">
-                  <div class="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-blue-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-3 mb-4">
-                      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                        </svg>
-                      </div>
-                      <h4 class="font-bold text-gray-950 dark:text-white">Technical Excellence</h4>
+                <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="w-9 h-9 rounded-lg bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                      </svg>
                     </div>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                      Writing lean, maintainable code that's built to scale and perform reliably.
-                    </p>
+                    <h4 class="font-bold text-gray-950 dark:text-white text-sm">Technical Excellence</h4>
                   </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Writing clean, semantic code and organizing directory structures for long-term project health.
+                  </p>
                 </div>
 
                 <!-- User-Centered Thinking -->
-                <div class="group relative">
-                  <div class="absolute -inset-0.5 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-                  <div class="relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
-                    <div class="flex items-center gap-3 mb-4">
-                      <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                      </div>
-                      <h4 class="font-bold text-gray-950 dark:text-white">User-Centered Thinking</h4>
+                <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/80 rounded-xl p-5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="w-9 h-9 rounded-lg bg-pink-100 dark:bg-pink-950/50 text-pink-600 dark:text-pink-400 flex items-center justify-center">
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                      </svg>
                     </div>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">
-                      Focusing on clarity, intent, and real-world usability in every design decision.
-                    </p>
+                    <h4 class="font-bold text-gray-950 dark:text-white text-sm">User-Centered</h4>
                   </div>
+                  <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Focusing on clarity, intent, and real-world usability in every design decision.
+                  </p>
                 </div>
               </div>
             </div>
@@ -414,459 +335,292 @@
 
       <!-- Education Section -->
       <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
-        <div class="mx-auto max-w-7xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Education</h2>
+        <div class="mx-auto max-w-5xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center" style="font-family: 'Pixelify Sans', sans-serif;">Academic Background</h2>
           <div class="grid lg:grid-cols-2 gap-6">
-            <article class="card p-8 hover:shadow-xl transition-shadow duration-300">
+            <!-- College Card -->
+            <article class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300">
               <div class="flex items-start justify-between gap-4 mb-4">
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Batangas State University TNEU - Lipa</h3>
-                <span class="badge whitespace-nowrap">2022 – 2026</span>
+                <div>
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">BatStateU TNEU - Lipa</h3>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Bachelor of Science in Information Technology (Service Management)</p>
+                </div>
+                <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 flex-shrink-0">2022 – 2026</span>
               </div>
-              <p class="text-gray-700 dark:text-gray-300 mb-3">
-                Bachelor of Science in Information Technology<br />
-                <span class="text-sm">Major in Service Management</span>
-              </p>
-              <div class="mb-4 p-4 bg-indigo-50 dark:bg-indigo-900/20 rounded-lg border border-indigo-200 dark:border-indigo-800">
-                <div class="grid grid-cols-2 gap-4">
-                  <div>
-                    <p class="text-xs uppercase tracking-wide text-indigo-700 dark:text-indigo-300 font-medium mb-1">Current GWA</p>
-                    <p class="text-2xl font-bold text-indigo-900 dark:text-indigo-100">1.4286</p>
-                    <p class="text-xs text-indigo-700 dark:text-indigo-300 mt-1">3rd Yr · 1st Sem</p>
-                  </div>
-                  <div>
-                    <p class="text-xs uppercase tracking-wide text-indigo-700 dark:text-indigo-300 font-medium mb-1">Status</p>
-                    <p class="text-lg font-bold text-indigo-900 dark:text-indigo-100">Dean's Lister</p>
-                    <p class="text-xs text-indigo-700 dark:text-indigo-300 mt-2 italic">4th Year: Waiting</p>
+              
+              <!-- Radial GWA Indicator -->
+              <div class="flex flex-col sm:flex-row items-center gap-6 p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/60 dark:border-slate-800/80 my-5">
+                <div class="relative w-24 h-24 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" class="text-slate-200 dark:text-slate-800" stroke-width="8" stroke="currentColor" fill="transparent" />
+                    <!-- Outstanding GWA 1.4286 represents outstanding honors progress -->
+                    <circle cx="50" cy="50" r="40" class="text-indigo-600 dark:text-indigo-400" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="27.6" stroke-linecap="round" stroke="currentColor" fill="transparent" />
+                  </svg>
+                  <div class="absolute flex flex-col items-center justify-center">
+                    <span class="text-lg font-extrabold text-indigo-900 dark:text-indigo-100">1.42</span>
+                    <span class="text-[9px] uppercase tracking-wide text-indigo-500 font-bold">GWA</span>
                   </div>
                 </div>
+                <div class="flex-1 w-full text-center sm:text-left space-y-2">
+                  <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/30 text-emerald-600 dark:text-emerald-400 border border-emerald-200/30 dark:border-emerald-800/30">
+                      Dean's Lister
+                    </span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 border border-indigo-200/30 dark:border-indigo-800/30">
+                      3.5+ Year Honors
+                    </span>
+                  </div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Expected Graduation: <span class="font-semibold text-slate-700 dark:text-slate-300">July 2026</span>
+                  </p>
+                </div>
               </div>
-              <p class="text-xs text-gray-500 dark:text-gray-400 mt-4">Expected Graduation: July 2026</p>
-              <div class="mt-6 relative group">
-                <button class="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition cursor-pointer">
-                  Click to view all semesters
+
+              <div class="mt-4">
+                <button onclick="toggleSemesterModal(true)" class="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition cursor-pointer flex items-center gap-1">
+                  <span>View All Semesters</span>
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                 </button>
-                <!-- Backdrop Blur -->
-                <div class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto z-40"></div>
-                <!-- Modal Popup - Centered -->
-                <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-2xl p-6 opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity z-50 w-80">
-                  <h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-4">Semester History</h4>
-                  <div class="text-xs text-gray-600 dark:text-gray-400 grid grid-cols-2 gap-3">
-                    <div><span class="text-gray-500 dark:text-gray-400">1st Year 1st:</span> <span class="font-semibold">1.2717</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">1st Year 2nd:</span> <span class="font-semibold">1.6304</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">2nd Year 1st:</span> <span class="font-semibold">1.5326</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">2nd Year 2nd:</span> <span class="font-semibold">1.5543</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">3rd Year 1st:</span> <span class="font-semibold">1.4286</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">3rd Year 2nd:</span> <span class="font-semibold">1.5357</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">Summer:</span> <span class="font-semibold">1.5</span></div>
-                    <div><span class="text-gray-500 dark:text-gray-400">4th Year:</span> <span class="font-semibold italic">TBA</span></div>
-                  </div>
-                </div>
               </div>
             </article>
 
-            <article class="card p-8 hover:shadow-xl transition-shadow duration-300">
-              <div class="flex items-start justify-between gap-4 mb-4">
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Pansol Integrated National High School</h3>
-                <span class="badge whitespace-nowrap">2020 – 2022</span>
+            <!-- High School Card -->
+            <article class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+              <div>
+                <div class="flex items-start justify-between gap-4 mb-4">
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">Pansol Integrated HS</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Science, Technology, Engineering, and Mathematics (STEM)</p>
+                  </div>
+                  <span class="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400 flex-shrink-0">2020 – 2022</span>
+                </div>
+                <div class="p-4 bg-slate-50 dark:bg-slate-900/60 rounded-2xl border border-slate-200/60 dark:border-slate-800/80 my-5">
+                  <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                    Graduated with <span class="font-bold text-indigo-600 dark:text-indigo-400">High Honors</span>. Developed foundational skills in scientific inquiry, mathematics, and structural logic.
+                  </p>
+                </div>
               </div>
-              <p class="text-gray-700 dark:text-gray-300 mb-2">
-                Science, Technology, Engineering, and Mathematics (STEM)
-              </p>
-              <p class="text-sm text-gray-600 dark:text-gray-400">
-                Graduated with High Honors
-              </p>
+              <div class="text-xs text-slate-400 dark:text-slate-500 italic mt-2">
+                STEM Strand Alumnus
+              </div>
             </article>
           </div>
         </div>
       </section>
 
       <!-- Skills Section -->
-      <section class="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/20">
-        <div class="mx-auto max-w-7xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Skills & Expertise</h2>
+      <section class="py-16 sm:py-20 px-4 bg-slate-50/50 dark:bg-slate-900/10 border-t border-slate-200/40 dark:border-slate-800/30">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center" style="font-family: 'Pixelify Sans', sans-serif;">Skills & Expertise</h2>
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div class="card glass p-6">
-              <div class="flex items-center gap-2 mb-3">
+            <!-- Frontend -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition duration-300">
+              <div class="flex items-center gap-2 mb-4">
                 <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                 </svg>
-                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Frontend</h3>
+                <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Frontend</h3>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/>
-                  </svg>
-                  HTML
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414z"/>
-                  </svg>
-                  CSS
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/>
-                  </svg>
-                  JavaScript
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M7.5 1.5L3 6v12c0 1.656.895 3 2 3h14c1.105 0 2-1.344 2-3V6l-4.5-4.5H7.5zm0 2h9L20 6H4l3.5-2.5zM3 8h18v10c0 1.1-.895 2-2 2H5c-1.105 0-2-.9-2-2V8z"/>
-                  </svg>
-                  PHP
-                </span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">HTML</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">CSS</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">JavaScript</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">PHP</span>
               </div>
             </div>
-            <div class="card glass p-6">
-              <div class="flex items-center gap-2 mb-3">
+
+            <!-- Frameworks -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition duration-300">
+              <div class="flex items-center gap-2 mb-4">
                 <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                 </svg>
-                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Frameworks</h3>
+                <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Frameworks</h3>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
-                  </svg>
-                  Tailwind CSS
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M5.5 0C2.5 0 0 2.5 0 5.5v13C0 21.5 2.5 24 5.5 24h13c3 0 5.5-2.5 5.5-5.5v-13C24 2.5 21.5 0 18.5 0h-13zm0 2h13c1.9 0 3.5 1.6 3.5 3.5v13c0 1.9-1.6 3.5-3.5 3.5h-13c-1.9 0-3.5-1.6-3.5-3.5v-13c0-1.9 1.6-3.5 3.5-3.5z"/>
-                  </svg>
-                  Bootstrap
-                </span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Bootstrap</span>
               </div>
             </div>
-            <div class="card glass p-6">
-              <div class="flex items-center gap-2 mb-3">
+
+            <!-- Design -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition duration-300">
+              <div class="flex items-center gap-2 mb-4">
                 <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
                 </svg>
-                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Design</h3>
+                <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Design</h3>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981h-4.587zm4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/>
-                  </svg>
-                  Figma
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-                  </svg>
-                  Canva
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                  </svg>
-                  Responsive UI
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                  </svg>
-                  Design Systems
-                </span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Figma</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Canva</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Responsive UI</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Design Systems</span>
               </div>
             </div>
-            <div class="card glass p-6">
-              <div class="flex items-center gap-2 mb-3">
+
+            <!-- Best Practices -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition duration-300">
+              <div class="flex items-center gap-2 mb-4">
                 <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <h3 class="font-semibold text-indigo-600 dark:text-indigo-400">Best Practices</h3>
+                <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Best Practices</h3>
               </div>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
-                  </svg>
-                  Accessibility
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect>
-                  </svg>
-                  Organized Code
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 4h9a2 2 0 0 1 2 2v12l-4-2-4 2V6a2 2 0 0 0-2-2z"></path>
-                  </svg>
-                  Testing
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 3v6l6 3 6-3V3"></path><path d="M6 15v6l6 3 6-3v-6"></path>
-                  </svg>
-                  Documentation
-                </span>
-                <span class="badge inline-flex items-center gap-1.5">
-                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 4h9a2 2 0 0 1 2 2v12l-4-2-4 2V6a2 2 0 0 0-2-2z"></path>
-                  </svg>
-                  Version Control
-                </span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Accessibility</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Clean Code</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Version Control</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300">Testing</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Decorative wave separator -->
-      <div class="wave-separator" aria-hidden="true">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="display:block;">
-          <path d="M0 0 L0 60 C 180 100 360 20 600 60 C 840 100 1020 20 1200 60 L1200 0 Z" fill="var(--wave-fill)" stroke="none" opacity="0.15"></path>
-          <path d="M0 0 L0 80 C 220 120 380 40 600 80 C 820 120 960 40 1200 80 L1200 0 Z" fill="var(--wave-fill)" stroke="none" opacity="0.3"></path>
-          <path d="M0 0 L0 100 C 160 120 400 60 600 100 C 800 120 1040 60 1200 100 L1200 0 Z" fill="var(--wave-fill)" stroke="none"></path>
-        </svg>
-      </div>
-
-      <!-- Experience Section -->
-      <section class="py-12 sm:py-16 px-4 bg-gradient-to-br from-white via-indigo-50/30 to-purple-50/30 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/20">
-
-        <div class="mx-auto max-w-6xl">
-          <!-- Section     -->
+      <!-- Unified Experience & Certificates Tabbed Section -->
+      <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
+        <div class="mx-auto max-w-5xl">
           <div class="text-center mb-10">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 mb-4">
-              <svg class="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-              </svg>
-              <span class="text-sm font-medium text-indigo-600 dark:text-indigo-400">Experience</span>
-            </div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white mb-2" style="font-family: 'Pixelify Sans', sans-serif;">
-              Events & Workshops
-            </h2>
-            <p class="text-sm text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-              Building knowledge through technology events, workshops, and design challenges
-            </p>
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">Activities & Honors</h2>
+            <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto">Seminars, workshops, memberships, and certifications earned along the way.</p>
           </div>
 
-          <!-- Events Grid -->
-          <div class="grid md:grid-cols-2 gap-6">
+          <!-- Tabbed Switcher Buttons -->
+          <div class="flex justify-center mb-8">
+            <div class="inline-flex p-1 bg-slate-100 dark:bg-slate-900/60 rounded-xl border border-slate-200/50 dark:border-slate-800/80">
+              <button id="tab-btn-experience" class="px-5 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm" onclick="switchAboutTab('experience')">
+                Events & Workshops
+              </button>
+              <button id="tab-btn-certificates" class="px-5 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" onclick="switchAboutTab('certificates')">
+                Certificates
+              </button>
+            </div>
+          </div>
+
+          <!-- Tab Contents: Experience -->
+          <div id="tab-content-experience" class="grid md:grid-cols-2 gap-6 transition-all duration-300">
             <!-- JPCS Membership -->
-            <div class="group relative">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
-                <div class="flex items-start gap-3 mb-3">
-                  <div class="w-6 h-6 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20 dark:from-indigo-500/30 dark:to-purple-500/30 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300 border border-indigo-200/30 dark:border-indigo-700/30">
-                    <svg class="w-2.5 h-2.5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2 mb-1">
-                      <h3 class="text-sm font-bold text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">JPCS Member</h3>
-                      <span class="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-indigo-50 dark:bg-indigo-900/20 text-indigo-600 dark:text-indigo-400">
-                        Active
-                      </span>
-                    </div>
-                    <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mb-1">BatStateU TNEU–Lipa Chapter</p>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
-                      Aug 2022 – Jun 2026
-                    </div>
-                  </div>
+            <div class="group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="flex items-start gap-4 mb-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-sm flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                  </svg>
                 </div>
-                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Active member participating in academic and technology activities promoting professional growth and collaboration.
-                </p>
+                <div>
+                  <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">JPCS Member</h3>
+                  <p class="text-xs text-indigo-600 dark:text-indigo-400 font-medium mt-0.5">Junior Philippine Computer Society — Lipa Chapter</p>
+                  <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Aug 2022 – Jun 2026</p>
+                </div>
               </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pl-12">
+                Active chapter member participating in tech seminars, academic forums, and community outreach campaigns.
+              </p>
             </div>
 
             <!-- Techsynergy -->
-            <div class="group relative">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-sky-500 to-blue-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
-                <div class="flex items-start gap-3 mb-3">
-                  <div class="w-6 h-6 rounded-lg bg-gradient-to-br from-sky-500/20 to-blue-500/20 dark:from-sky-500/30 dark:to-blue-500/30 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300 border border-sky-200/30 dark:border-sky-700/30">
-                    <svg class="w-2.5 h-2.5 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2 mb-1">
-                      <h3 class="text-sm font-bold text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">Techsynergy</h3>
-                      <span class="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-sky-50 dark:bg-sky-900/20 text-sky-600 dark:text-sky-400">
-                        Certified
-                      </span>
-                    </div>
-                    <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mb-1">Digital Landscape</p>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
-                      Lipa City
-                    </div>
-                  </div>
+            <div class="group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="flex items-start gap-4 mb-3">
+                <div class="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shadow-sm flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                  </svg>
                 </div>
-                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Certified participant gaining knowledge on emerging digital technologies and modern IT practices.
-                </p>
+                <div>
+                  <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Techsynergy Seminar</h3>
+                  <p class="text-xs text-sky-600 dark:text-sky-400 font-medium mt-0.5">Navigating the Modern Digital Landscape</p>
+                  <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Lipa Academy Campus</p>
+                </div>
               </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pl-12">
+                Gained certification on modern software engineering paradigms, cloud hosting practices, and collaborative product delivery.
+              </p>
             </div>
 
             <!-- Techno SDG -->
-            <div class="group relative">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
-                <div class="flex items-start gap-3 mb-3">
-                  <div class="w-6 h-6 rounded-lg bg-gradient-to-br from-emerald-500/20 to-green-500/20 dark:from-emerald-500/30 dark:to-green-500/30 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300 border border-emerald-200/30 dark:border-emerald-700/30">
-                    <svg class="w-2.5 h-2.5 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2 mb-1">
-                      <h3 class="text-sm font-bold text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">Techno SDG</h3>
-                      <span class="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400">
-                        Completed
-                      </span>
-                    </div>
-                    <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium mb-1">Sustainable Goals</p>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
-                      Oct 2025
-                    </div>
-                  </div>
+            <div class="group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="flex items-start gap-4 mb-3">
+                <div class="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-sm flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                  </svg>
                 </div>
-                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Completed SDG Exposition focusing on technology's role in sustainable development and social responsibility.
-                </p>
+                <div>
+                  <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Techno SDG Exposition</h3>
+                  <p class="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">Technology for Sustainable Goals</p>
+                  <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">Oct 2025</p>
+                </div>
               </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pl-12">
+                Collaborated in developing IT concepts aligning directly with United Nations sustainable cities and community goals.
+              </p>
             </div>
 
-            <!-- UI/UX Design Challenge -->
-            <div class="group relative">
-              <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
-              <div class="relative bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/20 rounded-lg p-4 hover:shadow-lg transition-all duration-300">
-                <div class="flex items-start gap-3 mb-3">
-                  <div class="w-6 h-6 rounded-lg bg-gradient-to-br from-amber-500/20 to-orange-500/20 dark:from-amber-500/30 dark:to-orange-500/30 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300 border border-amber-200/30 dark:border-amber-700/30">
-                    <svg class="w-2.5 h-2.5 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
-                    </svg>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="flex items-center gap-2 mb-1">
-                      <h3 class="text-sm font-bold text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">2nd Place</h3>
-                      <span class="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400">
-                        Winner
-                      </span>
-                    </div>
-                    <p class="text-xs text-amber-600 dark:text-amber-400 font-medium mb-1">UI/UX Challenge</p>
-                    <div class="text-xs text-gray-500 dark:text-gray-400">
-                      Lipa City
-                    </div>
-                  </div>
+            <!-- UI/UX Challenge -->
+            <div class="group bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="flex items-start gap-4 mb-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center shadow-sm flex-shrink-0">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                  </svg>
                 </div>
-                <p class="text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Awarded 2nd place in Creative Clicks UI/UX Design Challenge for exceptional creativity and interface design.
-                </p>
+                <div>
+                  <h3 class="font-bold text-gray-950 dark:text-white text-sm" style="font-family: 'Pixelify Sans', sans-serif;">Creative Clicks Challenge</h3>
+                  <p class="text-xs text-amber-600 dark:text-amber-400 font-medium mt-0.5">Awarded 2nd Place Winners</p>
+                  <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-1">University Level</p>
+                </div>
               </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pl-12">
+                Secured second place out of competitive team listings for creative design prototype and interface ease-of-use.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Certificates Section -->
-      <section class="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/20">
-        <div class="mx-auto max-w-7xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Certificates & Achievements</h2>
-          <div class="grid md:grid-cols-3 gap-6">
-            <!-- Certificate 1 -->
-            <article class="card p-6 hover:shadow-xl transition-shadow duration-300">
-              <div class="mb-4 aspect-video bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/20 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg class="w-12 h-12 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <!-- Tab Contents: Certificates -->
+          <div id="tab-content-certificates" class="grid md:grid-cols-3 gap-6 transition-all duration-300 hidden">
+            <!-- Cert 1 -->
+            <article class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="mb-4 aspect-video bg-emerald-50 dark:bg-emerald-950/20 rounded-xl flex items-center justify-center overflow-hidden border border-emerald-100 dark:border-emerald-900/30">
+                <svg class="w-10 h-10 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">2025 World Innovation Day</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Certificate of Participation for active participation in the 2025 World Innovation Day with the theme "Advancing Innovation for Sustainable Cities" held on April 21, 2025 via Google Meet.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge text-xs">Apr 2025</span>
-                <span class="badge text-xs">Innovation</span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-1.5" style="font-family: 'Pixelify Sans', sans-serif;">2025 World Innovation Day</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Completed active research participation in sustainable cities development forum on April 21, 2025.</p>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-slate-400">Apr 2025</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400">Cities</span>
               </div>
             </article>
 
-            <!-- Certificate 2 -->
-            <article class="card p-6 hover:shadow-xl transition-shadow duration-300">
-              <div class="mb-4 aspect-video bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/20 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg class="w-12 h-12 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- Cert 2 -->
+            <article class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="mb-4 aspect-video bg-sky-50 dark:bg-sky-950/20 rounded-xl flex items-center justify-center overflow-hidden border border-sky-100 dark:border-sky-900/30">
+                <svg class="w-10 h-10 text-sky-600 dark:text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">BITCON 2025</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Certificate of Participation for active participation in the Batangas Information Technology Conference (BITCON) 2025 with the theme "Building a Connected Tomorrow: IoT Innovations and Beyond" held on April 26, 2025 at Lipa Academy for Sports, Culture and Arts Convention Center.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge text-xs">Apr 2025</span>
-                <span class="badge text-xs">Technology</span>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-1.5" style="font-family: 'Pixelify Sans', sans-serif;">BITCON 2025 Participant</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">IoT and connected infrastructures forum at Lipa Academy Sports convention on April 26, 2025.</p>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-slate-400">Apr 2025</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400">IoT</span>
               </div>
             </article>
 
-            <!-- Certificate 3 -->
-            <article class="card p-6 hover:shadow-xl transition-shadow duration-300">
-              <div class="mb-4 aspect-video bg-gradient-to-br from-amber-100 to-yellow-100 dark:from-amber-900/30 dark:to-yellow-900/20 rounded-lg flex items-center justify-center overflow-hidden">
-                <svg class="w-12 h-12 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- Cert 3 -->
+            <article class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-5 hover:shadow-md transition-all duration-300">
+              <div class="mb-4 aspect-video bg-amber-50 dark:bg-amber-950/20 rounded-xl flex items-center justify-center overflow-hidden border border-amber-100 dark:border-amber-900/30">
+                <svg class="w-10 h-10 text-amber-600 dark:text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
               </div>
-              <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-2">TechSilog: Building High-Performance Teams</h3>
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Certificate of Participation for actively participating in the TechSilog: Uaapang Agham, Kaulam sa Umagahan Online Seminar on "Building High-Performance Teams for Startup Technopreneurs" held on September 3, 2025 via Facebook Live.</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="badge text-xs">Sep 2025</span>
-                <span class="badge text-xs">Entrepreneurship</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section class="py-16 sm:py-20 px-4 bg-white dark:bg-gray-950">
-        <div class="mx-auto max-w-7xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-8">Featured Projects</h2>
-          <div class="grid md:grid-cols-2 gap-8">
-            <article class="card overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-              <img src="../assets/images/libralinkFigma.jpg"
-                   data-fallback="/Portfolio/assets/images/libralinkFigma.jpg, ../assets/images/libralinkFigma.jpeg, ../assets/images/LibraLinkFigma.jpg, ../assets/images/libralinkFigma.png"
-                   alt="LibraLink • Figma"
-                   class="h-72 w-full object-cover"
-                   loading="lazy" />
-              <div class="p-6">
-                <h3 class="text-xl font-bold mb-2">LibraLink • Figma</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Responsive UI exploration and prototyping based on resume highlights.</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="badge">Figma</span><span class="badge">UI</span><span class="badge">Responsive</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card overflow-hidden group relative hover:shadow-2xl transition-shadow duration-300">
-              <img src="../assets/images/responsysFigma.jpg"
-                   data-fallback="/Portfolio/assets/images/responsysFigma.jpg, ../assets/images/responsysFigma.jpeg, ../assets/images/ResponsysFigma.jpg, ../assets/images/responsysFigma.png"
-                   alt="Responsys • Figma"
-                   class="h-72 w-full object-cover"
-                   loading="lazy" />
-              <div class="p-6">
-                <h3 class="text-xl font-bold mb-2">Responsys • Figma</h3>
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Dashboard layout and component system aligned with resume experience.</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="badge">Figma</span><span class="badge">Design System</span><span class="badge">Components</span>
-                </div>
-              </div>
-              <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end overflow-hidden">
-                <div class="w-full transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <a class="btn w-full text-center justify-center" href="https://responsysgarcia.com" target="_blank" rel="noopener noreferrer">Live Demo →</a>
-                </div>
+              <h3 class="text-sm font-bold text-gray-900 dark:text-white mb-1.5" style="font-family: 'Pixelify Sans', sans-serif;">TechSilog Technopreneurship</h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">Startup incubation seminar regarding building high performance engineering teams on Sept 3, 2025.</p>
+              <div class="flex flex-wrap gap-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-slate-400">Sep 2025</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-indigo-50 dark:bg-indigo-950/30 text-indigo-600 dark:text-indigo-400">Startup</span>
               </div>
             </article>
           </div>
@@ -874,90 +628,146 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section class="py-16 sm:py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50/30 dark:from-gray-900 dark:to-indigo-950/20">
-        <div class="mx-auto max-w-7xl">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-8" style="font-family: 'Pixelify Sans', sans-serif;">What People Say</h2>
+      <section class="py-16 sm:py-20 px-4 bg-slate-50/50 dark:bg-slate-900/10 border-t border-slate-200/40 dark:border-slate-800/30">
+        <div class="mx-auto max-w-5xl">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center" style="font-family: 'Pixelify Sans', sans-serif;">What People Say</h2>
           <div class="grid md:grid-cols-3 gap-6">
-            <div class="card p-6 flex flex-col">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
+            <!-- Review 1 -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:shadow-md transition-all duration-300">
+              <div class="flex items-center gap-0.5 mb-4 text-amber-400">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
               </div>
-              <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow italic text-sm">"King Jerome demonstrated exceptional creativity and technical skills in the UI/UX design challenge. His ability to combine aesthetics with functionality is truly impressive."</p>
-              <div>
-                <p class="font-semibold text-gray-900 dark:text-white text-sm">Von Cedric Latag</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">CICS UI/UX Design Challenge 2025</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400 italic mb-4 leading-relaxed flex-grow">"King Jerome demonstrated exceptional creativity and technical skills in the UI/UX design challenge. His ability to combine aesthetics with functionality is truly impressive."</p>
+              <div class="border-t border-slate-100 dark:border-slate-800/80 pt-3">
+                <p class="font-bold text-gray-900 dark:text-white text-xs">Von Cedric Latag</p>
+                <p class="text-[10px] text-slate-400 dark:text-slate-500">CICS UI/UX Challenge 2025</p>
               </div>
             </div>
 
-            <div class="card p-6 flex flex-col">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
+            <!-- Review 2 -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:shadow-md transition-all duration-300">
+              <div class="flex items-center gap-0.5 mb-4 text-amber-400">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
               </div>
-              <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow italic text-sm">"A dedicated student and active participant in tech communities. Jerome's commitment to learning and growth is remarkable, and his work reflects high standards of excellence."</p>
-              <div>
-                <p class="font-semibold text-gray-900 dark:text-white text-sm">Carelle Miles Bobadilla</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Junior Philippine Computer Society</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400 italic mb-4 leading-relaxed flex-grow">"A dedicated student and active participant in tech communities. Jerome's commitment to learning and growth is remarkable, and his work reflects high standards of excellence."</p>
+              <div class="border-t border-slate-100 dark:border-slate-800/80 pt-3">
+                <p class="font-bold text-gray-900 dark:text-white text-xs">Carelle Miles Bobadilla</p>
+                <p class="text-[10px] text-slate-400 dark:text-slate-500">Junior Philippine Computer Society</p>
               </div>
             </div>
 
-            <div class="card p-6 flex flex-col">
-              <div class="flex items-center gap-1 mb-4">
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
-                <svg class="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                </svg>
+            <!-- Review 3 -->
+            <div class="bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 flex flex-col justify-between hover:shadow-md transition-all duration-300">
+              <div class="flex items-center gap-0.5 mb-4 text-amber-400">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
               </div>
-              <p class="text-gray-700 dark:text-gray-300 mb-4 flex-grow italic text-sm">"Jerome's clean code, attention to detail, and responsiveness to feedback make him a valuable team member. He brings both technical skills and a positive attitude to everything he does."</p>
-              <div>
-                <p class="font-semibold text-gray-900 dark:text-white text-sm">John Adrian Perce</p>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Batangas State University</p>
+              <p class="text-xs text-slate-600 dark:text-slate-400 italic mb-4 leading-relaxed flex-grow">"Jerome's clean code, attention to detail, and responsiveness to feedback make him a valuable team member. He brings both technical skills and a positive attitude to everything he does."</p>
+              <div class="border-t border-slate-100 dark:border-slate-800/80 pt-3">
+                <p class="font-bold text-gray-900 dark:text-white text-xs">John Adrian Perce</p>
+                <p class="text-[10px] text-slate-400 dark:text-slate-500">Batangas State University</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Decorative wave separator -->
-      <div class="wave-separator" aria-hidden="true">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="display:block;">
-          <path d="M0 0 L0 60 C 180 100 360 20 600 60 C 840 100 1020 20 1200 60 L1200 0 Z" fill="var(--wave-fill)" stroke="none" opacity="0.15"></path>
-          <path d="M0 0 L0 80 C 220 120 380 40 600 80 C 820 120 960 40 1200 80 L1200 0 Z" fill="var(--wave-fill)" stroke="none" opacity="0.3"></path>
-          <path d="M0 0 L0 100 C 160 120 400 60 600 100 C 800 120 1040 60 1200 100 L1200 0 Z" fill="var(--wave-fill)" stroke="none"></path>
-        </svg>
+      <!-- Semester GWA Modal -->
+      <div id="semester-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm" onclick="if(event.target===this) toggleSemesterModal(false)">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden transform transition-all duration-300 scale-100 flex flex-col max-h-[85vh]">
+          <!-- Modal Header -->
+          <div class="px-6 py-5 border-b border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">BatStateU Semestral GWAs</h3>
+              <p class="text-xs text-slate-400 dark:text-slate-500">Official semestral grade weighted averages</p>
+            </div>
+            <button onclick="toggleSemesterModal(false)" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+          </div>
+          <!-- Modal Body (Scrollable) -->
+          <div class="p-6 overflow-y-auto space-y-4">
+            <div class="grid grid-cols-1 gap-2.5">
+              <!-- Semesters -->
+              <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-xl">
+                <div>
+                  <span class="text-xs font-bold text-slate-400 dark:text-slate-500">1st Year • 1st Semester</span>
+                  <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">BatStateU Lipa</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-sm font-black text-indigo-600 dark:text-indigo-400">1.46</span>
+                  <p class="text-[9px] uppercase tracking-wide text-slate-400 font-bold">GWA</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-xl">
+                <div>
+                  <span class="text-xs font-bold text-slate-400 dark:text-slate-500">1st Year • 2nd Semester</span>
+                  <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">BatStateU Lipa</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-sm font-black text-indigo-600 dark:text-indigo-400">1.44</span>
+                  <p class="text-[9px] uppercase tracking-wide text-slate-400 font-bold">GWA</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-xl">
+                <div>
+                  <span class="text-xs font-bold text-slate-400 dark:text-slate-500">2nd Year • 1st Semester</span>
+                  <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">BatStateU Lipa</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-sm font-black text-indigo-600 dark:text-indigo-400">1.50</span>
+                  <p class="text-[9px] uppercase tracking-wide text-slate-400 font-bold">GWA</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-xl">
+                <div>
+                  <span class="text-xs font-bold text-slate-400 dark:text-slate-500">2nd Year • 2nd Semester</span>
+                  <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">BatStateU Lipa</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-sm font-black text-indigo-600 dark:text-indigo-400">1.37</span>
+                  <p class="text-[9px] uppercase tracking-wide text-slate-400 font-bold">GWA</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-xl">
+                <div>
+                  <span class="text-xs font-bold text-slate-400 dark:text-slate-500">3rd Year • 1st Semester</span>
+                  <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">BatStateU Lipa</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-sm font-black text-indigo-600 dark:text-indigo-400">1.40</span>
+                  <p class="text-[9px] uppercase tracking-wide text-slate-400 font-bold">GWA</p>
+                </div>
+              </div>
+              <div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-950/40 border border-slate-100 dark:border-slate-800/60 rounded-xl">
+                <div>
+                  <span class="text-xs font-bold text-slate-400 dark:text-slate-500">3rd Year • 2nd Semester</span>
+                  <p class="text-sm font-semibold text-slate-800 dark:text-slate-200">BatStateU Lipa</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-sm font-black text-indigo-600 dark:text-indigo-400">1.35</span>
+                  <p class="text-[9px] uppercase tracking-wide text-slate-400 font-bold">GWA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal Footer -->
+          <div class="px-6 py-4 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-100 dark:border-slate-800/80 flex justify-end">
+            <button onclick="toggleSemesterModal(false)" class="px-4 py-2 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition cursor-pointer">Close</button>
+          </div>
+        </div>
       </div>
-
-    
-
     <footer id="site-footer" class="mt-12"></footer>
     
     <!-- Scroll to top button -->
@@ -1212,7 +1022,7 @@
       syncWaveColorsToAbove();
 
       // Load footer
-        fetch('../src/components/footer.html')
+      fetch('../src/components/footer.html')
         .then(r => r.text())
         .then(html => {
           const el = document.getElementById('site-footer');
@@ -1221,6 +1031,106 @@
           if (y) y.textContent = new Date().getFullYear().toString();
         })
         .catch(console.error);
+
+      // Initialize Bento Local Time Clock
+      function updateLocalTime() {
+        const options = {
+          timeZone: 'Asia/Manila',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        };
+        const formatter = new Intl.DateTimeFormat([], options);
+        const clockEl = document.getElementById('local-time-clock');
+        if (clockEl) {
+          clockEl.textContent = formatter.format(new Date());
+        }
+      }
+      setInterval(updateLocalTime, 1000);
+      updateLocalTime();
+
+      function switchBentoTab(tab) {
+        const detailsBtn = document.getElementById('tab-btn-details');
+        const achievementsBtn = document.getElementById('tab-btn-achievements');
+        const detailsContent = document.getElementById('tab-content-details');
+        const achievementsContent = document.getElementById('tab-content-achievements');
+
+        if (tab === 'details') {
+          detailsBtn.className = "text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 pb-1 border-b-2 border-indigo-600 dark:border-indigo-400 mr-6 transition";
+          achievementsBtn.className = "text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 pb-1 border-b-2 border-transparent hover:text-slate-600 dark:hover:text-slate-300 transition";
+          
+          achievementsContent.classList.add('hidden');
+          achievementsContent.classList.remove('opacity-100', 'translate-y-0');
+          achievementsContent.classList.add('opacity-0', 'translate-y-2');
+          
+          detailsContent.classList.remove('hidden');
+          setTimeout(() => {
+            detailsContent.classList.add('opacity-100', 'translate-y-0');
+            detailsContent.classList.remove('opacity-0', 'translate-y-2');
+          }, 50);
+        } else {
+          achievementsBtn.className = "text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 pb-1 border-b-2 border-indigo-600 dark:border-indigo-400 transition";
+          detailsBtn.className = "text-xs font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 pb-1 border-b-2 border-transparent hover:text-slate-600 dark:hover:text-slate-300 mr-6 transition";
+          
+          detailsContent.classList.add('hidden');
+          detailsContent.classList.remove('opacity-100', 'translate-y-0');
+          detailsContent.classList.add('opacity-0', 'translate-y-2');
+          
+          achievementsContent.classList.remove('hidden');
+          setTimeout(() => {
+            achievementsContent.classList.add('opacity-100', 'translate-y-0');
+            achievementsContent.classList.remove('opacity-0', 'translate-y-2');
+          }, 50);
+        }
+      }
+
+      function copyEmailToClipboard() {
+        const email = "lacernakingjeromep@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+          const toast = document.getElementById('toast-area');
+          if (toast) {
+            toast.style.opacity = '1';
+            setTimeout(() => {
+              toast.style.opacity = '0';
+            }, 2500);
+          }
+        }).catch(err => {
+          console.error('Could not copy email: ', err);
+        });
+      }
+
+      function toggleSemesterModal(show) {
+        const modal = document.getElementById('semester-modal');
+        if (show) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        } else {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      }
+
+      function switchAboutTab(tab) {
+        const expBtn = document.getElementById('tab-btn-experience');
+        const certBtn = document.getElementById('tab-btn-certificates');
+        const expContent = document.getElementById('tab-content-experience');
+        const certContent = document.getElementById('tab-content-certificates');
+        
+        if (tab === 'experience') {
+          expBtn.className = 'px-5 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm';
+          certBtn.className = 'px-5 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+          expContent.classList.remove('hidden');
+          certContent.classList.add('hidden');
+        } else {
+          certBtn.className = 'px-5 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 bg-white dark:bg-indigo-600 text-indigo-600 dark:text-white shadow-sm';
+          expBtn.className = 'px-5 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-200 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+          certContent.classList.remove('hidden');
+          expContent.classList.add('hidden');
+        }
+      }
     </script>
   </body>
 </html>
