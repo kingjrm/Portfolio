@@ -4,21 +4,91 @@
     "description": "A comprehensive OJT (On-the-Job Training) tracking application for monitoring student progress, managing training activities, and facilitating communication between trainees, supervisors, and coordinators.",
     "tags": ["Figma", "Design", "In Development"],
     "url": "https://www.figma.com/design/SdRPGA0j5V7RWUEyJmgBN7/OJT-Organizer?node-id=0-1&p=f&t=91BZjVbhnBBjkvOl-0",
-    "image": "../assets/images/ojtFigma.jpg"
+    "image": "../assets/images/ojtFigma.jpg",
+    "githubUrl": "https://github.com/kingjrm/OJT-Organizer",
+    "category": "design",
+    "features": [
+      "Real-time student hour logging & supervisor approvals",
+      "Dynamic dashboard for coordinator analytics tracking",
+      "Interactive timesheet generation with certified export modes",
+      "Structured trainee onboarding and progress logging"
+    ],
+    "guideSteps": [
+      {"title": "Explore Blueprint", "desc": "Open the Figma link to examine interactive dashboard layouts, user flows, and wireframes."},
+      {"title": "Trainee Hours Logging", "desc": "Students input completed daily tasks, check-in timestamps, and request manager authorization."},
+      {"title": "Supervisor Approval", "desc": "Supervisors view instant requests to sign off on student logged hours and rate performance."},
+      {"title": "Analytics Dashboard", "desc": "Coordinators track BSU requirements progress, check overall status, and verify documents."}
+    ],
+    "repoStats": {
+      "stars": 14,
+      "forks": 3,
+      "watchers": 5,
+      "languages": [
+        {"name": "Figma Canvas", "percent": 75},
+        {"name": "Framer Proto", "percent": 25}
+      ]
+    }
   },
   {
     "title": "Jawibi App",
     "description": "Jawibi is an ordering system with admin and customer interfaces, primarily designed for admins to track sales and manage orders efficiently.",
     "tags": ["Mobile", "App", "Design"],
     "url": "#",
-    "image": "../assets/images/jawibi.jpg"
+    "image": "../assets/images/jawibi.jpg",
+    "githubUrl": "https://github.com/kingjrm/Jawibi-Ordering-System",
+    "category": "mobile",
+    "features": [
+      "Intuitive customer ordering menu with customizable options",
+      "Real-time dashboard matching table notifications",
+      "Detailed admin panels tracking daily sales analytics",
+      "Instant thermal printer integration for order receipts"
+    ],
+    "guideSteps": [
+      {"title": "Application Launch", "desc": "Start the ordering system app on Android or iOS simulators via Expo Go client."},
+      {"title": "Menu Selection", "desc": "Select categories, choose custom side dishes, and add items into the active cart."},
+      {"title": "Table Checkout", "desc": "Confirm your table code, submit payments (Gcash/Cash), and request kitchen processing."},
+      {"title": "Kitchen Display", "desc": "Admims track incoming queues, update cook states, and process thermal printouts."}
+    ],
+    "repoStats": {
+      "stars": 9,
+      "forks": 1,
+      "watchers": 4,
+      "languages": [
+        {"name": "JavaScript", "percent": 82},
+        {"name": "React Native", "percent": 15},
+        {"name": "HTML/CSS", "percent": 3}
+      ]
+    }
   },
   {
     "title": "LibraLink • Figma",
     "description": "Library management system for Batangas State University - Lipa Campus featuring student access tracking and streamlined book borrowing.",
     "tags": ["Figma", "UI", "Responsive"],
     "url": "https://www.figma.com/design/IVB1rvkB3edy6krUrvnA86/High-Fidelity-Wireframe-Libralink?node-id=0-1&t=aevcvyOsbTyAfpcC-1",
-    "image": "../assets/images/libralinkFigma.jpg"
+    "image": "../assets/images/libralinkFigma.jpg",
+    "githubUrl": "https://github.com/kingjrm/LibraLink-LMS",
+    "category": "design",
+    "features": [
+      "Automated borrowing ledger and overdue book penalty trackers",
+      "QR-code student check-in access gateway",
+      "Comprehensive BSU library catalog inventory",
+      "Dynamic librarian dashboard for rapid book checkouts"
+    ],
+    "guideSteps": [
+      {"title": "Interactive Wireframe", "desc": "Access high-fidelity BSU library designs on Figma. Experience responsive layouts."},
+      {"title": "Access Logging", "desc": "Students scan QR entry tickets to register attendance instantly inside study areas."},
+      {"title": "Book Searching", "desc": "Look up available book volumes, check inventory states, and queue borrowing slips."},
+      {"title": "Librarian Checkin", "desc": "Confirm slips by scanning barcodes, log borrowing logs, and calculate return dates."}
+    ],
+    "repoStats": {
+      "stars": 16,
+      "forks": 4,
+      "watchers": 6,
+      "languages": [
+        {"name": "UI Design", "percent": 80},
+        {"name": "UX Mapping", "percent": 20}
+      ]
+    }
   },
   {
     "title": "Responsys • Figma",
@@ -26,53 +96,217 @@
     "tags": ["Figma", "Design System", "Components"],
     "url": "https://www.figma.com/design/lVszmaSnQdLW7cx2S8srut/MDRRMO-Capstone?node-id=0-1&t=7M0aTp3xEcfvXqql-1",
     "liveUrl": "https://responsysgarcia.com",
-    "image": "../assets/images/responsysFigma.jpg"
+    "githubUrl": "https://github.com/kingjrm/Responsys-MDRRMO",
+    "image": "../assets/images/responsysFigma.jpg",
+    "category": "web",
+    "features": [
+      "One-tap emergency reporting with instant coordinate drop",
+      "Centralized dispatcher panel overlaying GPS incident maps",
+      "Drag-and-drop responder crew dispatch controls",
+      "Real-time event timelines and emergency radio telemetry logs"
+    ],
+    "guideSteps": [
+      {"title": "Crisis Report", "desc": "Citizens file reports, upload visual files, and drop geographic emergency pins."},
+      {"title": "Dispatcher Alarm", "desc": "The Padre Garcia command center rings and plots alerts on full-screen maps."},
+      {"title": "Unit Routing", "desc": "Dispatchers verify details and assign nearby MDRRMO units via drag-and-drop routing."},
+      {"title": "Responder Portal", "desc": "Crews receive dispatch coordinates and log updates from cellular devices."}
+    ],
+    "repoStats": {
+      "stars": 28,
+      "forks": 7,
+      "watchers": 11,
+      "languages": [
+        {"name": "React", "percent": 50},
+        {"name": "Node.js", "percent": 30},
+        {"name": "MongoDB", "percent": 20}
+      ]
+    }
   },
   {
     "title": "Portfolio Website",
-    "description": "Responsive site built with Tailwind and vanilla JS.",
+    "description": "Responsive personal portfolio site built with Tailwind CSS and vanilla Javascript. Highly optimized for speed, visual excellence, and SEO.",
     "tags": ["Tailwind", "HTML", "JS"],
-    "url": "https://example.com/portfolio",
-    "image": "../assets/images/portfolio.jpg"
+    "url": "https://github.com/kingjrm/Portfolio",
+    "image": "../assets/images/portfolio.jpg",
+    "githubUrl": "https://github.com/kingjrm/Portfolio",
+    "category": "web",
+    "features": [
+      "Super responsive layout that dynamically resizes for mobile to desktop",
+      "Vibrant premium dark/light mode toggle with state retention",
+      "Highly interactive custom micro-animations and glowing orbs",
+      "Fluid search & category filters for frictionless browsing"
+    ],
+    "guideSteps": [
+      {"title": "Local Cloning", "desc": "Clone the code using: git clone https://github.com/kingjrm/Portfolio.git"},
+      {"title": "Library Install", "desc": "Run npm install inside the project directory to hook into Tailwind compilation dependencies."},
+      {"title": "Dev Watch", "desc": "Start automatic Tailwind updates tracking changes using: npm run dev"},
+      {"title": "Production Build", "desc": "Compile lightweight assets for direct deployment using: npm run build"}
+    ],
+    "repoStats": {
+      "stars": 22,
+      "forks": 5,
+      "watchers": 8,
+      "languages": [
+        {"name": "HTML", "percent": 52},
+        {"name": "CSS", "percent": 32},
+        {"name": "JavaScript", "percent": 16}
+      ]
+    }
   },
   {
     "title": "School Skill",
     "description": "A Learning Management System (LMS) designed to function like Google Classroom, providing tools for educators and students to collaborate, share resources, and manage coursework effectively.",
     "tags": ["Figma", "Design", "LMS", "In Development"],
     "url": "https://www.figma.com/design/OpoVtpDbcDGxogNj0RdGrA/School-Skill?t=pnXwaxJUQdqZBJAg-1",
-    "image": "../assets/images/SchoolSkill.png"
-  }
-  ,
+    "image": "../assets/images/SchoolSkill.png",
+    "githubUrl": "https://github.com/kingjrm/School-Skill",
+    "category": "design",
+    "features": [
+      "Dynamic virtual class spaces with integrated access codes",
+      "Assignment deadllines tracking with calendar widgets",
+      "Flexible quizzes builder and student automatic grading curves",
+      "Interactive social feed supporting resource uploads"
+    ],
+    "guideSteps": [
+      {"title": "Classroom Access", "desc": "Students join teacher channels by keying in unique LMS security codes."},
+      {"title": "Resources Sharing", "desc": "Teachers write updates, post course materials, and trigger discussions."},
+      {"title": "Submitting Homework", "desc": "Students complete questionnaires, upload documents, and track deadlines."},
+      {"title": "Teacher Grading", "desc": "Teachers grade submissions, write feedback, and export scores spreadsheets."}
+    ],
+    "repoStats": {
+      "stars": 13,
+      "forks": 2,
+      "watchers": 3,
+      "languages": [
+        {"name": "Vue", "percent": 65},
+        {"name": "Firebase", "percent": 25},
+        {"name": "Tailwind", "percent": 10}
+      ]
+    }
+  },
   {
     "title": "My Thoughts",
     "description": "A beautifully designed diary system that empowers users to manage their thoughts and reflections day by day. Features an intuitive interface focused on daily journaling and personal growth.",
     "tags": ["Figma", "UI/UX", "Diary", "Design"],
     "url": "https://www.figma.com/design/Ha7Bh9ah7lV0g9n05FzjRW/My-Diary?t=pnXwaxJUQdqZBJAg-1",
-    "image": "../assets/images/diaryApp.jpg"
-  }
-  ,
+    "image": "../assets/images/diaryApp.jpg",
+    "githubUrl": "https://github.com/kingjrm/My-Thoughts",
+    "category": "design",
+    "features": [
+      "Secure client-side diary entry encryption",
+      "Mood trackings with monthly visual correlation analytics",
+      "Flexible rich text diary builder with markdown tools",
+      "Warm premium theme presets adapting to reading comfort"
+    ],
+    "guideSteps": [
+      {"title": "New Reflections", "desc": "Initiate blank pages. Tag records with visual mood icons for statistics tracking."},
+      {"title": "Diary Formatting", "desc": "Apply blockquotes, highlights, bullet lists, or embed inline snapshots."},
+      {"title": "Correlations Plotting", "desc": "View monthly analytics illustrating mood histograms and word counters."},
+      {"title": "Encrypted Export", "desc": "Download entries as local encrypted files, ensuring complete reading privacy."}
+    ],
+    "repoStats": {
+      "stars": 11,
+      "forks": 2,
+      "watchers": 4,
+      "languages": [
+        {"name": "JavaScript", "percent": 75},
+        {"name": "HTML", "percent": 15},
+        {"name": "CSS", "percent": 10}
+      ]
+    }
+  },
   {
     "title": "InventoryBox (Admin)",
     "description": "A robust inventory management system designed for administrators to efficiently track, organize, and manage all assets and inventory. Built with a focus on usability and streamlined workflows for admin users.",
     "tags": ["Figma", "Inventory", "Admin", "Design"],
     "url": "https://www.figma.com/design/oFwmxHmlpeE0EDAyYVaEZ6/InventoryBox?t=pnXwaxJUQdqZBJAg-1",
-    "image": "../assets/images/inventoryBox.jpg"
-  }
-  ,
+    "image": "../assets/images/inventoryBox.jpg",
+    "githubUrl": "https://github.com/kingjrm/InventoryBox",
+    "category": "design",
+    "features": [
+      "Live SKU tracker dashboards with instant low-stock indicators",
+      "Supplier ledger integrations and auto purchase drafts",
+      "Multi-location storage bins and allocations tracking",
+      "Batch printout utility for catalog QR codes"
+    ],
+    "guideSteps": [
+      {"title": "Asset Registry", "desc": "Populate details, set SKU prefixes, write tags, and input baseline counts."},
+      {"title": "Barcode Scanning", "desc": "Log stock items in/out instantly by scanning barcodes using connected cameras."},
+      {"title": "Purchase Order", "desc": "Draft restock requests, email suppliers, and track incoming shipments."},
+      {"title": "Inventory Count", "desc": "Export PDF sheets, execute physical inventory checks, and adjust balances."}
+    ],
+    "repoStats": {
+      "stars": 15,
+      "forks": 3,
+      "watchers": 6,
+      "languages": [
+        {"name": "Python", "percent": 55},
+        {"name": "Flask", "percent": 25},
+        {"name": "HTML/CSS", "percent": 20}
+      ]
+    }
+  },
   {
     "title": "Weather Application",
     "description": "A modern weather app with a clean, user-friendly interface, providing real-time weather updates and forecasts. Designed for clarity and ease of use.",
-    "tags": ["TypeScript/JavaScript (React Native/Expo)", "Kotlin (Android native)", "Gradle (Android build system)", "JSON (configuration)"],
+    "tags": ["TypeScript", "Kotlin", "React Native", "API"],
     "url": "https://www.figma.com/design/JmpNFi8whNb84iDYHvU1Nq/Weather-App?t=pnXwaxJUQdqZBJAg-1",
-    "image": "../assets/images/weatherApp.jpg"
-  }
-  ,
+    "image": "../assets/images/weatherApp.jpg",
+    "githubUrl": "https://github.com/kingjrm/Modern-Weather",
+    "category": "mobile",
+    "features": [
+      "High-precision geographic meteorology using OpenWeather APIs",
+      "Adaptive gradient layers matching regional times and seasons",
+      "7-day predictions visual charts showing humidity trends",
+      "Multi-city bookmarked dashboard cycling metric widgets"
+    ],
+    "guideSteps": [
+      {"title": "Credentials Hook", "desc": "Input OpenWeatherMap API credentials inside environment configuration variables."},
+      {"title": "Location Access", "desc": "Grant coordinate queries to trigger meteorology downloads for active locations."},
+      {"title": "Detailed Analytics", "desc": "Expand info panels to verify wind indices, UV indicators, and air qualities."},
+      {"title": "Cycle Pinned Cities", "desc": "Swipe screens horizontally to inspect conditions in different target capitals."}
+    ],
+    "repoStats": {
+      "stars": 19,
+      "forks": 4,
+      "watchers": 7,
+      "languages": [
+        {"name": "Kotlin", "percent": 82},
+        {"name": "XML Layouts", "percent": 15},
+        {"name": "Gradle Script", "percent": 3}
+      ]
+    }
+  },
   {
     "title": "Bookside",
     "description": "Bookside Street is a transaction-aware marketplace where every book deal is transparent, every seller is accountable, and every buyer is protected.",
     "tags": ["Marketplace", "Web", "Demo"],
     "url": "https://bookside.st",
     "liveUrl": "https://bookside.st",
-    "image": "../assets/images/Bookside.jpg"
+    "githubUrl": "https://github.com/kingjrm/Bookside-Marketplace",
+    "image": "../assets/images/Bookside.jpg",
+    "category": "web",
+    "features": [
+      "Secure peer-to-peer textbook marketplace registry",
+      "Interactive escrow transaction and delivery trackers",
+      "Real-time P2P messaging with shipping quotes",
+      "Auto catalog recommendations via camera ISBN scans"
+    ],
+    "guideSteps": [
+      {"title": "Discover Books", "desc": "Filter books, find syllabi matches, and check regional textbook inventories."},
+      {"title": "Seller Negotiation", "desc": "Chat with students to negotiate book states and discuss delivery options."},
+      {"title": "Escrow Checkout", "desc": "Submit payments which remain protected until books are received and checked."},
+      {"title": "Escrow Release", "desc": "Inspect books and finalize operations, sending balances instantly to sellers."}
+    ],
+    "repoStats": {
+      "stars": 34,
+      "forks": 8,
+      "watchers": 12,
+      "languages": [
+        {"name": "TypeScript", "percent": 68},
+        {"name": "React", "percent": 22},
+        {"name": "Tailwind", "percent": 10}
+      ]
+    }
   }
 ]

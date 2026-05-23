@@ -9,32 +9,165 @@
     <link rel="shortcut icon" href="../assets/images/logoPortfolio.png" />
     <link rel="apple-touch-icon" href="../assets/images/logoPortfolio.png" />
     <meta name="theme-color" content="#4F46E5" />
+    <meta name="description" content="A curated showcase of professional web applications, mobile interfaces, and UI/UX design systems engineered by King Jerome P. Lacerna." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Pixelify+Sans:wght@400..700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+    
     <style>
       html { overflow-x: hidden; height: 100%; }
       body { min-height: 100vh; display: flex; flex-direction: column; margin: 0; padding: 0; }
       main { flex: 1; }
+
+      /* Ambient floating background elements */
+      .ambient-glow-1 {
+        background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(168, 85, 247, 0.05) 50%, transparent 100%);
+        animation: drift 25s infinite alternate ease-in-out;
+      }
+      .ambient-glow-2 {
+        background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(236, 72, 153, 0.04) 50%, transparent 100%);
+        animation: drift-reverse 30s infinite alternate ease-in-out;
+      }
+      .dark .ambient-glow-1 {
+        background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.03) 60%, transparent 100%);
+      }
+      .dark .ambient-glow-2 {
+        background: radial-gradient(circle, rgba(168, 85, 247, 0.07) 0%, rgba(236, 72, 153, 0.02) 60%, transparent 100%);
+      }
+
+      @keyframes drift {
+        0% { transform: translate(0px, 0px) scale(1); }
+        50% { transform: translate(60px, 30px) scale(1.1); }
+        100% { transform: translate(120px, -20px) scale(1.2); }
+      }
+      @keyframes drift-reverse {
+        0% { transform: translate(0px, 0px) scale(1.1); }
+        50% { transform: translate(-80px, -40px) scale(0.95); }
+        100% { transform: translate(-40px, 50px) scale(1.05); }
+      }
+
+      /* Skeleton shimmer loader */
+      .skeleton-shimmer {
+        background: linear-gradient(90deg, rgba(229, 231, 235, 0.5) 25%, rgba(243, 244, 246, 0.8) 50%, rgba(229, 231, 235, 0.5) 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.6s infinite linear;
+      }
+      .dark .skeleton-shimmer {
+        background: linear-gradient(90deg, rgba(31, 41, 55, 0.5) 25%, rgba(55, 65, 81, 0.8) 50%, rgba(31, 41, 55, 0.5) 75%);
+        background-size: 200% 100%;
+        animation: shimmer 1.6s infinite linear;
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+
+      /* 3D card layout & interactive hover glow */
+      .glow-card {
+        position: relative;
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15), box-shadow 0.4s ease, border-color 0.4s ease;
+        transform-style: preserve-3d;
+        will-change: transform;
+      }
+      .dark .glow-card {
+        background: rgba(15, 23, 42, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .glow-card::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        background: radial-gradient(350px circle at var(--mx, 50%) var(--my, 50%), rgba(99, 102, 241, 0.22), transparent 45%);
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+      }
+      .glow-card:hover::before {
+        opacity: 1;
+      }
+      .glow-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(280px circle at var(--mx, 50%) var(--my, 50%), rgba(99, 102, 241, 0.06), transparent 45%);
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.35s ease;
+        pointer-events: none;
+      }
+      .glow-card:hover::after {
+        opacity: 1;
+      }
+
+      /* Tab panel animations */
+      @keyframes modalScaleIn {
+        from { opacity: 0; transform: scale(0.96) translateY(12px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+      }
+      .modal-animate-in {
+        animation: modalScaleIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      /* Audio wave animation */
+      .wave-bar {
+        animation: audioWave 1.2s ease-in-out infinite alternate;
+      }
+      @keyframes audioWave {
+        0% { height: 6px; }
+        100% { height: 28px; }
+      }
+
+      /* Custom scrollbar for terminal/guide blocks */
+      .custom-scroll::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .custom-scroll::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 9999px;
+      }
+      .custom-scroll::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.3);
+        border-radius: 9999px;
+      }
+      .dark .custom-scroll::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.02);
+      }
+      .dark .custom-scroll::-webkit-scrollbar-thumb {
+        background: rgba(99, 102, 241, 0.5);
+      }
     </style>
   </head>
   <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
-    <nav class="relative sticky top-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/20 transition-all duration-300 shadow-xl" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
+    
+    <!-- Ambient glowing backgrounds -->
+    <div class="fixed top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full blur-[120px] ambient-glow-1 pointer-events-none -z-20"></div>
+    <div class="fixed bottom-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full blur-[120px] ambient-glow-2 pointer-events-none -z-20"></div>
+
+    <!-- Navigation Header -->
+    <nav class="relative sticky top-0 z-50 bg-white/20 dark:bg-black/30 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-lg" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
-        <a href="../index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
+        <a href="../index.html" class="font-bold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
           K.J
         </a>
         
         <!-- Desktop Navigation -->
-          <div class="hidden lg:flex items-center gap-8">
+        <div class="hidden lg:flex items-center gap-8">
           <ul class="flex items-center gap-8" style="font-family: 'Pixelify Sans', sans-serif;">
-            <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="../index.html">Home</a></li>
-            <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./about.html">About</a></li>
-            <li><a class="text-white bg-white/20 px-3 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-white/30" href="./projects.html">Projects</a></li>
-            <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./contact.html">Contact</a></li>
+            <li><a class="text-gray-700 dark:text-white/80 hover:text-indigo-600 dark:hover:text-white text-sm font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-2 rounded-full" href="../index.html">Home</a></li>
+            <li><a class="text-gray-700 dark:text-white/80 hover:text-indigo-600 dark:hover:text-white text-sm font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-2 rounded-full" href="./about.html">About</a></li>
+            <li><a class="text-indigo-600 dark:text-white bg-indigo-50 dark:bg-white/20 px-4 py-2 rounded-full text-sm font-medium transition duration-300 hover:bg-indigo-100 dark:hover:bg-white/30" href="./projects.html">Projects</a></li>
+            <li><a class="text-gray-700 dark:text-white/80 hover:text-indigo-600 dark:hover:text-white text-sm font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-2 rounded-full" href="./contact.html">Contact</a></li>
           </ul>
-          <button id="theme-toggle" class="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
+          <button id="theme-toggle" class="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white transition duration-300 backdrop-blur-sm border border-gray-200 dark:border-white/20 hover:border-indigo-500/50" aria-label="Toggle theme">
             <svg id="sun-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -54,7 +187,7 @@
         
         <!-- Mobile Navigation Button -->
         <div class="lg:hidden flex items-center gap-4">
-          <button id="theme-toggle-mobile" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
+          <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white transition duration-300 backdrop-blur-sm border border-gray-200 dark:border-white/20" aria-label="Toggle theme">
             <svg id="sun-icon-mobile" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -70,7 +203,7 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
-          <button id="mobile-menu-button" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle mobile menu">
+          <button id="mobile-menu-button" class="p-2 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white transition duration-300 backdrop-blur-sm border border-gray-200 dark:border-white/20" aria-label="Toggle mobile menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -78,15 +211,13 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden fixed top-20 right-0 z-40 w-80 h-auto bg-black/60 backdrop-blur-md border border-white/20 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out hidden">
+        <div id="mobile-menu" class="lg:hidden fixed top-20 right-0 z-40 w-80 h-auto bg-white/95 dark:bg-black/90 backdrop-blur-md border border-gray-200 dark:border-white/20 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out hidden">
           <div class="flex flex-col h-full">
-            
-            <!-- Menu items -->
             <div class="flex-1 px-6 py-8 space-y-6 text-right" style="font-family: 'Pixelify Sans', sans-serif;">
-              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
-              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./about.html">About</a>
-              <a class="block text-white bg-white/20 px-4 py-3 rounded-lg text-xl font-medium transition duration-300 hover:bg-white/30" href="./projects.html">Projects</a>
-              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./contact.html">Contact</a>
+              <a class="block text-gray-800 dark:text-white/90 hover:text-indigo-600 text-xl font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
+              <a class="block text-gray-800 dark:text-white/90 hover:text-indigo-600 text-xl font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-3 rounded-lg" href="./about.html">About</a>
+              <a class="block text-indigo-600 dark:text-white bg-indigo-50 dark:bg-white/20 px-4 py-3 rounded-lg text-xl font-medium transition duration-300" href="./projects.html">Projects</a>
+              <a class="block text-gray-800 dark:text-white/90 hover:text-indigo-600 text-xl font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-3 rounded-lg" href="./contact.html">Contact</a>
             </div>
           </div>
         </div>
@@ -94,104 +225,363 @@
     </nav>
 
     <main>
-      <!-- Projects Hero Section -->
-      <section class="relative px-4 py-16 sm:py-20 bg-white dark:bg-gray-950 overflow-hidden">
-        <!-- Decorative background elements -->
-        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl -z-10"></div>
-        <div class="absolute bottom-0 left-0 w-96 h-96 bg-indigo-600/5 rounded-full blur-3xl -z-10"></div>
-        
-        <div class="mx-auto max-w-5xl w-full">
-          <div class="text-center space-y-6">
-            <!-- Badge -->
-            <div class="inline-block">
-              <span class="px-3 py-1.5 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-300 text-xs font-medium border border-indigo-200 dark:border-indigo-700/50">
-                Portfolio
-              </span>
+      <!-- Premium Hero Section -->
+      <section class="relative px-4 py-16 sm:py-24 overflow-hidden">
+        <div class="mx-auto max-w-5xl w-full text-center space-y-8">
+          
+          <!-- Modern Glowing Glass Badge -->
+          <div class="inline-block">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 dark:bg-indigo-400/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wider uppercase border border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+              <span class="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-ping"></span>
+              Portfolio Showroom
+            </span>
+          </div>
+          
+          <!-- Heading -->
+          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-none" style="font-family: 'Pixelify Sans', sans-serif;">
+            <span class="block text-gray-800 dark:text-gray-200">Creative Craftsmanship</span>
+            <span class="block mt-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent filter drop-shadow-[0_2px_8px_rgba(99,102,241,0.1)]">Works & Showcase</span>
+          </h1>
+          
+          <!-- Subtitle -->
+          <p class="text-base sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
+            An interactive gallery showcasing digital systems, interactive interfaces, and comprehensive UI/UX design models built to BSU and industry standards. Click on any project to explore its interactive guides, terminal walkthroughs, and walkthrough media guides.
+          </p>
+          
+          <!-- Animated Quick Stats Panel -->
+          <div class="flex flex-wrap justify-center gap-6 sm:gap-12 pt-8 max-w-4xl mx-auto">
+            <div class="relative bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl px-6 py-4 min-w-[130px] flex-1 shadow-md hover:-translate-y-1 transition duration-300">
+              <p class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-indigo-500 to-purple-600 bg-clip-text text-transparent">10+</p>
+              <p class="text-gray-500 dark:text-gray-400 text-xs mt-1 font-semibold uppercase tracking-wider">Total Works</p>
             </div>
-            
-            <!-- Title -->
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-gray-950 dark:text-white" style="font-family: 'Pixelify Sans', sans-serif;">
-              <span class="block">My Creative</span>
-              <span class="block bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">Works & Projects</span>
-            </h1>
-            
-            <!-- Description -->
-            <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              From UI/UX design systems to full-stack web applications, each project represents a journey of creativity and technical excellence.
-            </p>
-            
-            <!-- Quick Stats -->
-            <div class="flex flex-wrap justify-center gap-8 sm:gap-12 pt-6">
-              <div class="text-center">
-                <p class="text-3xl sm:text-4xl font-bold text-indigo-600 dark:text-indigo-400">3+</p>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Projects</p>
-              </div>
-              <div class="text-center">
-                <p class="text-3xl sm:text-4xl font-bold text-indigo-600 dark:text-indigo-400">100%</p>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Satisfaction</p>
-              </div>
-              <div class="text-center">
-                <p class="text-3xl sm:text-4xl font-bold text-indigo-600 dark:text-indigo-400">2+</p>
-                <p class="text-gray-600 dark:text-gray-400 text-sm mt-1">Years Experience</p>
-              </div>
+            <div class="relative bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl px-6 py-4 min-w-[130px] flex-1 shadow-md hover:-translate-y-1 transition duration-300">
+              <p class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text text-transparent">100%</p>
+              <p class="text-gray-500 dark:text-gray-400 text-xs mt-1 font-semibold uppercase tracking-wider">Usability</p>
+            </div>
+            <div class="relative bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl px-6 py-4 min-w-[130px] flex-1 shadow-md hover:-translate-y-1 transition duration-300">
+              <p class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-pink-500 to-indigo-500 bg-clip-text text-transparent">BSU</p>
+              <p class="text-gray-500 dark:text-gray-400 text-xs mt-1 font-semibold uppercase tracking-wider">Alumnus/Dev</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Projects Grid Section -->
-      <section class="py-20 px-4 bg-gray-50 dark:bg-gray-900/50">
+      <!-- Glassmorphic Dashboard & Filtering controls -->
+      <section class="py-12 px-4 bg-gray-50/50 dark:bg-gray-950/20">
         <div class="mx-auto max-w-7xl">
-          <!-- Section header -->
-          <div class="mb-12 text-center">
-            <p class="text-sm tracking-widest uppercase text-indigo-600 dark:text-indigo-400 font-semibold mb-3">Featured Work</p>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-950 dark:text-white mb-4" style="font-family: 'Pixelify Sans', sans-serif;">Showcasing Excellence</h2>
-            <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">A collection of my best work in web development and design</p>
+          
+          <!-- Filters & Search Bar Wrapper -->
+          <div class="bg-white/60 dark:bg-gray-900/50 border border-white/20 dark:border-white/10 p-4 sm:p-5 rounded-3xl backdrop-blur-md shadow-xl max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 mb-16">
+            
+            <!-- Category Tabs with Sliding highlight pill -->
+            <div class="relative flex flex-wrap gap-2 p-1.5 bg-gray-200/50 dark:bg-gray-800/40 rounded-2xl w-full lg:w-auto" id="filter-tabs-container">
+              <!-- Sliding Pill behind active tab button -->
+              <span id="active-tab-pill" class="absolute top-1.5 left-1.5 h-[calc(100%-12px)] rounded-xl bg-white dark:bg-gray-800 shadow-md transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1) pointer-events-none -z-10"></span>
+              
+              <button onclick="applyFilter('all', this)" class="filter-tab-btn flex-1 sm:flex-initial px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-900 dark:text-white transition duration-300">
+                All Systems
+              </button>
+              <button onclick="applyFilter('web', this)" class="filter-tab-btn flex-1 sm:flex-initial px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition duration-300">
+                Web Applications
+              </button>
+              <button onclick="applyFilter('mobile', this)" class="filter-tab-btn flex-1 sm:flex-initial px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition duration-300">
+                Mobile Apps
+              </button>
+              <button onclick="applyFilter('design', this)" class="filter-tab-btn flex-1 sm:flex-initial px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition duration-300">
+                UI/UX Figma
+              </button>
+            </div>
+
+            <!-- Search box -->
+            <div class="relative w-full lg:w-80 group">
+              <svg class="absolute top-3.5 left-4 w-5 h-5 text-gray-400 group-focus-within:text-indigo-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+              </svg>
+              <input 
+                type="text" 
+                id="project-search-input" 
+                placeholder="Search projects by title/tag..." 
+                class="w-full px-5 py-3 pl-12 bg-white/70 dark:bg-gray-800/60 border border-gray-200 dark:border-white/10 focus:border-indigo-500 dark:focus:border-indigo-400 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:focus:ring-indigo-400/20 text-sm font-medium text-gray-900 dark:text-white transition-all shadow-inner"
+              />
+              <button id="search-clear-btn" class="absolute right-4 top-3.5 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors hidden">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <!-- Projects Grid -->
-          <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Static Bookside card to ensure visibility while JSON loads -->
-            <article id="bookside-card" class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg h-full flex flex-col">
-              <div class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800">
-                <img src="../assets/images/Bookside.jpg" alt="Bookside" class="w-full h-full object-cover" loading="lazy" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                  <div class="absolute bottom-4 left-4 right-4">
-                    <span class="inline-block px-3 py-1 rounded-full bg-green-500 text-white text-xs font-bold">● Live</span>
-                  </div>
-                </div>
-              </div>
-              <div class="p-6 flex-1 flex flex-col">
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">Bookside</h3>
-                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-1">Bookside Street is a transaction-aware marketplace where every book deal is transparent, every seller is accountable, and every buyer is protected.</p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">Marketplace</span>
-                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">Web</span>
-                  <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">Demo</span>
-                </div>
-                <div class="flex gap-3">
-                  <a href="https://bookside.st" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 group/btn">
-                    <span>View Design</span>
-                    <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                  </a>
-                  <a href="https://bookside.st" target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 border-2 border-gray-300 dark:border-gray-600 text-sm shadow-md hover:shadow-lg group/btn">
-                    <span>Live Site</span>
-                    <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </article>
+          <!-- Active Stats Counter -->
+          <div class="max-w-6xl mx-auto mb-8 px-4 flex items-center justify-between text-xs sm:text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">
+            <span id="results-count-text">Analyzing database...</span>
+            <span id="active-filter-badge" class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/10">Active: All</span>
+          </div>
+
+          <!-- Cards Grid Section -->
+          <div id="projects-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Skeleton cards will be loaded here dynamically by JS first, then swapped with actual glow cards -->
           </div>
         </div>
       </section>
     </main>
 
-    <footer id="site-footer" class="mt-12"></footer>
-    
+    <!-- Project Hub Modal Overlay (State of the art Split Screen design) -->
+    <div id="project-modal" class="fixed inset-0 z-50 overflow-y-auto bg-black/70 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300" onclick="closeProjectHub(event)">
+      
+      <!-- Modal Content Window -->
+      <div id="modal-content" class="bg-white/95 dark:bg-slate-950/95 border border-white/20 dark:border-white/5 w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 transform scale-95 flex flex-col max-h-[90vh] md:max-h-[85vh] relative" onclick="event.stopPropagation()">
+        
+        <!-- Close overlay button -->
+        <button onclick="closeProjectHub()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-900 dark:hover:text-white bg-gray-100 dark:bg-gray-800/80 p-2.5 rounded-full transition-all duration-200 z-50 cursor-pointer shadow-md border border-gray-200 dark:border-white/10" aria-label="Close modal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <!-- Main split screen content -->
+        <div class="flex flex-col md:flex-row h-full overflow-hidden flex-1">
+          
+          <!-- LEFT SIDE: Walkthrough Media Center (40%) -->
+          <div class="w-full md:w-[42%] bg-slate-950 border-r border-slate-200 dark:border-white/5 flex flex-col relative shrink-0 min-h-[220px] md:min-h-0">
+            <!-- Cover image placeholder background -->
+            <img id="modal-cover-img" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 filter blur-sm pointer-events-none" />
+            
+            <div class="flex-1 flex items-center justify-center p-6 relative z-10 w-full h-full">
+              <!-- Simulated Video Player or Live Showcase -->
+              <div class="w-full max-w-sm rounded-2xl overflow-hidden bg-black/60 border border-white/10 shadow-2xl relative aspect-[16/10] flex flex-col group/player">
+                
+                <!-- Media Area -->
+                <div class="flex-1 relative overflow-hidden flex items-center justify-center bg-slate-900">
+                  <img id="modal-player-preview" src="" alt="" class="w-full h-full object-cover transition duration-700 scale-100" />
+                  
+                  <!-- Glowing Center Play Button simulation -->
+                  <div onclick="switchHubTab('video')" class="absolute w-16 h-16 rounded-full bg-indigo-600/90 dark:bg-indigo-500/90 text-white flex items-center justify-center shadow-lg hover:shadow-indigo-500/40 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer group-hover/player:bg-indigo-500">
+                    <svg class="w-6 h-6 fill-current text-white translate-x-0.5" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"></path>
+                    </svg>
+                  </div>
+
+                  <!-- Backdrop overlay -->
+                  <div class="absolute inset-0 bg-black/30 group-hover/player:bg-black/10 transition-colors pointer-events-none"></div>
+                </div>
+
+                <!-- Video timeline player bar -->
+                <div class="bg-black/90 p-3.5 flex items-center gap-4 text-[10px] text-gray-400 font-semibold border-t border-white/5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
+                  <span class="uppercase tracking-widest text-[9px] text-red-500 font-bold">Walkthrough Player</span>
+                  <div class="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+                    <div class="w-2/5 h-full bg-indigo-500 rounded-full"></div>
+                  </div>
+                  <span>01:10 / 03:20</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tiny descriptive bar -->
+            <div class="bg-slate-900/60 p-4 border-t border-white/5 text-center relative z-10 hidden md:block">
+              <span class="text-xs text-gray-400" id="modal-sidebar-hint">Click Tab options to see more walkthrough specs.</span>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Information Console (58%) -->
+          <div class="w-full md:w-[58%] flex flex-col overflow-hidden bg-white dark:bg-slate-950">
+            
+            <!-- Header elements -->
+            <div class="p-6 pb-4 border-b border-gray-100 dark:border-white/5">
+              <div class="flex flex-wrap gap-2 mb-2" id="modal-tags-container">
+                <!-- Badges injected dynamically -->
+              </div>
+              <h2 id="modal-title" class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white font-black" style="font-family: 'Pixelify Sans', sans-serif;">
+                Project Title
+              </h2>
+              <p id="modal-description" class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
+                Project description details go here. Loading contents...
+              </p>
+            </div>
+
+            <!-- Tab Navigation (High-tech layout) -->
+            <div class="bg-gray-50/50 dark:bg-slate-900/30 border-b border-gray-100 dark:border-white/5 px-6 py-2.5 flex items-center justify-between shrink-0">
+              <div class="flex gap-4">
+                <button id="modal-tab-overview" onclick="switchHubTab('overview')" class="px-4 py-2 text-sm font-semibold rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800 transition duration-300">
+                  Overview
+                </button>
+                <button id="modal-tab-video" onclick="switchHubTab('video')" class="px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 transition duration-300">
+                  Video Walkthrough
+                </button>
+                <button id="modal-tab-repo" onclick="switchHubTab('repo')" class="px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 transition duration-300">
+                  GitHub & Terminal
+                </button>
+              </div>
+
+              <!-- Quick action links -->
+              <div class="flex gap-2" id="modal-actions-container">
+                <!-- Actions injected by JS -->
+              </div>
+            </div>
+
+            <!-- Tab Panels Area (Scrollable scrollbox) -->
+            <div class="p-6 overflow-y-auto flex-1 custom-scroll" id="modal-tabs-content">
+              
+              <!-- Tab 1 Pane: Overview & Guide -->
+              <div id="pane-overview" class="space-y-6">
+                
+                <!-- Core Features -->
+                <div>
+                  <h4 class="text-xs uppercase font-extrabold tracking-widest text-indigo-600 dark:text-indigo-400 mb-3">Key Features & Metrics</h4>
+                  <ul id="modal-features-list" class="grid sm:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-700 dark:text-gray-300">
+                    <!-- Features dynamic list -->
+                  </ul>
+                </div>
+
+                <!-- Interactive Guide Steps Tracker -->
+                <div class="bg-gray-50 dark:bg-slate-900/40 border border-gray-100 dark:border-white/5 p-4 rounded-2xl">
+                  <h4 class="text-xs uppercase font-extrabold tracking-widest text-gray-500 dark:text-gray-400 mb-4">Interactive System Guide</h4>
+                  
+                  <div class="flex gap-3 mb-4 overflow-x-auto pb-1 custom-scroll" id="modal-guide-steps-list">
+                    <!-- Step pills dynamically injected -->
+                  </div>
+
+                  <div class="bg-white dark:bg-slate-950 p-4 rounded-xl border border-gray-200/50 dark:border-white/5" id="active-step-details">
+                    <h5 id="active-step-title" class="text-sm font-bold text-gray-900 dark:text-white">Loading Step...</h5>
+                    <p id="active-step-desc" class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">Explanation content...</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 2 Pane: Custom Video walkthrough display -->
+              <div id="pane-video" class="space-y-6 hidden">
+                <div class="text-center py-6 space-y-4">
+                  <div class="inline-flex w-16 h-16 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                    </svg>
+                  </div>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white">Walkthrough Room</h4>
+                  <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 max-w-md mx-auto leading-relaxed">
+                    Watch the live system execution and visual interface guides explaining key capabilities, BSU design systems, and responsive features.
+                  </p>
+                </div>
+
+                <!-- Custom High-fidelity interactive Simulated Player layout -->
+                <div class="relative bg-gradient-to-tr from-slate-950 via-slate-900 to-indigo-950 rounded-2xl p-6 border border-white/10 shadow-inner overflow-hidden flex flex-col justify-between aspect-[16/9] max-w-xl mx-auto group">
+                  
+                  <!-- Sound wave animations in background -->
+                  <div class="absolute inset-0 flex items-center justify-center gap-1.5 opacity-25 group-hover:opacity-40 transition-opacity">
+                    <div class="w-1 bg-indigo-500 wave-bar rounded-full" style="animation-delay: 0.1s;"></div>
+                    <div class="w-1 bg-purple-500 wave-bar rounded-full" style="animation-delay: 0.3s;"></div>
+                    <div class="w-1 bg-pink-500 wave-bar rounded-full" style="animation-delay: 0.5s;"></div>
+                    <div class="w-1 bg-indigo-400 wave-bar rounded-full" style="animation-delay: 0.2s;"></div>
+                    <div class="w-1 bg-purple-400 wave-bar rounded-full" style="animation-delay: 0.4s;"></div>
+                    <div class="w-1 bg-pink-400 wave-bar rounded-full" style="animation-delay: 0.6s;"></div>
+                  </div>
+
+                  <!-- Glowing center Play Trigger overlay -->
+                  <div class="absolute inset-0 flex items-center justify-center z-10">
+                    <button class="w-20 h-20 rounded-full bg-white text-indigo-900 flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-indigo-500/50 hover:bg-indigo-50 transition duration-300">
+                      <svg class="w-8 h-8 fill-current translate-x-0.5" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"></path>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <!-- Top overlay status bar -->
+                  <div class="relative flex items-center justify-between text-xs text-white/70 font-semibold z-10">
+                    <span class="flex items-center gap-2">
+                      <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                      Direct Video Demo Connected
+                    </span>
+                    <span class="px-2 py-0.5 rounded bg-white/10">1080p</span>
+                  </div>
+
+                  <!-- Bottom player details -->
+                  <div class="relative z-10 bg-slate-900/90 border border-white/5 px-4 py-3 rounded-xl flex items-center gap-4 text-xs text-white/80">
+                    <svg class="w-4 h-4 text-white hover:text-indigo-400 cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                    </svg>
+                    <div class="flex-1 h-1.5 bg-white/20 rounded-full overflow-hidden relative cursor-pointer">
+                      <div class="w-1/3 h-full bg-indigo-500 rounded-full"></div>
+                    </div>
+                    <span>01:10 / 03:20</span>
+                    <svg class="w-4 h-4 text-white hover:text-indigo-400 cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 3 Pane: Repository Hub & Copyable Terminal -->
+              <div id="pane-repo" class="space-y-6 hidden">
+                
+                <!-- Github metrics grid -->
+                <div class="grid grid-cols-3 gap-4 text-center">
+                  <div class="bg-gray-50 dark:bg-slate-900/40 p-4 border border-gray-100 dark:border-white/5 rounded-2xl">
+                    <p id="modal-repo-stars" class="text-xl sm:text-2xl font-extrabold text-gray-900 dark:text-white">0</p>
+                    <p class="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider mt-1">Stars ⭐</p>
+                  </div>
+                  <div class="bg-gray-50 dark:bg-slate-900/40 p-4 border border-gray-100 dark:border-white/5 rounded-2xl">
+                    <p id="modal-repo-forks" class="text-xl sm:text-2xl font-extrabold text-gray-900 dark:text-white">0</p>
+                    <p class="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider mt-1">Forks 🍴</p>
+                  </div>
+                  <div class="bg-gray-50 dark:bg-slate-900/40 p-4 border border-gray-100 dark:border-white/5 rounded-2xl">
+                    <p id="modal-repo-watchers" class="text-xl sm:text-2xl font-extrabold text-gray-900 dark:text-white">0</p>
+                    <p class="text-[10px] sm:text-xs text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider mt-1">Watchers 👁️</p>
+                  </div>
+                </div>
+
+                <!-- Custom copyable Unix Terminal component -->
+                <div class="bg-slate-900 rounded-2xl border border-white/10 shadow-2xl overflow-hidden relative">
+                  
+                  <!-- Terminal Header -->
+                  <div class="bg-slate-800/80 px-4 py-3 flex items-center justify-between border-b border-slate-700/60 shrink-0">
+                    <div class="flex items-center gap-2">
+                      <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                      <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                      <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                      <span class="text-slate-400 text-xs font-mono font-bold pl-2 select-none" id="terminal-header-title">bash — kingjrm@bsu-lipa</span>
+                    </div>
+
+                    <!-- Copy button trigger -->
+                    <button onclick="copyTerminalCode()" class="text-slate-400 hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer" id="terminal-copy-btn">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                      </svg>
+                      <span class="text-xs font-semibold font-mono">Copy Code</span>
+                    </button>
+                  </div>
+
+                  <!-- Terminal Terminal Screen -->
+                  <div class="p-5 font-mono text-xs sm:text-sm text-indigo-400 space-y-3 leading-relaxed overflow-x-auto custom-scroll max-h-56 select-all" id="terminal-commands-body">
+                    <div class="text-slate-500 font-normal select-none"># Clone the repository</div>
+                    <div><span class="text-green-400 select-none">$</span> <span id="term-clone-text" class="text-white">git clone https://github.com/kingjrm/...</span></div>
+                    
+                    <div class="text-slate-500 font-normal select-none mt-2"># Navigate and hook dependencies</div>
+                    <div><span class="text-green-400 select-none">$</span> <span id="term-cd-text" class="text-white">cd project-folder && npm install</span></div>
+                    
+                    <div class="text-slate-500 font-normal select-none mt-2"># Run the local system application</div>
+                    <div><span class="text-green-400 select-none">$</span> <span id="term-run-text" class="text-white">npm run dev</span></div>
+                  </div>
+                </div>
+
+                <!-- Languages breakdown bar -->
+                <div class="space-y-2">
+                  <h4 class="text-xs uppercase font-extrabold tracking-widest text-gray-500 dark:text-gray-400 mb-2">Technology Breakdown</h4>
+                  <div class="h-3 bg-gray-200 dark:bg-gray-800 rounded-full flex overflow-hidden w-full shadow-inner" id="modal-repo-lang-bar">
+                    <!-- Bars injected dynamically -->
+                  </div>
+                  <div class="flex flex-wrap gap-4 text-xs font-semibold pt-1" id="modal-repo-lang-list">
+                    <!-- Languages label details dynamic -->
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <!-- Scroll to top button -->
     <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top" title="Scroll to top">
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -199,7 +589,17 @@
       </svg>
     </button>
 
+    <footer id="site-footer" class="mt-12"></footer>
+
+    <!-- INTERACTIVE DASHBOARD SCRIPT LOGIC -->
     <script>
+      // State management for portfolio engine
+      let projectsDatabase = [];
+      let activeFilter = 'all';
+      let activeSearchQuery = '';
+      let selectedProject = null;
+
+      // Theme toggle engine
       function initTheme() {
         const html = document.documentElement;
         const saved = localStorage.getItem('theme');
@@ -215,12 +615,10 @@
       }
 
       function updateThemeButton() {
-        const btn = document.getElementById('theme-toggle');
         const isDark = document.documentElement.classList.contains('dark');
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
         
-        // Update desktop icons
         if (isDark) {
           sunIcon?.classList.add('hidden');
           moonIcon?.classList.remove('hidden');
@@ -229,7 +627,6 @@
           moonIcon?.classList.add('hidden');
         }
         
-        // Update mobile icons
         const sunIconMobile = document.getElementById('sun-icon-mobile');
         const moonIconMobile = document.getElementById('moon-icon-mobile');
         if (isDark) {
@@ -251,108 +648,552 @@
       document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
       initTheme();
 
+      // Category Pill Highlight Mathematics
+      function refreshSlidingTabPill() {
+        const activeBtn = document.querySelector('.filter-tab-btn.text-gray-900, .filter-tab-btn.text-white');
+        const pill = document.getElementById('active-tab-pill');
+        if (!activeBtn || !pill) return;
+        
+        const rect = activeBtn.getBoundingClientRect();
+        const containerRect = document.getElementById('filter-tabs-container').getBoundingClientRect();
+        
+        pill.style.width = `${rect.width}px`;
+        pill.style.left = `${rect.left - containerRect.left}px`;
+      }
 
-      // Render projects with clean, modern card design
-      async function renderProjects() {
+      // Initial tab layout positioning
+      window.addEventListener('resize', refreshSlidingTabPill);
+      setTimeout(refreshSlidingTabPill, 200);
+
+      // Filtering Engine logic
+      function applyFilter(category, buttonTrigger) {
+        activeFilter = category;
+        
+        // Handle filter button style states
+        document.querySelectorAll('.filter-tab-btn').forEach(btn => {
+          btn.classList.remove('text-gray-900', 'text-white', 'bg-white', 'dark:bg-gray-800');
+          btn.classList.add('text-gray-600', 'dark:text-gray-400');
+        });
+
+        if (buttonTrigger) {
+          buttonTrigger.classList.remove('text-gray-600', 'dark:text-gray-400');
+          buttonTrigger.classList.add('text-gray-900', 'dark:text-white');
+        }
+
+        // Reposition sliding highlighting background pill
+        refreshSlidingTabPill();
+
+        // Update active badge indicator
+        const badge = document.getElementById('active-filter-badge');
+        if (badge) {
+          const names = { all: 'All Systems', web: 'Web Apps', mobile: 'Mobile Apps', design: 'UI/UX Design' };
+          badge.textContent = `Active: ${names[category] || category}`;
+        }
+
+        // Re-render cards based on new specifications
+        renderActiveDatabase();
+      }
+
+      // Live search filters listener
+      const searchBox = document.getElementById('project-search-input');
+      const clearSearchBtn = document.getElementById('search-clear-btn');
+      
+      if (searchBox) {
+        searchBox.addEventListener('input', (e) => {
+          activeSearchQuery = e.target.value.toLowerCase().trim();
+          
+          if (activeSearchQuery.length > 0) {
+            clearSearchBtn?.classList.remove('hidden');
+          } else {
+            clearSearchBtn?.classList.add('hidden');
+          }
+
+          renderActiveDatabase();
+        });
+      }
+
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          if (searchBox) searchBox.value = '';
+          activeSearchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          renderActiveDatabase();
+        });
+      }
+
+      // Loading Shimmer Skeletons
+      function renderShimmerSkeletons() {
         const container = document.getElementById('projects-container');
         if (!container) return;
+
+        let skeletonsHtml = '';
+        for (let i = 0; i < 6; i++) {
+          skeletonsHtml += `
+            <div class="relative bg-white/40 dark:bg-gray-900/30 border border-gray-100 dark:border-white/5 rounded-3xl overflow-hidden h-[420px] flex flex-col p-4 shadow-md">
+              <div class="w-full h-48 rounded-2xl skeleton-shimmer mb-4 shrink-0"></div>
+              <div class="h-4 w-1/3 rounded-full skeleton-shimmer mb-3"></div>
+              <div class="h-6 w-3/4 rounded-full skeleton-shimmer mb-4"></div>
+              <div class="space-y-2 flex-1">
+                <div class="h-3 w-full rounded-full skeleton-shimmer"></div>
+                <div class="h-3 w-5/6 rounded-full skeleton-shimmer"></div>
+                <div class="h-3 w-4/5 rounded-full skeleton-shimmer"></div>
+              </div>
+              <div class="h-10 w-full rounded-xl skeleton-shimmer mt-4"></div>
+            </div>
+          `;
+        }
+        container.innerHTML = skeletonsHtml;
+      }
+
+      // Dynamic Projects fetch and layout initialization
+      async function initializeProjectsEngine() {
+        renderShimmerSkeletons();
+        
         try {
           const response = await fetch('../src/data/projects.json');
-          const projects = await response.json();
-          // Append JSON-driven project cards but skip Bookside (static card present)
-          container.insertAdjacentHTML('beforeend', projects
-            .filter(p => p.title !== 'Bookside')
-            .map((project, index) => `
-            <article class="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 h-full flex flex-col" style="animation: fadeInUp 0.6s ease-out ${index * 0.1}s backwards;">
-              <!-- Project Image -->
-              <div class="relative h-56 overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800">
+          if (!response.ok) throw new Error('Data fetch failed');
+          projectsDatabase = await response.json();
+          
+          // Render actual cards after loading finishes
+          renderActiveDatabase();
+        } catch (error) {
+          console.error('Error fetching database:', error);
+          const container = document.getElementById('projects-container');
+          if (container) {
+            container.innerHTML = `
+              <div class="col-span-full text-center py-16 space-y-4">
+                <div class="inline-flex w-16 h-16 bg-red-500/10 text-red-500 rounded-full items-center justify-center">
+                  <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Unable to Load Portfolio</h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400 max-w-sm mx-auto">We encountered an issue downloading the dynamic database JSON files. Please check if your servers are responding correctly.</p>
+              </div>
+            `;
+          }
+        }
+      }
+
+      // Filter and Search renderer
+      function renderActiveDatabase() {
+        const container = document.getElementById('projects-container');
+        const countText = document.getElementById('results-count-text');
+        if (!container) return;
+
+        // Apply filters
+        let filteredProjects = projectsDatabase;
+
+        if (activeFilter !== 'all') {
+          filteredProjects = filteredProjects.filter(p => p.category === activeFilter);
+        }
+
+        if (activeSearchQuery.length > 0) {
+          filteredProjects = filteredProjects.filter(p => 
+            p.title.toLowerCase().includes(activeSearchQuery) || 
+            p.description.toLowerCase().includes(activeSearchQuery) ||
+            p.tags.some(t => t.toLowerCase().includes(activeSearchQuery))
+          );
+        }
+
+        // Update count tracking text
+        if (countText) {
+          countText.textContent = `Displaying ${filteredProjects.length} of ${projectsDatabase.length} entries`;
+        }
+
+        // Render card results or fallback
+        if (filteredProjects.length === 0) {
+          container.innerHTML = `
+            <div class="col-span-full text-center py-20 space-y-4">
+              <div class="inline-flex w-16 h-16 bg-gray-500/10 text-gray-400 rounded-full items-center justify-center">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 dark:text-white">No Systems Found</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400 max-w-sm mx-auto">No results matched your search term or active category filters. Try typing different terms or resetting filters.</p>
+              <button onclick="resetAllFilters()" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition shadow-md cursor-pointer">
+                Reset Dashboard Filters
+              </button>
+            </div>
+          `;
+          return;
+        }
+
+        // Map cards and inject with dynamic staggered delays
+        container.innerHTML = filteredProjects.map((project, idx) => {
+          // Define category-colored tag gradient styles
+          const badgeStyles = {
+            design: 'bg-pink-500/10 text-pink-600 dark:text-pink-400 border-pink-500/20',
+            web: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20',
+            mobile: 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
+          };
+          
+          const catClass = badgeStyles[project.category] || 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20';
+
+          return `
+            <article 
+              onclick="openProjectHub('${project.title}')" 
+              class="glow-card group rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl flex flex-col cursor-pointer h-[430px] p-3 text-left z-10"
+              style="animation: fadeInUp 0.5s ease-out ${idx * 0.08}s backwards;"
+              onmousemove="applyCardGlowMovement(event, this)"
+              onmouseleave="clearCardGlowMovement(this)"
+            >
+              <!-- Card Image container -->
+              <div class="relative h-48 w-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-slate-900 shrink-0 select-none">
                 <img 
                   src="${project.image}" 
                   alt="${project.title}" 
-                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 select-none"
                   loading="lazy"
-                  onerror="this.style.display='none'"
+                  onerror="this.src='../assets/images/logoPortfolio.png'; this.classList.add('p-12', 'object-contain', 'opacity-30');"
                 />
-                <!-- Overlay on hover -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div class="absolute bottom-4 left-4 right-4">
-                    <span class="inline-block px-3 py-1 rounded-full ${project.liveUrl ? 'bg-green-500' : 'bg-indigo-500'} text-white text-xs font-bold">
-                      ${project.liveUrl ? '● Live' : '● Design'}
-                    </span>
-                  </div>
+                
+                <!-- Shaded cover vignette -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+                
+                <!-- Visual active live or draft badge -->
+                <div class="absolute top-4 left-4 z-10">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-sm text-white text-[10px] font-bold border border-white/10 uppercase tracking-widest">
+                    <span class="w-1.5 h-1.5 rounded-full ${project.liveUrl ? 'bg-green-500 animate-pulse' : 'bg-indigo-400'}"></span>
+                    ${project.liveUrl ? 'Live Site' : 'Design Spec'}
+                  </span>
                 </div>
               </div>
-              
-              <!-- Project Content -->
-              <div class="p-6 flex-1 flex flex-col">
+
+              <!-- Content details -->
+              <div class="p-4 flex-1 flex flex-col relative z-10 select-none">
+                
+                <!-- Category Tag -->
+                <div class="mb-2">
+                  <span class="px-2.5 py-0.5 rounded-lg border text-[10px] font-bold uppercase tracking-wider ${catClass}">
+                    ${project.category || 'Portfolio'}
+                  </span>
+                </div>
+
                 <!-- Title -->
-                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" style="font-family: 'Pixelify Sans', sans-serif;">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" style="font-family: 'Pixelify Sans', sans-serif;">
                   ${project.title}
                 </h3>
                 
                 <!-- Description -->
-                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 flex-1">
+                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-1 overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
                   ${project.description}
                 </p>
                 
-                <!-- Tags -->
-                <div class="flex flex-wrap gap-2 mb-5">
-                  ${project.tags.map(tag => `
-                    <span class="px-3 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800">
+                <!-- Quick tags summary -->
+                <div class="flex flex-wrap gap-1.5 mb-4 max-h-[26px] overflow-hidden shrink-0">
+                  ${project.tags.slice(0, 3).map(tag => `
+                    <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200/50 dark:border-white/5">
                       ${tag}
                     </span>
                   `).join('')}
+                  ${project.tags.length > 3 ? `<span class="text-[9px] text-gray-400 font-bold self-center pl-1">+${project.tags.length - 3} more</span>` : ''}
                 </div>
-                
-                <!-- Action Buttons -->
-                ${project.url !== '#' ? `
-                  <div class="flex gap-3">
-                    <a 
-                      href="${project.url}" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      class="flex-1 inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 text-sm shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 group/btn"
-                    >
-                      <span>${project.liveUrl ? 'View Design' : 'View Project'}</span>
-                      <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                      </svg>
-                    </a>
-                    ${project.liveUrl ? `
-                      <a 
-                        href="${project.liveUrl}" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        class="flex-1 inline-flex items-center justify-center gap-2 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-900 dark:text-white font-semibold px-5 py-3 rounded-xl transition-all duration-300 border-2 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 text-sm shadow-md hover:shadow-lg group/btn"
-                      >
-                        <span>Live Site</span>
-                        <svg class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                        </svg>
-                      </a>
-                    ` : ''}
-                  </div>
-                ` : project.title === 'Jawibi App' ? `
-                  <div class="flex gap-3">
-                    <button 
-                      class="flex-1 inline-flex items-center justify-center gap-2 bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 font-semibold px-5 py-3 rounded-xl text-sm cursor-not-allowed opacity-60"
-                      disabled
-                    >
-                      <span>Coming Soon</span>
-                    </button>
-                  </div>
-                ` : ''}
+
+                <!-- Action Button row -->
+                <div class="w-full shrink-0">
+                  <span class="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 dark:bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 px-4 rounded-xl transition duration-300 text-xs shadow-md shadow-indigo-500/20 group-hover:shadow-indigo-500/35">
+                    <span>Inspect Hub Details</span>
+                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                  </span>
+                </div>
+
               </div>
             </article>
-          `).join(''));
-        } catch (error) {
-          console.error('Failed to load projects:', error);
-          container.innerHTML = '<p class="col-span-full text-center text-gray-600 dark:text-gray-400">Unable to load projects. Please try again later.</p>';
-        }
+          `;
+        }).join('');
+
+        // Re-execute Pill Refresh to align with active selections
+        setTimeout(refreshSlidingTabPill, 100);
       }
 
-      // Initialize on load
-      renderProjects();
+      function resetAllFilters() {
+        const searchInput = document.getElementById('project-search-input');
+        if (searchInput) searchInput.value = '';
+        activeSearchQuery = '';
+        clearSearchBtn?.classList.add('hidden');
+        
+        const firstTab = document.querySelectorAll('.filter-tab-btn')[0];
+        applyFilter('all', firstTab);
+      }
+
+      // Mouse Glow tracking mathematics
+      function applyCardGlowMovement(e, card) {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        card.style.setProperty('--mx', `${x}px`);
+        card.style.setProperty('--my', `${y}px`);
+
+        // Gentle 3D Tilt calculation
+        const cardWidth = rect.width;
+        const cardHeight = rect.height;
+        const centerX = cardWidth / 2;
+        const centerY = cardHeight / 2;
+        
+        const rotateX = ((centerY - y) / centerY) * 5; // max tilt 5 degrees
+        const rotateY = ((x - centerX) / centerX) * 5;
+
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+        card.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.15)';
+      }
+
+      function clearCardGlowMovement(card) {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        card.style.boxShadow = '';
+      }
+
+      // Interactive Hub Modal Controls
+      function openProjectHub(title) {
+        const modal = document.getElementById('project-modal');
+        const content = document.getElementById('modal-content');
+        if (!modal || !content) return;
+
+        // Locate data object matching target project
+        const project = projectsDatabase.find(p => p.title === title);
+        if (!project) return;
+        selectedProject = project;
+
+        // Populate basic information
+        document.getElementById('modal-title').textContent = project.title;
+        document.getElementById('modal-description').textContent = project.description;
+        
+        const coverImg = document.getElementById('modal-cover-img');
+        const playerPreview = document.getElementById('modal-player-preview');
+        
+        if (coverImg) coverImg.src = project.image;
+        if (playerPreview) playerPreview.src = project.image;
+
+        // Render modal tags
+        const tagsBox = document.getElementById('modal-tags-container');
+        if (tagsBox) {
+          const categoryColors = {
+            design: 'bg-pink-500/10 text-pink-600 dark:text-pink-400 border-pink-500/20',
+            web: 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20',
+            mobile: 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/20'
+          };
+          
+          const catStyle = categoryColors[project.category] || 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border-indigo-500/20';
+
+          let tagsHtml = `<span class="px-2.5 py-0.5 rounded-lg border text-[9px] font-bold uppercase tracking-wider ${catStyle}">${project.category || 'System'}</span>`;
+          tagsHtml += project.tags.map(t => `<span class="px-2 py-0.5 rounded-lg border border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-slate-900 text-gray-500 dark:text-gray-400 text-[9px] font-semibold">${t}</span>`).join('');
+          tagsBox.innerHTML = tagsHtml;
+        }
+
+        // Render Action links
+        const actionsBox = document.getElementById('modal-actions-container');
+        if (actionsBox) {
+          let actionsHtml = '';
+          
+          // Live website button
+          if (project.liveUrl) {
+            actionsHtml += `
+              <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-bold transition shadow-sm cursor-pointer shadow-indigo-500/20 hover:shadow-indigo-500/30">
+                <span>Launch App</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            `;
+          }
+
+          // Design Link button
+          if (project.url && project.url !== '#') {
+            const label = project.url.includes('figma.com') ? 'Figma Design' : 'Explore Spec';
+            actionsHtml += `
+              <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gray-100 dark:bg-slate-800 hover:bg-gray-200 dark:hover:bg-slate-700 text-gray-800 dark:text-white rounded-lg text-xs font-bold transition border border-gray-200 dark:border-white/5 cursor-pointer shadow-sm">
+                <span>${label}</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            `;
+          }
+
+          actionsBox.innerHTML = actionsHtml;
+        }
+
+        // Populate Tab 1 Features list
+        const featuresBox = document.getElementById('modal-features-list');
+        if (featuresBox) {
+          if (project.features && project.features.length > 0) {
+            featuresBox.innerHTML = project.features.map(f => `
+              <li class="flex items-start gap-2.5 bg-gray-50/50 dark:bg-slate-900/10 border border-gray-200/30 dark:border-white/5 p-3 rounded-xl">
+                <svg class="w-5 h-5 text-indigo-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="leading-relaxed text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300">${f}</span>
+              </li>
+            `).join('');
+          } else {
+            featuresBox.innerHTML = '<li class="col-span-full text-center text-gray-500 py-3">No specific feature highlights documented.</li>';
+          }
+        }
+
+        // Render Guide Steps Interactive Widget
+        const stepsContainer = document.getElementById('modal-guide-steps-list');
+        if (stepsContainer && project.guideSteps) {
+          stepsContainer.innerHTML = project.guideSteps.map((step, index) => `
+            <button 
+              id="guide-step-btn-${index}" 
+              onclick="activateGuideStep(${index})" 
+              class="px-3.5 py-1.5 rounded-lg border text-xs font-semibold shrink-0 cursor-pointer transition ${index === 0 ? 'bg-indigo-600 border-indigo-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-white/5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700'}"
+            >
+              Step ${index + 1}: ${step.title}
+            </button>
+          `).join('');
+
+          // Initialize step 0 details
+          activateGuideStep(0);
+        }
+
+        // Populate Tab 3 GitHub Terminal and Stats details
+        if (project.repoStats) {
+          document.getElementById('modal-repo-stars').textContent = project.repoStats.stars || '0';
+          document.getElementById('modal-repo-forks').textContent = project.repoStats.forks || '0';
+          document.getElementById('modal-repo-watchers').textContent = project.repoStats.watchers || '0';
+
+          // Language percent bar
+          const bar = document.getElementById('modal-repo-lang-bar');
+          const list = document.getElementById('modal-repo-lang-list');
+          
+          if (bar && list && project.repoStats.languages) {
+            const colors = ['#6366F1', '#A855F7', '#EC4899', '#3B82F6', '#10B981', '#F59E0B'];
+            
+            bar.innerHTML = project.repoStats.languages.map((l, i) => `
+              <div class="h-full" style="width: ${l.percent}%; background-color: ${colors[i % colors.length]}" title="${l.name}: ${l.percent}%"></div>
+            `).join('');
+
+            list.innerHTML = project.repoStats.languages.map((l, i) => `
+              <span class="flex items-center gap-1.5 text-[10px] text-gray-600 dark:text-gray-400">
+                <span class="w-2.5 h-2.5 rounded-full" style="background-color: ${colors[i % colors.length]}"></span>
+                ${l.name} (${l.percent}%)
+              </span>
+            `).join('');
+          }
+        }
+
+        // Update Terminal cloning scripts details
+        const termClone = document.getElementById('term-clone-text');
+        const termCd = document.getElementById('term-cd-text');
+        const termHeader = document.getElementById('terminal-header-title');
+        
+        if (termClone && termCd) {
+          const gitUrl = project.githubUrl || `https://github.com/kingjrm/${project.title.replace(/\s+/g, '-').replace(/[^a-zA-Z0-9-]/g, '')}`;
+          const folderName = gitUrl.split('/').pop().replace('.git', '');
+          
+          termClone.textContent = `git clone ${gitUrl}.git`;
+          termCd.textContent = `cd ${folderName} && npm install`;
+          if (termHeader) termHeader.textContent = `bash — kingjrm@bsu-lipa ~/${folderName}`;
+        }
+
+        // Make sure we default back to Tab 1 (Overview)
+        switchHubTab('overview');
+
+        // Fire display animations
+        modal.classList.remove('pointer-events-none');
+        modal.classList.add('opacity-100');
+        content.classList.add('modal-animate-in');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeProjectHub(e) {
+        const modal = document.getElementById('project-modal');
+        const content = document.getElementById('modal-content');
+        if (!modal || !content) return;
+
+        modal.classList.add('pointer-events-none');
+        modal.classList.remove('opacity-100');
+        content.classList.remove('modal-animate-in');
+        document.body.style.overflow = '';
+        selectedProject = null;
+      }
+
+      // Close modal on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeProjectHub();
+        }
+      });
+
+      // Guide Steps click switcher
+      function activateGuideStep(idx) {
+        if (!selectedProject || !selectedProject.guideSteps) return;
+        const step = selectedProject.guideSteps[idx];
+        if (!step) return;
+
+        // Toggle button selection designs
+        document.querySelectorAll('[id^="guide-step-btn-"]').forEach((btn, i) => {
+          btn.className = 'px-3.5 py-1.5 rounded-lg border text-xs font-semibold shrink-0 cursor-pointer transition';
+          if (i === idx) {
+            btn.classList.add('bg-indigo-600', 'border-indigo-600', 'text-white', 'shadow-md');
+          } else {
+            btn.classList.add('bg-white', 'dark:bg-slate-800', 'border-gray-200', 'dark:border-white/5', 'text-gray-600', 'dark:text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-slate-700');
+          }
+        });
+
+        // Set content descriptions
+        const stepTitle = document.getElementById('active-step-title');
+        const stepDesc = document.getElementById('active-step-desc');
+        
+        if (stepTitle) stepTitle.textContent = `Step ${idx + 1}: ${step.title}`;
+        if (stepDesc) stepDesc.textContent = step.desc;
+      }
+
+      // Hub Tab Panel Switcher
+      function switchHubTab(tabName) {
+        // Tab buttons array
+        const tabs = ['overview', 'video', 'repo'];
+        
+        tabs.forEach(t => {
+          const btn = document.getElementById(`modal-tab-${t}`);
+          const pane = document.getElementById(`pane-${t}`);
+          
+          if (btn && pane) {
+            if (t === tabName) {
+              // Active State styling
+              btn.className = 'px-4 py-2 text-sm font-semibold rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800 transition duration-300';
+              pane.classList.remove('hidden');
+              pane.classList.add('animate-[fadeIn_0.3s_ease-out_forwards]');
+            } else {
+              // Inactive State styling
+              btn.className = 'px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 transition duration-300';
+              pane.classList.add('hidden');
+            }
+          }
+        });
+      }
+
+      // Terminal copy code execution
+      function copyTerminalCode() {
+        const cloneCmd = document.getElementById('term-clone-text')?.textContent || '';
+        const cdCmd = document.getElementById('term-cd-text')?.textContent || '';
+        const runCmd = document.getElementById('term-run-text')?.textContent || '';
+        
+        const UnifiedText = `${cloneCmd}\n${cdCmd}\n${runCmd}`;
+        
+        navigator.clipboard.writeText(UnifiedText).then(() => {
+          const btn = document.getElementById('terminal-copy-btn');
+          if (btn) {
+            // Flash a dynamic success checkbox state
+            btn.innerHTML = `
+              <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span class="text-xs font-semibold font-mono text-green-500">Copied!</span>
+            `;
+            
+            setTimeout(() => {
+              btn.innerHTML = `
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+                </svg>
+                <span class="text-xs font-semibold font-mono">Copy Code</span>
+              `;
+            }, 2000);
+          }
+        }).catch(err => console.error('Failed to copy command:', err));
+      }
 
       // Scroll to top button functionality
       function initScrollToTop() {
@@ -371,20 +1212,20 @@
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       }
-      
       initScrollToTop();
 
-      // Cursor follower with delayed animation and color inversion
+      // Mouse trailing cursor delay logic
       const cursorFollower = document.createElement('div');
       cursorFollower.style.position = 'fixed';
-      cursorFollower.style.width = '50px';
-      cursorFollower.style.height = '50px';
+      cursorFollower.style.width = '45px';
+      cursorFollower.style.height = '45px';
       cursorFollower.style.borderRadius = '50%';
       cursorFollower.style.backgroundColor = 'white';
       cursorFollower.style.mixBlendMode = 'difference';
       cursorFollower.style.pointerEvents = 'none';
       cursorFollower.style.zIndex = '9999';
       cursorFollower.style.transform = 'translate(-50%, -50%)';
+      cursorFollower.style.transition = 'width 0.2s ease, height 0.2s ease';
       document.body.appendChild(cursorFollower);
 
       let mouseX = 0, mouseY = 0;
@@ -395,17 +1236,30 @@
         mouseY = e.clientY;
       });
 
+      // Expand custom pointer ring on interactive tags hover
+      document.addEventListener('mouseover', (e) => {
+        const clickable = e.target.closest('a, button, article, [onclick]');
+        
+        if (clickable) {
+          cursorFollower.style.width = '65px';
+          cursorFollower.style.height = '65px';
+        } else {
+          cursorFollower.style.width = '45px';
+          cursorFollower.style.height = '45px';
+        }
+      });
+
       function updateFollower() {
-        followerX += (mouseX - followerX) * 0.08; // delay factor for smooth following
+        followerX += (mouseX - followerX) * 0.08;
         followerY += (mouseY - followerY) * 0.08;
         cursorFollower.style.left = followerX + 'px';
         cursorFollower.style.top = followerY + 'px';
+        cursorFollower.style.transition = 'width 0.2s ease, height 0.2s ease'; // Ensure smooth scaling
         requestAnimationFrame(updateFollower);
       }
-
       updateFollower();
 
-      // Mobile menu functionality
+      // Mobile Menu control engine
       function initMobileMenu() {
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -413,33 +1267,31 @@
         const sunIconMobile = document.getElementById('sun-icon-mobile');
         const moonIconMobile = document.getElementById('moon-icon-mobile');
         
-        // Function to open menu
         const openMenu = () => {
           mobileMenu.classList.remove('hidden');
-          mobileMenu.classList.remove('translate-x-full');
+          // Allow render frames to catch hidden removal
+          setTimeout(() => {
+            mobileMenu.classList.remove('translate-x-full');
+          }, 20);
         };
         
-        // Function to close menu
         const closeMenu = () => {
           mobileMenu.classList.add('translate-x-full');
           setTimeout(() => {
             mobileMenu.classList.add('hidden');
-          }, 300); // Match transition duration
+          }, 300);
         };
         
-        // Open menu on hamburger click
         if (mobileMenuButton && mobileMenu) {
           mobileMenuButton.addEventListener('click', () => {
             if (mobileMenu.classList.contains('hidden')) {
               openMenu();
-              // Update hamburger icon to X
               const hamburgerIcon = mobileMenuButton.querySelector('svg');
               if (hamburgerIcon) {
                 hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
               }
             } else {
               closeMenu();
-              // Update hamburger icon back to hamburger
               const hamburgerIcon = mobileMenuButton.querySelector('svg');
               if (hamburgerIcon) {
                 hamburgerIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
@@ -448,14 +1300,12 @@
           });
         }
         
-        // Close menu on escape key
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
             closeMenu();
           }
         });
         
-        // Close menu on menu item click
         if (mobileMenu) {
           mobileMenu.addEventListener('click', (e) => {
             if (e.target.tagName === 'A') {
@@ -464,14 +1314,12 @@
           });
         }
         
-        // Mobile theme toggle
         if (themeToggleMobile && sunIconMobile && moonIconMobile) {
           themeToggleMobile.addEventListener('click', () => {
             document.documentElement.classList.toggle('dark');
             sunIconMobile.classList.toggle('hidden');
             moonIconMobile.classList.toggle('hidden');
             
-            // Sync with desktop theme toggle if it exists
             const themeToggle = document.getElementById('theme-toggle');
             const sunIcon = document.getElementById('sun-icon');
             const moonIcon = document.getElementById('moon-icon');
@@ -485,11 +1333,10 @@
           });
         }
       }
-      
       initMobileMenu();
 
-      // Load footer
-        fetch('../src/components/footer.html')
+      // Site Footer load
+      fetch('../src/components/footer.html')
         .then(r => r.text())
         .then(html => {
           const el = document.getElementById('site-footer');
@@ -498,21 +1345,9 @@
           if (y) y.textContent = new Date().getFullYear().toString();
         })
         .catch(console.error);
-      // Custom animations
-      const style = document.createElement('style');
-      style.innerHTML = `
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `;
-      document.head.appendChild(style);
+
+      // Trigger Portfolio fetch
+      initializeProjectsEngine();
     </script>
   </body>
 </html>
