@@ -225,44 +225,126 @@
     </nav>
 
     <main>
-      <!-- Premium Hero Section -->
-      <section class="relative px-4 py-16 sm:py-24 overflow-hidden">
-        <div class="mx-auto max-w-5xl w-full text-center space-y-8">
+      <!-- Premium Asymmetric Hero Section -->
+      <section class="relative px-4 pt-20 pb-16 sm:py-24 overflow-hidden max-w-7xl mx-auto">
+        <!-- Floating Mesh Gradients inside the hero boundaries -->
+        <div class="absolute top-10 left-1/3 w-72 h-72 rounded-full bg-indigo-500/10 dark:bg-indigo-600/5 blur-3xl -z-10 animate-[pulse_6s_infinite_alternate]"></div>
+        <div class="absolute bottom-10 right-1/4 w-80 h-80 rounded-full bg-pink-500/10 dark:bg-pink-600/5 blur-3xl -z-10 animate-[pulse_8s_infinite_alternate]"></div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
           
-          <!-- Modern Glowing Glass Badge -->
-          <div class="inline-block">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 dark:bg-indigo-400/10 text-indigo-600 dark:text-indigo-400 text-xs font-semibold tracking-wider uppercase border border-indigo-500/20 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
-              <span class="w-2 h-2 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-ping"></span>
-              Portfolio Showroom
-            </span>
+          <!-- LEFT SIDE: Typographic Masterpiece & Description (7 Cols) -->
+          <div class="lg:col-span-7 space-y-8 text-left">
+            <!-- futuristic micro-badge -->
+            <div class="inline-block">
+              <span class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/10 to-purple-500/10 dark:from-indigo-500/5 dark:to-purple-500/5 text-indigo-600 dark:text-indigo-400 text-xs font-bold uppercase tracking-wider border border-indigo-500/20 shadow-[0_0_20px_rgba(99,102,241,0.08)] relative overflow-hidden group">
+                <span class="absolute inset-0 w-1/2 h-full bg-white/10 transform -skew-x-12 -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000 ease-out"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-indigo-600 dark:bg-indigo-400 animate-pulse"></span>
+                Portfolio Showroom v2.5
+              </span>
+            </div>
+
+            <!-- Header with styled mixed weights and gradients -->
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tight text-gray-900 dark:text-white leading-[1.05]" style="font-family: 'Pixelify Sans', sans-serif;">
+              <span class="text-slate-400 dark:text-slate-500 font-light block text-2xl sm:text-3xl tracking-widest uppercase mb-1" style="font-family: 'Poppins', sans-serif;">Creative Craftsmanship</span>
+              <span class="block">Works &</span>
+              <span class="block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent filter drop-shadow-[0_2px_8px_rgba(99,102,241,0.15)]">System Showcase</span>
+            </h1>
+
+            <!-- Sleek Left-Border Accent Description -->
+            <div class="border-l-4 border-indigo-500 pl-5 space-y-2">
+              <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed font-light font-medium">
+                An interactive gallery showcasing digital systems, responsive interfaces, and comprehensive UI/UX design models built to BSU and industry standards.
+              </p>
+              <p class="text-xs text-gray-400 font-mono tracking-widest uppercase">
+                // Click on any card below to launch the Interactive Hub Modal.
+              </p>
+            </div>
+
+            <!-- Technical stack badge ribbon -->
+            <div class="flex flex-wrap items-center gap-3 pt-2 text-xs font-semibold text-gray-500 dark:text-gray-400">
+              <span class="text-slate-400 uppercase tracking-wider text-[10px]">STACK CODES:</span>
+              <span class="px-2.5 py-1 rounded-md bg-gray-100 dark:bg-slate-900 border border-gray-200/50 dark:border-white/5 text-gray-600 dark:text-gray-400">HTML5</span>
+              <span class="px-2.5 py-1 rounded-md bg-gray-100 dark:bg-slate-900 border border-gray-200/50 dark:border-white/5 text-gray-600 dark:text-gray-400">TailwindCSS</span>
+              <span class="px-2.5 py-1 rounded-md bg-gray-100 dark:bg-slate-900 border border-gray-200/50 dark:border-white/5 text-gray-600 dark:text-gray-400">VanillaJS</span>
+              <span class="px-2.5 py-1 rounded-md bg-gray-100 dark:bg-slate-900 border border-gray-200/50 dark:border-white/5 text-gray-600 dark:text-gray-400">JSON Schema</span>
+            </div>
           </div>
-          
-          <!-- Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-gray-900 dark:text-white leading-none" style="font-family: 'Pixelify Sans', sans-serif;">
-            <span class="block text-gray-800 dark:text-gray-200">Creative Craftsmanship</span>
-            <span class="block mt-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent filter drop-shadow-[0_2px_8px_rgba(99,102,241,0.1)]">Works & Showcase</span>
-          </h1>
-          
-          <!-- Subtitle -->
-          <p class="text-base sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
-            An interactive gallery showcasing digital systems, interactive interfaces, and comprehensive UI/UX design models built to BSU and industry standards. Click on any project to explore its interactive guides, terminal walkthroughs, and walkthrough media guides.
-          </p>
-          
-          <!-- Animated Quick Stats Panel -->
-          <div class="flex flex-wrap justify-center gap-6 sm:gap-12 pt-8 max-w-4xl mx-auto">
-            <div class="relative bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl px-6 py-4 min-w-[130px] flex-1 shadow-md hover:-translate-y-1 transition duration-300">
-              <p class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-indigo-500 to-purple-600 bg-clip-text text-transparent">10+</p>
-              <p class="text-gray-500 dark:text-gray-400 text-xs mt-1 font-semibold uppercase tracking-wider">Total Works</p>
-            </div>
-            <div class="relative bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl px-6 py-4 min-w-[130px] flex-1 shadow-md hover:-translate-y-1 transition duration-300">
-              <p class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text text-transparent">100%</p>
-              <p class="text-gray-500 dark:text-gray-400 text-xs mt-1 font-semibold uppercase tracking-wider">Usability</p>
-            </div>
-            <div class="relative bg-white/40 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl px-6 py-4 min-w-[130px] flex-1 shadow-md hover:-translate-y-1 transition duration-300">
-              <p class="text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-pink-500 to-indigo-500 bg-clip-text text-transparent">BSU</p>
-              <p class="text-gray-500 dark:text-gray-400 text-xs mt-1 font-semibold uppercase tracking-wider">Alumnus/Dev</p>
+
+          <!-- RIGHT SIDE: Futuristic Control Panel / Bento Stat Console (5 Cols) -->
+          <div class="lg:col-span-5 relative">
+            <div class="bg-gradient-to-tr from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 border border-gray-200 dark:border-white/10 p-6 rounded-[32px] shadow-2xl relative overflow-hidden backdrop-blur-xl group">
+              <!-- Glow corner element -->
+              <div class="absolute -top-12 -right-12 w-28 h-28 bg-indigo-500/20 rounded-full blur-2xl group-hover:bg-indigo-500/35 transition-colors pointer-events-none"></div>
+              
+              <!-- Console title header -->
+              <div class="flex items-center justify-between border-b border-gray-200/60 dark:border-white/5 pb-4 mb-6 select-none">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                  <span class="text-xs font-mono font-bold text-gray-500 dark:text-gray-400 pl-1 uppercase tracking-wider">System Analytics</span>
+                </div>
+                <span class="text-[10px] font-mono text-indigo-500 dark:text-indigo-400 font-bold uppercase bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">Operational</span>
+              </div>
+
+              <!-- Stat 1: Total Works with Circular radial progress Dial -->
+              <div class="grid grid-cols-12 gap-4 items-center border-b border-gray-200/60 dark:border-white/5 pb-5 mb-5 animate-[fadeInUp_0.6s_ease-out_100ms_backwards]">
+                <div class="col-span-4 flex justify-center">
+                  <!-- Circular radial progress SVG loader -->
+                  <div class="relative w-16 h-16 flex items-center justify-center">
+                    <svg class="w-full h-full transform -rotate-90">
+                      <circle cx="32" cy="32" r="26" stroke-width="4" stroke="currentColor" class="text-gray-200 dark:text-slate-800" fill="transparent"/>
+                      <circle cx="32" cy="32" r="26" stroke-width="4" stroke="currentColor" class="text-indigo-500" stroke-dasharray="163" stroke-dashoffset="40" stroke-linecap="round" fill="transparent"/>
+                    </svg>
+                    <span class="absolute text-sm font-black text-gray-900 dark:text-white font-mono">10+</span>
+                  </div>
+                </div>
+                <div class="col-span-8 space-y-1">
+                  <h4 class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider" style="font-family: 'Pixelify Sans', sans-serif;">Total Systems Built</h4>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">Interactive full-stack, design models, and BSU capstone releases integrated in database.</p>
+                </div>
+              </div>
+
+              <!-- Stat 2: Usability with core health CPU meter bar -->
+              <div class="grid grid-cols-12 gap-4 items-center border-b border-gray-200/60 dark:border-white/5 pb-5 mb-5 animate-[fadeInUp_0.6s_ease-out_200ms_backwards]">
+                <div class="col-span-4 flex flex-col items-center justify-center">
+                  <div class="text-2xl font-black text-emerald-500 font-mono tracking-tight flex items-baseline">
+                    100%
+                  </div>
+                  <span class="text-[9px] text-emerald-500 uppercase tracking-widest font-bold bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/10 mt-1">Excellent</span>
+                </div>
+                <div class="col-span-8 space-y-1.5">
+                  <h4 class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider" style="font-family: 'Pixelify Sans', sans-serif;">System Core Usability</h4>
+                  <div class="w-full h-2 bg-gray-200 dark:bg-slate-800 rounded-full overflow-hidden relative">
+                    <div class="h-full bg-emerald-500 rounded-full animate-[shimmer_2s_infinite_linear]" style="width: 100%;"></div>
+                  </div>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">Responsive accessibility, semantic syntaxing, and SEO metadata indexing.</p>
+                </div>
+              </div>
+
+              <!-- Stat 3: BSU Credentials with custom crest label -->
+              <div class="grid grid-cols-12 gap-4 items-center animate-[fadeInUp_0.6s_ease-out_300ms_backwards]">
+                <div class="col-span-4 flex justify-center">
+                  <!-- Custom graduation crest icon wrapper -->
+                  <div class="w-14 h-14 rounded-2xl bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20 flex items-center justify-center shadow-inner relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
+                    <!-- Red and Gold BSU Accents -->
+                    <div class="absolute bottom-0 inset-x-0 h-1 bg-red-600"></div>
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                      <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="col-span-8 space-y-1">
+                  <h4 class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider" style="font-family: 'Pixelify Sans', sans-serif;">BSU Alumnus</h4>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed font-light">Batangas State University (BSU) - Lipa Campus technology scholar and creative dev.</p>
+                </div>
+              </div>
+
             </div>
           </div>
+
         </div>
       </section>
 
