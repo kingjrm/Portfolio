@@ -45,7 +45,7 @@ async function renderProjects() {
       .map(
         (p) => `
       <article class="card">
-        <img src="${p.image}" alt="${p.title}" class="h-40 w-full object-cover rounded-t-lg" />
+        <img src="${p.image}" alt="${p.title}" class="h-40 w-full object-cover rounded-t-lg" loading="lazy" decoding="async" />
         <div class="card-body">
           <h3 class="font-semibold">${p.title}</h3>
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">${p.description}</p>

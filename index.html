@@ -11,7 +11,9 @@
     <meta name="theme-color" content="#4F46E5" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" as="style" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="assets/css/main.css" as="style" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
       html { overflow-x: hidden; height: 100%; }
@@ -364,12 +366,21 @@
   document.addEventListener('DOMContentLoaded', () => {
     const intro = document.getElementById('intro-overlay');
     if (!intro) return;
+
     const hide = () => {
       intro.classList.add('intro-hide');
       setTimeout(() => intro.remove(), 600);
     };
-    setTimeout(hide, 2200);
-    intro.addEventListener('click', hide);
+
+    // Skip the intro if it already played this session to make the site feel faster
+    if (sessionStorage.getItem('introPlayed')) {
+      intro.style.display = 'none';
+      intro.remove();
+    } else {
+      setTimeout(hide, 2200);
+      intro.addEventListener('click', hide);
+      sessionStorage.setItem('introPlayed', 'true');
+    }
   });
 
   // Light parallax for the intro graphic

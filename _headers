@@ -1,2 +1,18 @@
+/*
+  Cache-Control: max-age=31536000, public
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /assets/css/main.css
   Content-Type: text/css
+  Cache-Control: max-age=31536000, public
+
+/assets/images/*
+  Cache-Control: max-age=31536000, public
+  
+/src/js/*
+  Cache-Control: max-age=31536000, public

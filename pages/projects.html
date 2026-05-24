@@ -781,6 +781,7 @@
       const clearSearchBtn = document.getElementById('search-clear-btn');
       
       if (searchBox) {
+        let searchTimeout;
         searchBox.addEventListener('input', (e) => {
           activeSearchQuery = e.target.value.toLowerCase().trim();
           
@@ -790,7 +791,10 @@
             clearSearchBtn?.classList.add('hidden');
           }
 
-          renderActiveDatabase();
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            renderActiveDatabase();
+          }, 300); // 300ms debounce
         });
       }
 
@@ -924,6 +928,7 @@
                   alt="${project.title}" 
                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 select-none"
                   loading="lazy"
+                  decoding="async"
                   onerror="this.src='../assets/images/logoPortfolio.png'; this.classList.add('p-12', 'object-contain', 'opacity-30');"
                 />
                 
