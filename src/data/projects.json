@@ -187,11 +187,12 @@
   {
     "title": "My Diary",
     "description": "A beautifully designed diary system that empowers users to manage their thoughts and reflections day by day. Features an intuitive interface focused on daily journaling and personal growth.",
-    "tags": ["Figma", "UI/UX", "Diary", "Design"],
+    "tags": ["Figma", "UI/UX", "Diary", "Design", "Web"],
     "url": "https://yellowgreen-shark-241679.hostingersite.com",
+    "liveUrl": "https://yellowgreen-shark-241679.hostingersite.com",
     "image": "../assets/images/diaryApp.jpg",
     "githubUrl": "https://github.com/kingjrm/My-Thoughts",
-    "category": "design",
+    "category": "web",
     "features": [
       "Secure client-side diary entry encryption",
       "Mood trackings with monthly visual correlation analytics",
