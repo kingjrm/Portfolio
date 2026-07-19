@@ -440,45 +440,33 @@
         <!-- Main split screen content -->
         <div class="flex flex-col md:flex-row h-full overflow-hidden flex-1">
           
-          <!-- LEFT SIDE: Walkthrough Media Center (40%) -->
-          <div class="w-full md:w-[42%] bg-slate-950 border-r border-slate-200 dark:border-white/5 flex flex-col relative shrink-0 min-h-[220px] md:min-h-0">
-            <!-- Cover image placeholder background -->
-            <img id="modal-cover-img" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 filter blur-sm pointer-events-none" />
+          <!-- LEFT SIDE: Project Showcase Card (42%) -->
+          <div class="w-full md:w-[42%] bg-slate-950 border-r border-slate-200 dark:border-white/5 flex flex-col relative shrink-0 min-h-[260px] md:min-h-0">
+            <!-- Full size project screenshot -->
+            <img id="modal-cover-img" src="" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none filter blur-[2px] transition-all duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/40"></div>
             
-            <div class="flex-1 flex items-center justify-center p-6 relative z-10 w-full h-full">
-              <!-- Simulated Video Player or Live Showcase -->
-              <div class="w-full max-w-sm rounded-2xl overflow-hidden bg-black/60 border border-white/10 shadow-2xl relative aspect-[16/10] flex flex-col group/player">
+            <div class="flex-1 flex flex-col justify-end p-8 relative z-10 w-full h-full">
+              <!-- Showcase Badge & Action card -->
+              <div class="space-y-4">
+                <span id="modal-showcase-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-[10px] font-extrabold uppercase tracking-widest border border-indigo-500/30">
+                  PROJECT SPEC
+                </span>
                 
-                <!-- Media Area -->
-                <div class="flex-1 relative overflow-hidden flex items-center justify-center bg-slate-900">
-                  <img id="modal-player-preview" src="" alt="" class="w-full h-full object-cover transition duration-700 scale-100" />
-                  
-                  <!-- Glowing Center Play Button simulation -->
-                  <div onclick="switchHubTab('video')" class="absolute w-16 h-16 rounded-full bg-indigo-600/90 dark:bg-indigo-500/90 text-white flex items-center justify-center shadow-lg hover:shadow-indigo-500/40 hover:scale-110 active:scale-95 transition-all duration-300 cursor-pointer group-hover/player:bg-indigo-500">
-                    <svg class="w-6 h-6 fill-current text-white translate-x-0.5" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"></path>
-                    </svg>
-                  </div>
+                <h4 id="modal-showcase-title" class="text-xl sm:text-2xl font-black text-white leading-tight font-sans">
+                  Showcase Title
+                </h4>
+                
+                <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                  Interactive blueprint, feature breakdown, and execution walkthrough. Choose tabs to review details.
+                </p>
 
-                  <!-- Backdrop overlay -->
-                  <div class="absolute inset-0 bg-black/30 group-hover/player:bg-black/10 transition-colors pointer-events-none"></div>
-                </div>
-
-                <!-- Video timeline player bar -->
-                <div class="bg-black/90 p-3.5 flex items-center gap-4 text-[10px] text-gray-400 font-semibold border-t border-white/5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
-                  <span class="uppercase tracking-widest text-[9px] text-red-500 font-bold">Walkthrough Player</span>
-                  <div class="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
-                    <div class="w-2/5 h-full bg-indigo-500 rounded-full"></div>
-                  </div>
-                  <span>01:10 / 03:20</span>
+                <!-- Project preview frame -->
+                <div class="rounded-xl overflow-hidden bg-slate-900/80 border border-white/10 shadow-lg relative aspect-[16/10] overflow-hidden group/preview select-none mt-2">
+                  <img id="modal-player-preview" src="" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover/preview:scale-105" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
                 </div>
               </div>
-            </div>
-
-            <!-- Tiny descriptive bar -->
-            <div class="bg-slate-900/60 p-4 border-t border-white/5 text-center relative z-10 hidden md:block">
-              <span class="text-xs text-gray-400" id="modal-sidebar-hint">Click Tab options to see more walkthrough specs.</span>
             </div>
           </div>
 
@@ -501,14 +489,14 @@
             <!-- Tab Navigation (High-tech layout) -->
             <div class="bg-gray-50/50 dark:bg-slate-900/30 border-b border-gray-100 dark:border-white/5 px-6 py-2.5 flex items-center justify-between shrink-0">
               <div class="flex gap-4">
-                <button id="modal-tab-overview" onclick="switchHubTab('overview')" class="px-4 py-2 text-sm font-semibold rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 border border-indigo-100 dark:border-indigo-800 transition duration-300">
+                <button id="modal-tab-overview" onclick="switchHubTab('overview')" class="px-4 py-2 text-xs font-extrabold uppercase tracking-wider rounded-full bg-white dark:bg-slate-900 text-indigo-600 dark:text-indigo-400 border border-gray-200 dark:border-white/10 shadow-sm transition duration-300 cursor-pointer">
                   Overview
                 </button>
-                <button id="modal-tab-video" onclick="switchHubTab('video')" class="px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 transition duration-300">
-                  Video Walkthrough
+                <button id="modal-tab-video" onclick="switchHubTab('video')" class="px-4 py-2 text-xs font-extrabold uppercase tracking-wider rounded-full text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition duration-300 cursor-pointer">
+                  Video Demo
                 </button>
-                <button id="modal-tab-repo" onclick="switchHubTab('repo')" class="px-4 py-2 text-sm font-semibold rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-white/5 transition duration-300">
-                  GitHub & Terminal
+                <button id="modal-tab-repo" onclick="switchHubTab('repo')" class="px-4 py-2 text-xs font-extrabold uppercase tracking-wider rounded-full text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white transition duration-300 cursor-pointer">
+                  Git & Terminal
                 </button>
               </div>
 
@@ -532,17 +520,12 @@
                   </ul>
                 </div>
 
-                <!-- Interactive Guide Steps Tracker -->
-                <div class="bg-gray-50 dark:bg-slate-900/40 border border-gray-100 dark:border-white/5 p-4 rounded-2xl">
-                  <h4 class="text-xs uppercase font-extrabold tracking-widest text-gray-500 dark:text-gray-400 mb-4">Interactive System Guide</h4>
+                <!-- Clean System Guide Stepper Timeline -->
+                <div class="bg-slate-50/50 dark:bg-slate-900/10 border border-gray-200/30 dark:border-white/5 p-5 rounded-2xl">
+                  <h4 class="text-xs uppercase font-extrabold tracking-widest text-gray-500 dark:text-gray-400 mb-5">System Execution Walkthrough</h4>
                   
-                  <div class="flex gap-3 mb-4 overflow-x-auto pb-1 custom-scroll" id="modal-guide-steps-list">
-                    <!-- Step pills dynamically injected -->
-                  </div>
-
-                  <div class="bg-white dark:bg-slate-950 p-4 rounded-xl border border-gray-200/50 dark:border-white/5" id="active-step-details">
-                    <h5 id="active-step-title" class="text-sm font-bold text-gray-900 dark:text-white">Loading Step...</h5>
-                    <p id="active-step-desc" class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">Explanation content...</p>
+                  <div class="space-y-1" id="modal-guide-steps-list">
+                    <!-- Stepper items injected dynamically -->
                   </div>
                 </div>
               </div>
@@ -550,60 +533,37 @@
               <!-- Tab 2 Pane: Custom Video walkthrough display -->
               <div id="pane-video" class="space-y-6 hidden">
                 <div class="text-center py-6 space-y-4">
-                  <div class="inline-flex w-16 h-16 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div class="inline-flex w-12 h-12 items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
                     </svg>
                   </div>
-                  <h4 class="text-lg font-bold text-gray-900 dark:text-white">Walkthrough Room</h4>
-                  <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 max-w-md mx-auto leading-relaxed">
+                  <h4 class="text-base font-bold text-gray-900 dark:text-white">Walkthrough Demo</h4>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 max-w-md mx-auto leading-relaxed">
                     Watch the live system execution and visual interface guides explaining key capabilities, BSU design systems, and responsive features.
                   </p>
                 </div>
 
-                <!-- Custom High-fidelity interactive Simulated Player layout -->
-                <div class="relative bg-gradient-to-tr from-slate-950 via-slate-900 to-indigo-950 rounded-2xl p-6 border border-white/10 shadow-inner overflow-hidden flex flex-col justify-between aspect-[16/9] max-w-xl mx-auto group">
+                <!-- Custom High-fidelity mockup player layout -->
+                <div class="relative bg-slate-900 rounded-2xl border border-white/10 shadow-2xl overflow-hidden aspect-[16/9] max-w-xl mx-auto group/vplayer">
+                  <img id="modal-video-preview" src="" alt="Video Preview" class="w-full h-full object-cover opacity-80" />
+                  <div class="absolute inset-0 bg-slate-950/40 group-hover/vplayer:bg-slate-950/20 transition duration-300"></div>
                   
-                  <!-- Sound wave animations in background -->
-                  <div class="absolute inset-0 flex items-center justify-center gap-1.5 opacity-25 group-hover:opacity-40 transition-opacity">
-                    <div class="w-1 bg-indigo-500 wave-bar rounded-full" style="animation-delay: 0.1s;"></div>
-                    <div class="w-1 bg-purple-500 wave-bar rounded-full" style="animation-delay: 0.3s;"></div>
-                    <div class="w-1 bg-pink-500 wave-bar rounded-full" style="animation-delay: 0.5s;"></div>
-                    <div class="w-1 bg-indigo-400 wave-bar rounded-full" style="animation-delay: 0.2s;"></div>
-                    <div class="w-1 bg-purple-400 wave-bar rounded-full" style="animation-delay: 0.4s;"></div>
-                    <div class="w-1 bg-pink-400 wave-bar rounded-full" style="animation-delay: 0.6s;"></div>
-                  </div>
-
                   <!-- Glowing center Play Trigger overlay -->
-                  <div class="absolute inset-0 flex items-center justify-center z-10">
-                    <button class="w-20 h-20 rounded-full bg-white text-indigo-900 flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-indigo-500/50 hover:bg-indigo-50 transition duration-300">
-                      <svg class="w-8 h-8 fill-current translate-x-0.5" viewBox="0 0 24 24">
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="w-16 h-16 rounded-full bg-white/95 dark:bg-slate-900/95 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-indigo-500/30 transition duration-300 cursor-pointer border border-gray-200/50 dark:border-white/10">
+                      <svg class="w-6 h-6 fill-current translate-x-0.5" viewBox="0 0 24 24">
                         <path d="M8 5v14l11-7z"></path>
                       </svg>
                     </button>
                   </div>
-
-                  <!-- Top overlay status bar -->
-                  <div class="relative flex items-center justify-between text-xs text-white/70 font-semibold z-10">
+                  
+                  <div class="absolute bottom-4 left-4 right-4 bg-slate-950/95 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-xl flex items-center justify-between text-[10px] text-white/90">
                     <span class="flex items-center gap-2">
-                      <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
-                      Direct Video Demo Connected
+                      <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+                      Demo Ready
                     </span>
-                    <span class="px-2 py-0.5 rounded bg-white/10">1080p</span>
-                  </div>
-
-                  <!-- Bottom player details -->
-                  <div class="relative z-10 bg-slate-900/90 border border-white/5 px-4 py-3 rounded-xl flex items-center gap-4 text-xs text-white/80">
-                    <svg class="w-4 h-4 text-white hover:text-indigo-400 cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-                    </svg>
-                    <div class="flex-1 h-1.5 bg-white/20 rounded-full overflow-hidden relative cursor-pointer">
-                      <div class="w-1/3 h-full bg-indigo-500 rounded-full"></div>
-                    </div>
-                    <span>01:10 / 03:20</span>
-                    <svg class="w-4 h-4 text-white hover:text-indigo-400 cursor-pointer" fill="currentColor" viewBox="0 0 20 20">
-                      <path fill-rule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.929a1 1 0 011.414 0A9.972 9.972 0 0119 10a9.972 9.972 0 01-2.929 7.071 1 1 0 01-1.414-1.414A7.971 7.971 0 0017 10c0-2.21-.894-4.208-2.343-5.657a1 1 0 010-1.414zm-2.829 2.828a1 1 0 011.415 0A5.983 5.983 0 0115 10a5.984 5.984 0 01-1.757 4.243 1 1 0 01-1.415-1.415A3.984 3.984 0 0013 10a3.983 3.983 0 00-1.172-2.828 1 1 0 010-1.415z" clip-rule="evenodd"></path>
-                    </svg>
+                    <span>1080p Stream</span>
                   </div>
                 </div>
               </div>
@@ -703,7 +663,7 @@
         const html = document.documentElement;
         const saved = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDark = saved ? saved === 'dark' : prefersDark;
+        const isDark = saved ? saved === 'dark' : true;
         
         if (isDark) {
           html.classList.add('dark');
@@ -933,13 +893,13 @@
           return `
             <article 
               onclick="openProjectHub('${project.title}')" 
-              class="glow-card group rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl flex flex-col cursor-pointer h-[430px] p-3 text-left z-10"
+              class="glow-card group rounded-3xl overflow-hidden shadow-md hover:shadow-xl flex flex-col cursor-pointer h-[395px] p-3 text-left z-10"
               style="animation: fadeInUp 0.5s ease-out ${idx * 0.08}s backwards;"
               onmousemove="applyCardGlowMovement(event, this)"
               onmouseleave="clearCardGlowMovement(this)"
             >
               <!-- Card Image container -->
-              <div class="relative h-48 w-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-slate-900 shrink-0 select-none">
+              <div class="relative h-44 w-full rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-slate-900 shrink-0 select-none">
                 <img 
                   src="${project.image}" 
                   alt="${project.title}" 
@@ -950,11 +910,11 @@
                 />
                 
                 <!-- Shaded cover vignette -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
                 
                 <!-- Visual active live or draft badge -->
                 <div class="absolute top-4 left-4 z-10">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-sm text-white text-[10px] font-bold border border-white/10 uppercase tracking-widest">
+                  <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-950/80 backdrop-blur-sm text-white text-[9px] font-bold border border-white/10 uppercase tracking-wider">
                     <span class="w-1.5 h-1.5 rounded-full ${project.liveUrl ? 'bg-green-500 animate-pulse' : 'bg-indigo-400'}"></span>
                     ${project.liveUrl ? 'Live Site' : 'Design Spec'}
                   </span>
@@ -962,43 +922,41 @@
               </div>
 
               <!-- Content details -->
-              <div class="p-4 flex-1 flex flex-col relative z-10 select-none">
-                
-                <!-- Category Tag -->
-                <div class="mb-2">
-                  <span class="px-2.5 py-0.5 rounded-lg border text-[10px] font-bold uppercase tracking-wider ${catClass}">
-                    ${project.category || 'Portfolio'}
-                  </span>
-                </div>
-
-                <!-- Title -->
-                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" style="font-family: 'Pixelify Sans', sans-serif;">
-                  ${project.title}
-                </h3>
-                
-                <!-- Description -->
-                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-1 overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
-                  ${project.description}
-                </p>
-                
-                <!-- Quick tags summary -->
-                <div class="flex flex-wrap gap-1.5 mb-4 max-h-[26px] overflow-hidden shrink-0">
-                  ${project.tags.slice(0, 3).map(tag => `
-                    <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 border border-gray-200/50 dark:border-white/5">
-                      ${tag}
+              <div class="p-3.5 flex-1 flex flex-col justify-between relative z-10 select-none">
+                <div>
+                  <!-- Category & Tags Line -->
+                  <div class="flex items-center justify-between mb-2 shrink-0">
+                    <span class="px-2 py-0.5 rounded-md border text-[9px] font-bold uppercase tracking-wider ${catClass}">
+                      ${project.category || 'Portfolio'}
                     </span>
-                  `).join('')}
-                  ${project.tags.length > 3 ? `<span class="text-[9px] text-gray-400 font-bold self-center pl-1">+${project.tags.length - 3} more</span>` : ''}
+                    <div class="flex gap-1">
+                      ${project.tags.slice(0, 2).map(tag => `
+                        <span class="px-1.5 py-0.5 rounded text-[8px] font-semibold bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 border border-gray-200/40 dark:border-white/5">
+                          ${tag}
+                        </span>
+                      `).join('')}
+                    </div>
+                  </div>
+
+                  <!-- Title -->
+                  <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1.5 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors" style="font-family: 'Pixelify Sans', sans-serif;">
+                    ${project.title}
+                  </h3>
+                  
+                  <!-- Description -->
+                  <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
+                    ${project.description}
+                  </p>
                 </div>
 
-                <!-- Action Button row -->
-                <div class="w-full shrink-0">
-                  <span class="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 dark:bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2.5 px-4 rounded-xl transition duration-300 text-xs shadow-md shadow-indigo-500/20 group-hover:shadow-indigo-500/35">
-                    <span>Inspect Hub Details</span>
-                    <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
+                <!-- Clean explore footer link -->
+                <div class="flex items-center justify-between pt-2 border-t border-gray-100/50 dark:border-white/5 shrink-0 mt-3">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    Explore Project
                   </span>
+                  <svg class="w-4 h-4 text-gray-400 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
                 </div>
 
               </div>
@@ -1064,9 +1022,18 @@
         
         const coverImg = document.getElementById('modal-cover-img');
         const playerPreview = document.getElementById('modal-player-preview');
+        const videoPreview = document.getElementById('modal-video-preview');
         
         if (coverImg) coverImg.src = project.image;
         if (playerPreview) playerPreview.src = project.image;
+        if (videoPreview) videoPreview.src = project.image;
+
+        const showcaseTitle = document.getElementById('modal-showcase-title');
+        const showcaseBadge = document.getElementById('modal-showcase-badge');
+        if (showcaseTitle) showcaseTitle.textContent = project.title;
+        if (showcaseBadge) {
+          showcaseBadge.textContent = project.category === 'design' ? 'Figma Design Spec' : 'System Showcase';
+        }
 
         // Render modal tags
         const tagsBox = document.getElementById('modal-tags-container');
@@ -1134,21 +1101,26 @@
           }
         }
 
-        // Render Guide Steps Interactive Widget
+        // Render Guide Steps as a Vertical Timeline Stepper
         const stepsContainer = document.getElementById('modal-guide-steps-list');
         if (stepsContainer && project.guideSteps) {
           stepsContainer.innerHTML = project.guideSteps.map((step, index) => `
-            <button 
-              id="guide-step-btn-${index}" 
-              onclick="activateGuideStep(${index})" 
-              class="px-3.5 py-1.5 rounded-lg border text-xs font-semibold shrink-0 cursor-pointer transition ${index === 0 ? 'bg-indigo-600 border-indigo-600 text-white shadow-md' : 'bg-white dark:bg-slate-800 border-gray-200 dark:border-white/5 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700'}"
-            >
-              Step ${index + 1}: ${step.title}
-            </button>
+            <div class="flex gap-4 items-start relative pb-5 last:pb-0">
+              <!-- Connecting vertical line -->
+              \${index < project.guideSteps.length - 1 ? '<div class="absolute left-[13px] top-6 bottom-0 w-0.5 bg-gray-200 dark:bg-slate-800/80"></div>' : ''}
+              
+              <!-- Circle Number Bullet -->
+              <div class="w-7 h-7 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xs font-extrabold font-mono relative z-10 shadow-sm shrink-0">
+                \${index + 1}
+              </div>
+              
+              <!-- Content -->
+              <div class="flex-1 pt-0.5">
+                <h5 class="text-xs sm:text-sm font-bold text-gray-900 dark:text-white">\${step.title}</h5>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 leading-relaxed">\${step.desc}</p>
+              </div>
+            </div>
           `).join('');
-
-          // Initialize step 0 details
-          activateGuideStep(0);
         }
 
         // Populate Tab 3 GitHub Terminal and Stats details
@@ -1220,29 +1192,6 @@
         }
       });
 
-      // Guide Steps click switcher
-      function activateGuideStep(idx) {
-        if (!selectedProject || !selectedProject.guideSteps) return;
-        const step = selectedProject.guideSteps[idx];
-        if (!step) return;
-
-        // Toggle button selection designs
-        document.querySelectorAll('[id^="guide-step-btn-"]').forEach((btn, i) => {
-          btn.className = 'px-3.5 py-1.5 rounded-lg border text-xs font-semibold shrink-0 cursor-pointer transition';
-          if (i === idx) {
-            btn.classList.add('bg-indigo-600', 'border-indigo-600', 'text-white', 'shadow-md');
-          } else {
-            btn.classList.add('bg-white', 'dark:bg-slate-800', 'border-gray-200', 'dark:border-white/5', 'text-gray-600', 'dark:text-gray-400', 'hover:bg-gray-100', 'dark:hover:bg-slate-700');
-          }
-        });
-
-        // Set content descriptions
-        const stepTitle = document.getElementById('active-step-title');
-        const stepDesc = document.getElementById('active-step-desc');
-        
-        if (stepTitle) stepTitle.textContent = `Step ${idx + 1}: ${step.title}`;
-        if (stepDesc) stepDesc.textContent = step.desc;
-      }
 
       // Hub Tab Panel Switcher
       function switchHubTab(tabName) {

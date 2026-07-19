@@ -172,45 +172,87 @@
       .ios-tab-btn {
         transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       }
+
+      /* Premium Hover Entrance Animations */
+      .hover-reveal-parent {
+        position: relative;
+      }
+      .hover-reveal-parent .hover-reveal-child {
+        transform: translateY(10px) scale(0.98);
+        opacity: 0.85;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+      }
+      .hover-reveal-parent:hover .hover-reveal-child {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      .hover-reveal-parent .hover-reveal-delay-1 {
+        transition-delay: 40ms;
+      }
+      .hover-reveal-parent .hover-reveal-delay-2 {
+        transition-delay: 80ms;
+      }
+      .hover-reveal-parent .hover-reveal-delay-3 {
+        transition-delay: 120ms;
+      }
+      .hover-reveal-parent .hover-reveal-delay-4 {
+        transition-delay: 160ms;
+      }
+
+      /* Hover animation specific to skills board container */
+      .skills-container-card .skill-capsule {
+        transform: translateY(5px);
+        opacity: 0.85;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, background-color 0.3s ease, border-color 0.3s ease;
+      }
+      .skills-container-card:hover .skill-capsule {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      /* Staggered delay for child capsules in the skills cards */
+      .skills-container-card:hover .skill-capsule:nth-child(1) { transition-delay: 0ms; }
+      .skills-container-card:hover .skill-capsule:nth-child(2) { transition-delay: 40ms; }
+      .skills-container-card:hover .skill-capsule:nth-child(3) { transition-delay: 80ms; }
+      .skills-container-card:hover .skill-capsule:nth-child(4) { transition-delay: 120ms; }
+      .skills-container-card:hover .skill-capsule:nth-child(5) { transition-delay: 160ms; }
     </style>
   </head>
   <body class="min-h-full bg-white dark:bg-gray-950 text-gray-950 dark:text-gray-100 transition-colors duration-300" style="font-family: 'Poppins', sans-serif;">
-    <nav class="relative sticky top-0 z-50 bg-black/30 backdrop-blur-md border-b border-white/20 transition-all duration-300 shadow-xl" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex h-20 items-center justify-between">
-          <a href="../index.html" class="font-bold text-white hover:text-gray-300 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
-            K.J
-          </a>
+    <nav class="relative sticky top-0 z-50 bg-white/20 dark:bg-black/30 backdrop-blur-md border-b border-gray-200/50 dark:border-white/10 transition-all duration-300 shadow-lg" style="-webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
+        <a href="../index.html" class="font-bold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition duration-300 text-lg" style="font-family: 'Pixelify Sans', sans-serif;">
+          K.J
+        </a>
 
-          <!-- Desktop Navigation -->
-          <div class="hidden lg:flex items-center gap-8">
-            <ul class="flex items-center gap-8" style="font-family: 'Pixelify Sans', sans-serif;">
-              <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="../index.html">Home</a></li>
-              <li><a class="text-white bg-white/20 px-3 py-1 rounded-full text-sm font-medium transition duration-300 hover:bg-white/30" href="./about.html">About</a></li>
-              <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./projects.html">Projects</a></li>
-              <li><a class="text-white/90 hover:text-white text-sm font-medium transition duration-300 hover:bg-white/10 px-3 py-1 rounded-full" href="./contact.html">Contact</a></li>
-            </ul>
-            <button id="theme-toggle" class="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
-              <svg id="sun-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-              </svg>
-              <svg id="moon-icon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-              </svg>
-            </button>
-          </div>
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <ul class="flex items-center gap-8" style="font-family: 'Pixelify Sans', sans-serif;">
+            <li><a class="text-gray-700 dark:text-white/80 hover:text-indigo-600 dark:hover:text-white text-sm font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-2 rounded-full" href="../index.html">Home</a></li>
+            <li><a class="text-indigo-600 dark:text-white bg-indigo-50 dark:bg-white/20 px-4 py-2 rounded-full text-sm font-medium transition duration-300 hover:bg-indigo-100 dark:hover:bg-white/30" href="./about.html">About</a></li>
+            <li><a class="text-gray-700 dark:text-white/80 hover:text-indigo-600 dark:hover:text-white text-sm font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-2 rounded-full" href="./projects.html">Projects</a></li>
+            <li><a class="text-gray-700 dark:text-white/80 hover:text-indigo-600 dark:hover:text-white text-sm font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-2 rounded-full" href="./contact.html">Contact</a></li>
+          </ul>
+          <button id="theme-toggle" class="p-3 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white transition duration-300 backdrop-blur-sm border border-gray-200 dark:border-white/20 hover:border-indigo-500/50" aria-label="Toggle theme">
+            <svg id="sun-icon" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg id="moon-icon" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
 
         <!-- Mobile Navigation Button -->
         <div class="lg:hidden flex items-center gap-4">
-          <button id="theme-toggle-mobile" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle theme">
+          <button id="theme-toggle-mobile" class="p-2 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white transition duration-300 backdrop-blur-sm border border-gray-200 dark:border-white/20" aria-label="Toggle theme">
             <svg id="sun-icon-mobile" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -226,7 +268,7 @@
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </button>
-          <button id="mobile-menu-button" class="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white hover:text-white transition duration-300 backdrop-blur-sm border border-white/20 hover:border-white/40" aria-label="Toggle mobile menu">
+          <button id="mobile-menu-button" class="p-2 rounded-full bg-gray-100 dark:bg-white/10 hover:bg-gray-200 dark:hover:bg-white/20 text-gray-700 dark:text-white transition duration-300 backdrop-blur-sm border border-gray-200 dark:border-white/20" aria-label="Toggle mobile menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -234,18 +276,15 @@
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden fixed top-20 right-0 z-40 w-80 h-auto bg-black/60 backdrop-blur-md border border-white/20 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out hidden">
+        <div id="mobile-menu" class="lg:hidden fixed top-20 right-0 z-40 w-80 h-auto bg-white/95 dark:bg-black/90 backdrop-blur-md border border-gray-200 dark:border-white/20 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out hidden">
           <div class="flex flex-col h-full">
-            
-            <!-- Menu items -->
             <div class="flex-1 px-6 py-8 space-y-6 text-right" style="font-family: 'Pixelify Sans', sans-serif;">
-              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
-              <a class="block text-white bg-white/20 px-4 py-3 rounded-lg text-xl font-medium transition duration-300 hover:bg-white/30" href="./about.html">About</a>
-              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./projects.html">Projects</a>
-              <a class="block text-white/90 hover:text-white text-xl font-medium transition duration-300 hover:bg-white/10 px-4 py-3 rounded-lg" href="./contact.html">Contact</a>
+              <a class="block text-gray-800 dark:text-white/90 hover:text-indigo-600 text-xl font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-3 rounded-lg" href="../index.html">Home</a>
+              <a class="block text-indigo-600 dark:text-white bg-indigo-50 dark:bg-white/20 px-4 py-3 rounded-lg text-xl font-medium transition duration-300" href="./about.html">About</a>
+              <a class="block text-gray-800 dark:text-white/90 hover:text-indigo-600 text-xl font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-3 rounded-lg" href="./projects.html">Projects</a>
+              <a class="block text-gray-800 dark:text-white/90 hover:text-indigo-600 text-xl font-medium transition duration-300 hover:bg-gray-100 dark:hover:bg-white/10 px-4 py-3 rounded-lg" href="./contact.html">Contact</a>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </nav>
@@ -370,11 +409,11 @@
 
                 <!-- Card Content -->
                 <div class="w-full md:w-[44%] pl-16 md:pl-0 flex">
-                  <div class="premium-glow-indigo w-full bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-[0_20px_50px_rgba(99,102,241,0.12)] transition-all duration-300">
+                  <div class="premium-glow-indigo hover-reveal-parent w-full bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-[0_20px_50px_rgba(99,102,241,0.12)] transition-all duration-300">
                     <div>
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/30 dark:border-indigo-800/30 mb-4">MILESTONE 01</span>
-                      <h3 class="text-xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Spark</h3>
-                      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <span class="hover-reveal-child inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/30 dark:border-indigo-800/30 mb-4">MILESTONE 01</span>
+                      <h3 class="hover-reveal-child hover-reveal-delay-1 text-xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Spark</h3>
+                      <p class="hover-reveal-child hover-reveal-delay-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         My journey began with a simple question: <span class="font-semibold text-indigo-600 dark:text-indigo-400">how does the web really work?</span> That curiosity sparked a relentless exploration of code, design, and digital experiences.
                       </p>
                     </div>
@@ -398,11 +437,11 @@
 
                 <!-- Card Content -->
                 <div class="w-full md:w-[44%] pl-16 md:pl-0 flex">
-                  <div class="premium-glow-sky w-full bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-[0_20px_50px_rgba(14,165,233,0.12)] transition-all duration-300">
+                  <div class="premium-glow-sky hover-reveal-parent w-full bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-[0_20px_50px_rgba(14,165,233,0.12)] transition-all duration-300">
                     <div>
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 border border-sky-200/30 dark:border-sky-800/30 mb-4">MILESTONE 02</span>
-                      <h3 class="text-xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Build</h3>
-                      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <span class="hover-reveal-child inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 border border-sky-200/30 dark:border-sky-800/30 mb-4">MILESTONE 02</span>
+                      <h3 class="hover-reveal-child hover-reveal-delay-1 text-xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Build</h3>
+                      <p class="hover-reveal-child hover-reveal-delay-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         As a 4th-year IT student at <span class="font-semibold text-sky-600 dark:text-sky-400">Batangas State University</span>, I've mastered frontend development, responsive design, and user-centered thinking through hands-on projects and continuous learning.
                       </p>
                     </div>
@@ -426,11 +465,11 @@
 
                 <!-- Card Content -->
                 <div class="w-full md:w-[44%] pl-16 md:pl-0 flex">
-                  <div class="premium-glow-pink w-full bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-[0_20px_50px_rgba(236,72,153,0.12)] transition-all duration-300">
+                  <div class="premium-glow-pink hover-reveal-parent w-full bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-[0_20px_50px_rgba(236,72,153,0.12)] transition-all duration-300">
                     <div>
-                      <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 border border-pink-200/30 dark:border-pink-800/30 mb-4">MILESTONE 03</span>
-                      <h3 class="text-xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Impact</h3>
-                      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                      <span class="hover-reveal-child inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 border border-pink-200/30 dark:border-pink-800/30 mb-4">MILESTONE 03</span>
+                      <h3 class="hover-reveal-child hover-reveal-delay-1 text-xl font-black text-gray-950 dark:text-white mb-3" style="font-family: 'Pixelify Sans', sans-serif;">The Impact</h3>
+                      <p class="hover-reveal-child hover-reveal-delay-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                         Beyond code, I <span class="font-semibold text-pink-600 dark:text-pink-400">contribute to communities</span>, explore emerging technologies, and collaborate on projects that create meaningful digital experiences and solve real-world problems.
                       </p>
                     </div>
@@ -465,45 +504,45 @@
               <!-- Bento Grid -->
               <div class="grid sm:grid-cols-3 gap-6 relative z-10">
                 <!-- Pixel-Perfect Design -->
-                <div class="bento-card bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 hover:shadow-lg hover:border-indigo-500/40 dark:hover:border-indigo-500/30 flex flex-col justify-between">
+                <div class="bento-card hover-reveal-parent bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 hover:shadow-lg hover:border-indigo-500/40 dark:hover:border-indigo-500/30 flex flex-col justify-between">
                   <div>
-                    <div class="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-5 shadow-inner">
+                    <div class="hover-reveal-child w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-5 shadow-inner">
                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
                       </svg>
                     </div>
-                    <h4 class="font-extrabold text-gray-950 dark:text-white text-base mb-2">Pixel-Perfect Design</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <h4 class="hover-reveal-child hover-reveal-delay-1 font-extrabold text-gray-950 dark:text-white text-base mb-2">Pixel-Perfect Design</h4>
+                    <p class="hover-reveal-child hover-reveal-delay-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                       Crafting calm, consistent interfaces that feel effortless, structured, and highly intuitive to the end user.
                     </p>
                   </div>
                 </div>
 
                 <!-- Technical Excellence -->
-                <div class="bento-card bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 hover:shadow-lg hover:border-sky-500/40 dark:hover:border-sky-500/30 flex flex-col justify-between">
+                <div class="bento-card hover-reveal-parent bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 hover:shadow-lg hover:border-sky-500/40 dark:hover:border-sky-500/30 flex flex-col justify-between">
                   <div>
-                    <div class="w-11 h-11 rounded-xl bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-5 shadow-inner">
+                    <div class="hover-reveal-child w-11 h-11 rounded-xl bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center mb-5 shadow-inner">
                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                       </svg>
                     </div>
-                    <h4 class="font-extrabold text-gray-950 dark:text-white text-base mb-2">Technical Excellence</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <h4 class="hover-reveal-child hover-reveal-delay-1 font-extrabold text-gray-950 dark:text-white text-base mb-2">Technical Excellence</h4>
+                    <p class="hover-reveal-child hover-reveal-delay-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                       Writing clean, accessible, semantic code and organizing optimized directory structures for excellent project health.
                     </p>
                   </div>
                 </div>
 
                 <!-- User-Centered -->
-                <div class="bento-card bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 hover:shadow-lg hover:border-pink-500/40 dark:hover:border-pink-500/30 flex flex-col justify-between">
+                <div class="bento-card hover-reveal-parent bg-white dark:bg-slate-950 border border-slate-200/60 dark:border-slate-800/80 rounded-2xl p-6 hover:shadow-lg hover:border-pink-500/40 dark:hover:border-pink-500/30 flex flex-col justify-between">
                   <div>
-                    <div class="w-11 h-11 rounded-xl bg-pink-50 dark:bg-pink-950/50 text-pink-600 dark:text-pink-400 flex items-center justify-center mb-5 shadow-inner">
+                    <div class="hover-reveal-child w-11 h-11 rounded-xl bg-pink-50 dark:bg-pink-950/50 text-pink-600 dark:text-pink-400 flex items-center justify-center mb-5 shadow-inner">
                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                       </svg>
                     </div>
-                    <h4 class="font-extrabold text-gray-950 dark:text-white text-base mb-2">User-Centered</h4>
-                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <h4 class="hover-reveal-child hover-reveal-delay-1 font-extrabold text-gray-950 dark:text-white text-base mb-2">User-Centered</h4>
+                    <p class="hover-reveal-child hover-reveal-delay-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                       Focusing on core intent, digital clarity, and real-world usability in every engineering and design decision.
                     </p>
                   </div>
@@ -527,7 +566,7 @@
           
           <div class="grid lg:grid-cols-2 gap-8">
             <!-- College Card -->
-            <article class="bg-slate-50/60 dark:bg-slate-900/30 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 hover:shadow-[0_20px_50px_rgba(99,102,241,0.1)] hover:border-indigo-500/30 dark:hover:border-indigo-500/20 transition-all duration-300 flex flex-col justify-between">
+            <article class="bg-slate-50/60 dark:bg-slate-900/30 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 hover:shadow-[0_20px_50px_rgba(99,102,241,0.1)] hover:border-indigo-500/30 dark:hover:border-indigo-500/20 transition-all duration-300 flex flex-col justify-between hover-reveal-parent">
               <div>
                 <div class="flex items-start justify-between gap-4 mb-6">
                   <div>
@@ -538,14 +577,14 @@
                 </div>
                 
                 <!-- Radial GWA Indicator -->
-                <div class="flex flex-col sm:flex-row items-center gap-6 p-5 bg-white/80 dark:bg-slate-950/40 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 my-6 relative overflow-hidden">
+                <div class="hover-reveal-child flex flex-col sm:flex-row items-center gap-6 p-5 bg-white/80 dark:bg-slate-950/40 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 my-6 relative overflow-hidden">
                   <!-- Neon circle glow background -->
                   <div class="absolute -left-6 -top-6 w-24 h-24 bg-indigo-500/5 dark:bg-indigo-500/10 rounded-full blur-xl pointer-events-none"></div>
 
                   <div class="relative w-24 h-24 flex items-center justify-center flex-shrink-0 z-10">
                     <div class="absolute inset-0 rounded-full bg-indigo-500/5 gwa-pulse-bg"></div>
                     <svg class="w-full h-full transform -rotate-90 relative z-10" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="40" class="text-slate-100 dark:text-slate-800" stroke-width="8" stroke="currentColor" fill="transparent" />
+                      <circle cx="50" cy="50" r="40" class="text-slate-200 dark:text-slate-800" stroke-width="8" stroke="currentColor" fill="transparent" />
                       <!-- Outstanding GWA 1.4286 represents outstanding honors progress -->
                       <circle cx="50" cy="50" r="40" class="text-indigo-600 dark:text-indigo-400" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="27.6" stroke-linecap="round" stroke="currentColor" fill="transparent" />
                     </svg>
@@ -572,7 +611,7 @@
                 </div>
               </div>
 
-              <div class="mt-2">
+              <div class="mt-2 hover-reveal-child hover-reveal-delay-1">
                 <button onclick="toggleSemesterModal(true)" class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors group cursor-pointer">
                   <span>View All Semesters</span>
                   <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
@@ -581,7 +620,7 @@
             </article>
 
             <!-- High School Card -->
-            <article class="bg-slate-50/60 dark:bg-slate-900/30 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 hover:shadow-[0_20px_50px_rgba(14,165,233,0.1)] hover:border-sky-500/30 dark:hover:border-sky-500/20 transition-all duration-300 flex flex-col justify-between">
+            <article class="bg-slate-50/60 dark:bg-slate-900/30 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 sm:p-8 hover:shadow-[0_20px_50px_rgba(14,165,233,0.1)] hover:border-sky-500/30 dark:hover:border-sky-500/20 transition-all duration-300 flex flex-col justify-between hover-reveal-parent">
               <div>
                 <div class="flex items-start justify-between gap-4 mb-6">
                   <div>
@@ -591,7 +630,7 @@
                   <span class="px-3 py-1 text-xs font-bold rounded-full bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 border border-indigo-200/30 dark:border-indigo-800/30 flex-shrink-0">2020 – 2022</span>
                 </div>
 
-                <div class="flex items-center gap-4 p-5 bg-white/80 dark:bg-slate-950/40 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 my-6 relative overflow-hidden">
+                <div class="hover-reveal-child flex items-center gap-4 p-5 bg-white/80 dark:bg-slate-950/40 rounded-2xl border border-slate-200/60 dark:border-slate-800/60 my-6 relative overflow-hidden">
                   <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-sky-500/5 dark:bg-sky-500/10 rounded-full blur-xl pointer-events-none"></div>
 
                   <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 flex items-center justify-center shadow-sm flex-shrink-0 z-10">
@@ -609,7 +648,7 @@
                 </div>
               </div>
 
-              <div class="flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400">
+              <div class="flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 hover-reveal-child hover-reveal-delay-1">
                 <span>🎓 STEM Strand Alumnus</span>
               </div>
             </article>
@@ -626,9 +665,9 @@
           
           <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Frontend -->
-            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(99,102,241,0.1)] hover:border-indigo-500/35 transition-all duration-300 flex flex-col justify-between group">
+            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(99,102,241,0.1)] hover:border-indigo-500/35 transition-all duration-300 flex flex-col justify-between group skills-container-card hover-reveal-parent">
               <div>
-                <div class="flex items-center gap-3 mb-5">
+                <div class="flex items-center gap-3 mb-5 hover-reveal-child">
                   <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
@@ -636,7 +675,7 @@
                   </div>
                   <h3 class="font-extrabold text-gray-950 dark:text-white text-base" style="font-family: 'Pixelify Sans', sans-serif;">Frontend</h3>
                 </div>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 hover-reveal-child hover-reveal-delay-1">
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">HTML</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">CSS</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">JavaScript</span>
@@ -646,9 +685,9 @@
             </div>
 
             <!-- Frameworks -->
-            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(14,165,233,0.1)] hover:border-sky-500/35 transition-all duration-300 flex flex-col justify-between group">
+            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(14,165,233,0.1)] hover:border-sky-500/35 transition-all duration-300 flex flex-col justify-between group skills-container-card hover-reveal-parent">
               <div>
-                <div class="flex items-center gap-3 mb-5">
+                <div class="flex items-center gap-3 mb-5 hover-reveal-child">
                   <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
@@ -656,7 +695,7 @@
                   </div>
                   <h3 class="font-extrabold text-gray-950 dark:text-white text-base" style="font-family: 'Pixelify Sans', sans-serif;">Frameworks</h3>
                 </div>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 hover-reveal-child hover-reveal-delay-1">
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Tailwind CSS</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Bootstrap</span>
                 </div>
@@ -664,9 +703,9 @@
             </div>
 
             <!-- Design -->
-            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(236,72,153,0.1)] hover:border-pink-500/35 transition-all duration-300 flex flex-col justify-between group">
+            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(236,72,153,0.1)] hover:border-pink-500/35 transition-all duration-300 flex flex-col justify-between group skills-container-card hover-reveal-parent">
               <div>
-                <div class="flex items-center gap-3 mb-5">
+                <div class="flex items-center gap-3 mb-5 hover-reveal-child">
                   <div class="w-10 h-10 rounded-xl bg-pink-50 dark:bg-pink-950/50 text-pink-600 dark:text-pink-400 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
@@ -674,7 +713,7 @@
                   </div>
                   <h3 class="font-extrabold text-gray-950 dark:text-white text-base" style="font-family: 'Pixelify Sans', sans-serif;">Design</h3>
                 </div>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 hover-reveal-child hover-reveal-delay-1">
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Figma</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Canva</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Responsive UI</span>
@@ -684,9 +723,9 @@
             </div>
 
             <!-- Best Practices -->
-            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(16,185,129,0.1)] hover:border-emerald-500/35 transition-all duration-300 flex flex-col justify-between group">
+            <div class="bg-white/70 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 hover:shadow-[0_15px_30px_rgba(16,185,129,0.1)] hover:border-emerald-500/35 transition-all duration-300 flex flex-col justify-between group skills-container-card hover-reveal-parent">
               <div>
-                <div class="flex items-center gap-3 mb-5">
+                <div class="flex items-center gap-3 mb-5 hover-reveal-child">
                   <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform duration-300">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -694,7 +733,7 @@
                   </div>
                   <h3 class="font-extrabold text-gray-950 dark:text-white text-base" style="font-family: 'Pixelify Sans', sans-serif;">Best Practices</h3>
                 </div>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 hover-reveal-child hover-reveal-delay-1">
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Accessibility</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Clean Code</span>
                   <span class="skill-capsule px-3 py-1.5 rounded-xl text-xs font-medium bg-slate-100/80 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 border border-slate-200/30 dark:border-slate-800/50 shadow-sm cursor-default">Version Control</span>
@@ -887,17 +926,17 @@
           
           <div class="grid md:grid-cols-3 gap-6">
             <!-- Review 1 -->
-            <div class="testimonial-card bg-white/80 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between hover:shadow-[0_20px_45px_rgba(99,102,241,0.08)] hover:border-indigo-500/35 transition-all duration-300">
+            <div class="testimonial-card hover-reveal-parent bg-white/80 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between hover:shadow-[0_20px_45px_rgba(99,102,241,0.08)] hover:border-indigo-500/35 transition-all duration-300">
               <span class="testimonial-quote-bg text-indigo-500/5 dark:text-indigo-400/5 select-none" aria-hidden="true">“</span>
               <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-400">
+                <div class="flex items-center gap-1 mb-4 text-amber-400 hover-reveal-child">
                   <span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed flex-grow">
+                <p class="hover-reveal-child hover-reveal-delay-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed flex-grow">
                   "King Jerome demonstrated exceptional creativity and technical skills in the UI/UX design challenge. His ability to combine aesthetics with functionality is truly impressive."
                 </p>
               </div>
-              <div class="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              <div class="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/80 pt-4 hover-reveal-child hover-reveal-delay-2">
                 <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-500 to-sky-500 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">VL</div>
                 <div>
                   <p class="font-extrabold text-gray-950 dark:text-white text-xs">Von Cedric Latag</p>
@@ -907,17 +946,17 @@
             </div>
 
             <!-- Review 2 -->
-            <div class="testimonial-card bg-white/80 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between hover:shadow-[0_20px_45px_rgba(14,165,233,0.08)] hover:border-sky-500/35 transition-all duration-300">
+            <div class="testimonial-card hover-reveal-parent bg-white/80 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between hover:shadow-[0_20px_45px_rgba(14,165,233,0.08)] hover:border-sky-500/35 transition-all duration-300">
               <span class="testimonial-quote-bg text-sky-500/5 dark:text-sky-400/5 select-none" aria-hidden="true">“</span>
               <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-400">
+                <div class="flex items-center gap-1 mb-4 text-amber-400 hover-reveal-child">
                   <span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed flex-grow">
+                <p class="hover-reveal-child hover-reveal-delay-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed flex-grow">
                   "A dedicated student and active participant in tech communities. Jerome's commitment to learning and growth is remarkable, and his work reflects high standards of excellence."
                 </p>
               </div>
-              <div class="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              <div class="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/80 pt-4 hover-reveal-child hover-reveal-delay-2">
                 <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-sky-500 to-emerald-500 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">CB</div>
                 <div>
                   <p class="font-extrabold text-gray-950 dark:text-white text-xs">Carelle Miles Bobadilla</p>
@@ -927,17 +966,17 @@
             </div>
 
             <!-- Review 3 -->
-            <div class="testimonial-card bg-white/80 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between hover:shadow-[0_20px_45px_rgba(236,72,153,0.08)] hover:border-pink-500/35 transition-all duration-300">
+            <div class="testimonial-card hover-reveal-parent bg-white/80 dark:bg-slate-950/60 backdrop-blur-md border border-slate-200/60 dark:border-slate-800/80 rounded-3xl p-6 flex flex-col justify-between hover:shadow-[0_20px_45px_rgba(236,72,153,0.08)] hover:border-pink-500/35 transition-all duration-300">
               <span class="testimonial-quote-bg text-pink-500/5 dark:text-pink-400/5 select-none" aria-hidden="true">“</span>
               <div>
-                <div class="flex items-center gap-1 mb-4 text-amber-400">
+                <div class="flex items-center gap-1 mb-4 text-amber-400 hover-reveal-child">
                   <span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span><span class="text-sm">★</span>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed flex-grow">
+                <p class="hover-reveal-child hover-reveal-delay-1 text-xs sm:text-sm text-slate-600 dark:text-slate-400 italic mb-6 leading-relaxed flex-grow">
                   "Jerome's clean code, attention to detail, and responsiveness to feedback make him a valuable team member. He brings both technical skills and a positive attitude to everything he does."
                 </p>
               </div>
-              <div class="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/80 pt-4">
+              <div class="flex items-center gap-3 border-t border-slate-100 dark:border-slate-800/80 pt-4 hover-reveal-child hover-reveal-delay-2">
                 <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-indigo-500 text-white font-extrabold text-xs flex items-center justify-center shadow-sm">JP</div>
                 <div>
                   <p class="font-extrabold text-gray-900 dark:text-white text-xs">John Adrian Perce</p>
@@ -1048,7 +1087,7 @@
         const html = document.documentElement;
         const saved = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        const isDark = saved ? saved === 'dark' : prefersDark;
+        const isDark = saved ? saved === 'dark' : true;
         
         if (isDark) {
           html.classList.add('dark');
