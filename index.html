@@ -281,79 +281,59 @@
 
           <!-- Right: Hero Graphic (Portrait with Floating Skill Badges) -->
           <div class="relative lg:order-last flex justify-center items-center">
-            <div class="relative w-full max-w-[340px] sm:max-w-[380px] aspect-[4/5] flex items-center justify-center">
+            <div class="relative w-[290px] h-[290px] sm:w-[350px] sm:h-[350px] aspect-square flex items-center justify-center">
               
               <!-- Background Ambient Glow & Rings -->
               <div class="absolute inset-0 -z-10 flex items-center justify-center pointer-events-none">
                 <!-- Glowing Aura -->
                 <div class="h-64 w-64 rounded-full bg-gradient-to-tr from-indigo-500/30 to-pink-500/30 blur-[60px] animate-pulse"></div>
                 <!-- Orbital Ring 1 -->
-                <div class="absolute w-[110%] h-[110%] border border-white/5 rounded-full animate-[spin_40s_linear_infinite]"></div>
+                <div class="absolute w-[112%] h-[112%] border border-white/5 rounded-full animate-[spin_45s_linear_infinite]"></div>
                 <!-- Orbital Ring 2 -->
-                <div class="absolute w-[90%] h-[90%] border border-white/5 rounded-full animate-[spin_25s_linear_infinite_reverse]"></div>
+                <div class="absolute w-[94%] h-[94%] border border-white/5 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
               </div>
 
               <!-- Main Frame Container -->
-              <div class="relative w-full h-full rounded-[2.5rem] overflow-hidden border border-white/10 bg-slate-950/80 backdrop-blur-xl shadow-2xl group/portrait">
+              <div class="relative w-full h-full rounded-full overflow-hidden border border-white/10 bg-slate-950/80 backdrop-blur-xl shadow-2xl group/portrait">
                 <!-- Frame Decoration (Faint Grid) -->
                 <div class="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
                 
                 <!-- Linear Gradient Accent Border -->
-                <div class="absolute inset-0 p-[1px] rounded-[2.5rem] bg-gradient-to-tr from-indigo-500/30 via-transparent to-pink-500/30 pointer-events-none"></div>
+                <div class="absolute inset-0 p-[1px] rounded-full bg-gradient-to-tr from-indigo-500/30 via-transparent to-pink-500/30 pointer-events-none"></div>
 
                 <!-- Portrait Photo -->
-                <img src="assets/images/Formal.png" alt="King Jerome P. Lacerna" class="w-full h-full object-cover object-center transition-all duration-700 group-hover/portrait:scale-105 filter brightness-[0.9] hover:brightness-100">
+                <img src="assets/images/Formal.png" alt="King Jerome P. Lacerna" class="w-full h-full object-cover object-top rounded-full transition-all duration-700 group-hover/portrait:scale-105 filter brightness-[0.9] hover:brightness-100">
                 
                 <!-- Bottom Soft Shadow Mask -->
-                <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-gray-950 via-gray-950/50 to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                 
                 <!-- Label Badge overlay -->
-                <div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-slate-900/90 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-                  <span class="text-[10px] font-bold tracking-wider uppercase text-slate-300">Available for projects</span>
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-900/90 backdrop-blur-md border border-white/10 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+                  <span class="text-[9px] font-bold tracking-wider uppercase text-slate-300">Available</span>
                 </div>
               </div>
 
-              <!-- Floating Skills with Custom SVG Logos -->
+              <!-- Floating Skills with Custom SVG Logos (Clean & Spaced Out) -->
 
               <!-- 1. JavaScript (Top Right) -->
-              <div class="absolute -right-6 top-8 z-10 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-yellow-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_5s_ease-in-out_infinite] select-none">
+              <div class="absolute -right-4 top-6 z-10 flex items-center gap-2 bg-slate-900/95 backdrop-blur-md border border-yellow-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_5s_ease-in-out_infinite] select-none">
                 <span class="w-4 h-4 text-yellow-400 font-black text-xs flex items-center justify-center bg-yellow-400/10 rounded">JS</span>
                 <span class="text-xs font-bold text-slate-200">JavaScript</span>
               </div>
 
               <!-- 2. Tailwind (Top Left) -->
-              <div class="absolute -left-8 top-16 z-10 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-sky-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_6s_ease-in-out_infinite_1.5s] select-none">
+              <div class="absolute -left-6 top-16 z-10 flex items-center gap-2 bg-slate-900/95 backdrop-blur-md border border-sky-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_6s_ease-in-out_infinite_1.5s] select-none">
                 <svg class="w-4 h-4 text-sky-400" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C7.666 17.818 9.027 19 12.001 19c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
                 </svg>
                 <span class="text-xs font-bold text-slate-200">Tailwind</span>
               </div>
 
-              <!-- 3. Figma (Mid Left) -->
-              <div class="absolute -left-10 bottom-32 z-10 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-pink-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_5.5s_ease-in-out_infinite_0.8s] select-none">
-                <svg class="w-3.5 h-3.5 text-pink-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H10v5H7.5A2.5 2.5 0 0 1 5 5.5z"/>
-                  <path d="M12 3h2.5a2.5 2.5 0 0 1 0 5H12V3z"/>
-                  <path d="M5 12.5A2.5 2.5 0 0 1 7.5 10H10v5H7.5A2.5 2.5 0 0 1 5 12.5z"/>
-                  <path d="M12 10h2.5a2.5 2.5 0 0 1 0 5H12v-5z"/>
-                  <path d="M5 19.5A2.5 2.5 0 0 1 7.5 17H10v5H7.5A2.5 2.5 0 0 1 5 19.5z"/>
-                </svg>
-                <span class="text-xs font-bold text-slate-200">Figma</span>
-              </div>
-
-              <!-- 4. PHP (Bottom Right) -->
-              <div class="absolute -right-8 bottom-24 z-10 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-violet-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_7s_ease-in-out_infinite_2.2s] select-none">
+              <!-- 3. PHP & SQL (Bottom Right) -->
+              <div class="absolute -right-8 bottom-12 z-10 flex items-center gap-2 bg-slate-900/95 backdrop-blur-md border border-violet-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_7s_ease-in-out_infinite_2.2s] select-none">
                 <span class="w-4 h-4 text-violet-400 font-extrabold text-[10px] flex items-center justify-center bg-violet-400/10 rounded">PHP</span>
                 <span class="text-xs font-bold text-slate-200">PHP & SQL</span>
-              </div>
-
-              <!-- 5. HTML5 & CSS3 (Bottom Left) -->
-              <div class="absolute -left-2 -bottom-4 z-10 flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-orange-500/30 px-3 py-1.5 rounded-2xl shadow-lg animate-[float-y_6.5s_ease-in-out_infinite_1.2s] select-none">
-                <svg class="w-4 h-4 text-orange-500" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L2 22h20L12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>
-                </svg>
-                <span class="text-xs font-bold text-slate-200">HTML & CSS</span>
               </div>
 
             </div>
